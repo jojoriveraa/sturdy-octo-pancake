@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CatalogTest.testSave_withNullItem_negative" project="Lab06.1" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testSave_withNullItem_negative" classname="com.javatunes.service.CatalogTest" time="0.375"/>
+</testrun>

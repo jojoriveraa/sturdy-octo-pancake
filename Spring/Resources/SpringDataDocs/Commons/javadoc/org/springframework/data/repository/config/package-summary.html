@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.springframework.data.repository.config (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="org.springframework.data.repository.config (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li class="navBarCell1Rev">Package</li>
+<li>Class</li>
+<li><a href="package-use.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/repository/cdi/package-summary.html">Prev&nbsp;Package</a></li>
+<li><a href="../../../../../org/springframework/data/repository/core/package-summary.html">Next&nbsp;Package</a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/repository/config/package-summary.html" target="_top">Frames</a></li>
+<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+<div class="header">
+<p><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/NonNullApi.html?is-external=true" title="class or interface in org.springframework.lang">@NonNullApi</a>
+</p>
+<h1 title="Package" class="title">Package&nbsp;org.springframework.data.repository.config</h1>
+<div class="docSummary">
+<div class="block">Support classes for repository namespace and JavaConfig integration.</div>
+</div>
+<p>See:&nbsp;<a href="#package.description">Description</a></p>
+</div>
+<div class="contentContainer">
+<ul class="blockList">
+<li class="blockList">
+<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
+<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Interface</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config">RepositoryConfiguration</a>&lt;T extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&gt;</td>
+<td class="colLast">
+<div class="block">Configuration information for a single repository instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></td>
+<td class="colLast">
+<div class="block">SPI to implement store specific extension to the repository bean definition registration process.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a></td>
+<td class="colLast">
+<div class="block">Interface containing the configurable options for the Spring Data repository subsystem.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationUtils.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationUtils</a></td>
+<td class="colLast">
+<div class="block">Helper class to centralize common functionality that needs to be used in various places of the configuration
+implementation.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary table, listing classes, and an explanation">
+<caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html" title="class in org.springframework.data.repository.config">AnnotationRepositoryConfigurationSource</a></td>
+<td class="colLast">
+<div class="block">Annotation based <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/CustomRepositoryImplementationDetector.html" title="class in org.springframework.data.repository.config">CustomRepositoryImplementationDetector</a></td>
+<td class="colLast">
+<div class="block">Detects the custom implementation for a <a href="../../../../../org/springframework/data/repository/Repository.html" title="interface in org.springframework.data.repository"><code>Repository</code></a></div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/DefaultRepositoryBaseClass.html" title="class in org.springframework.data.repository.config">DefaultRepositoryBaseClass</a></td>
+<td class="colLast">
+<div class="block">Placeholder class to be used in <code>@Enable</code> annotation's <code>repositoryBaseClass</code> attribute.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/DefaultRepositoryConfiguration.html" title="class in org.springframework.data.repository.config">DefaultRepositoryConfiguration</a>&lt;T extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&gt;</td>
+<td class="colLast">
+<div class="block">Default implementation of <a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfiguration</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/NamedQueriesBeanDefinitionBuilder.html" title="class in org.springframework.data.repository.config">NamedQueriesBeanDefinitionBuilder</a></td>
+<td class="colLast">
+<div class="block">Builder to create a <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a> for a <a href="../../../../../org/springframework/data/repository/core/NamedQueries.html" title="interface in org.springframework.data.repository.core"><code>NamedQueries</code></a> instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/NamedQueriesBeanDefinitionParser.html" title="class in org.springframework.data.repository.config">NamedQueriesBeanDefinitionParser</a></td>
+<td class="colLast">
+<div class="block"><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/xml/BeanDefinitionParser.html?is-external=true" title="class or interface in org.springframework.beans.factory.xml"><code>BeanDefinitionParser</code></a> to create <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a>s of <a href="../../../../../org/springframework/data/repository/core/NamedQueries.html" title="interface in org.springframework.data.repository.core"><code>NamedQueries</code></a> instances looking up a
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util"><code>Properties</code></a> file fom the given location.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryBeanDefinitionParser.html" title="class in org.springframework.data.repository.config">RepositoryBeanDefinitionParser</a></td>
+<td class="colLast">
+<div class="block">Base class to implement repository namespaces.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryBeanDefinitionRegistrarSupport.html" title="class in org.springframework.data.repository.config">RepositoryBeanDefinitionRegistrarSupport</a></td>
+<td class="colLast">
+<div class="block">Base class to implement <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/annotation/ImportBeanDefinitionRegistrar.html?is-external=true" title="class or interface in org.springframework.context.annotation"><code>ImportBeanDefinitionRegistrar</code></a>s to enable repository</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryBeanNameGenerator.html" title="class in org.springframework.data.repository.config">RepositoryBeanNameGenerator</a></td>
+<td class="colLast">
+<div class="block">Special <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>BeanNameGenerator</code></a> to create bean names for Spring Data repositories.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationDelegate.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationDelegate</a></td>
+<td class="colLast">
+<div class="block">Delegate for configuration integration to reuse the general way of detecting repositories.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationExtensionSupport</a></td>
+<td class="colLast">
+<div class="block">Base implementation of <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationExtension</code></a> to ease the implementation of the interface.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationSourceSupport</a></td>
+<td class="colLast">
+<div class="block">Base class to implement <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a>s.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryFragmentConfiguration.html" title="class in org.springframework.data.repository.config">RepositoryFragmentConfiguration</a></td>
+<td class="colLast">
+<div class="block">Fragment configuration consisting of an interface name and the implementation class name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/RepositoryNameSpaceHandler.html" title="class in org.springframework.data.repository.config">RepositoryNameSpaceHandler</a></td>
+<td class="colLast">
+<div class="block"><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/xml/NamespaceHandler.html?is-external=true" title="class or interface in org.springframework.beans.factory.xml"><code>NamespaceHandler</code></a> to register <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/xml/BeanDefinitionParser.html?is-external=true" title="class or interface in org.springframework.beans.factory.xml"><code>BeanDefinitionParser</code></a>s for repository initializers.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/ResourceReaderRepositoryPopulatorBeanDefinitionParser.html" title="class in org.springframework.data.repository.config">ResourceReaderRepositoryPopulatorBeanDefinitionParser</a></td>
+<td class="colLast">
+<div class="block"><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/xml/BeanDefinitionParser.html?is-external=true" title="class or interface in org.springframework.beans.factory.xml"><code>BeanDefinitionParser</code></a> to parse repository initializers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/SpringDataAnnotationBeanNameGenerator.html" title="class in org.springframework.data.repository.config">SpringDataAnnotationBeanNameGenerator</a></td>
+<td class="colLast">
+<div class="block">Simple extension to Spring's <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/annotation/AnnotationBeanNameGenerator.html?is-external=true" title="class or interface in org.springframework.context.annotation"><code>AnnotationBeanNameGenerator</code></a> to work without a <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>BeanDefinitionRegistry</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/springframework/data/repository/config/XmlRepositoryConfigurationSource.html" title="class in org.springframework.data.repository.config">XmlRepositoryConfigurationSource</a></td>
+<td class="colLast">
+<div class="block">XML based <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<a name="package.description">
+
+</a>
+<h2 title="Package org.springframework.data.repository.config Description">Package org.springframework.data.repository.config Description</h2>
+<div class="block">Support classes for repository namespace and JavaConfig integration.</div>
+</div>
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li class="navBarCell1Rev">Package</li>
+<li>Class</li>
+<li><a href="package-use.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/repository/cdi/package-summary.html">Prev&nbsp;Package</a></li>
+<li><a href="../../../../../org/springframework/data/repository/core/package-summary.html">Next&nbsp;Package</a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/repository/config/package-summary.html" target="_top">Frames</a></li>
+<li><a href="package-summary.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

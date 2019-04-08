@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RepositoryComposition.RepositoryFragments (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="RepositoryComposition.RepositoryFragments (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":10,"i12":9,"i13":10,"i14":10};var tabs={65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/RepositoryComposition.RepositoryFragments.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.html" title="class in org.springframework.data.repository.core.support"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFactoryBeanSupport.html" title="class in org.springframework.data.repository.core.support"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" target="_top">Frames</a></li>
+<li><a href="RepositoryComposition.RepositoryFragments.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.repository.core.support</div>
+<h2 title="Class RepositoryComposition.RepositoryFragments" class="title">Class RepositoryComposition.RepositoryFragments</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.repository.core.support.RepositoryComposition.RepositoryFragments</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;, <a href="../../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;</dd>
+</dl>
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public static class <span class="typeNameLabel">RepositoryComposition.RepositoryFragments</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;</pre>
+<div class="block">Value object representing an ordered list of <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>fragments</code></a>.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Mark Paluch</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#append-org.springframework.data.repository.core.support.RepositoryComposition.RepositoryFragments-">append</a></span>(<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a>&nbsp;fragments)</code>
+<div class="block">Create new <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from the current content appending <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a>.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#append-org.springframework.data.repository.core.support.RepositoryFragment-">append</a></span>(<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&nbsp;fragment)</code>
+<div class="block">Create new <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from the current content appending <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>RepositoryFragment</code></a>.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#canEqual-java.lang.Object-">canEqual</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;other)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#empty--">empty</a></span>()</code>
+<div class="block">Create empty <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a>.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#equals-java.lang.Object-">equals</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#from-java.util.List-">from</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;&nbsp;fragments)</code>
+<div class="block">Create <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util"><code>List</code></a> of <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>fragments</code></a>.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#invoke-java.lang.reflect.Method-java.lang.Object:A-">invoke</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;args)</code>
+<div class="block">Invoke <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect"><code>Method</code></a> by resolving the</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#isEmpty--">isEmpty</a></span>()</code>
+<div class="block">Return true if this <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> contains no <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>fragments</code></a>.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#iterator--">iterator</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#just-java.lang.Object...-">just</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;implementations)</code>
+<div class="block">Create <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from just implementation objects.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#methods--">methods</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#of-org.springframework.data.repository.core.support.RepositoryFragment...-">of</a></span>(<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;...&nbsp;fragments)</code>
+<div class="block">Create <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>fragments</code></a>.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#stream--">stream</a></span>()</code>
+<div class="block">Creates a non-parallel <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream"><code>Stream</code></a> of the underlying <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang"><code>Iterable</code></a>.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html#toString--">toString</a></span>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.data.util.Streamable">
+
+</a>
+<h3>Methods inherited from interface&nbsp;org.springframework.data.util.<a href="../../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></h3>
+<code><a href="../../../../../../org/springframework/data/util/Streamable.html#filter-java.util.function.Predicate-">filter</a>, <a href="../../../../../../org/springframework/data/util/Streamable.html#flatMap-java.util.function.Function-">flatMap</a>, <a href="../../../../../../org/springframework/data/util/Streamable.html#map-java.util.function.Function-">map</a>, <a href="../../../../../../org/springframework/data/util/Streamable.html#of-java.lang.Iterable-">of</a>, <a href="../../../../../../org/springframework/data/util/Streamable.html#of-java.util.function.Supplier-">of</a>, <a href="../../../../../../org/springframework/data/util/Streamable.html#of-T...-">of</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Iterable">
+
+</a>
+<h3>Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#forEach-java.util.function.Consumer-" title="class or interface in java.lang">forEach</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#spliterator--" title="class or interface in java.lang">spliterator</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="empty--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>empty</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a>&nbsp;empty()</pre>
+<div class="block">Create empty <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../org/springframework/data/util/Streamable.html#empty--">empty</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>empty <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="just-java.lang.Object...-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>just</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a>&nbsp;just(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;implementations)</pre>
+<div class="block">Create <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from just implementation objects.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>implementations</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> for <code>implementations</code>.</dd>
+</dl>
+</li>
+</ul>
+<a name="of-org.springframework.data.repository.core.support.RepositoryFragment...-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>of</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a>&nbsp;of(<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;...&nbsp;fragments)</pre>
+<div class="block">Create <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>fragments</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>fragments</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> for <code>implementations</code>.</dd>
+</dl>
+</li>
+</ul>
+<a name="from-java.util.List-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>from</h4>
+<pre>public static&nbsp;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a>&nbsp;from(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;&nbsp;fragments)</pre>
+<div class="block">Create <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util"><code>List</code></a> of <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>fragments</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>fragments</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> for <code>implementations</code>.</dd>
+</dl>
+</li>
+</ul>
+<a name="append-org.springframework.data.repository.core.support.RepositoryFragment-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>append</h4>
+<pre>public&nbsp;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a>&nbsp;append(<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&nbsp;fragment)</pre>
+<div class="block">Create new <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from the current content appending <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>RepositoryFragment</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>fragment</code> - must not be null</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the new <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> containing all existing fragments and the given
+<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>RepositoryFragment</code></a> as last element.</dd>
+</dl>
+</li>
+</ul>
+<a name="append-org.springframework.data.repository.core.support.RepositoryComposition.RepositoryFragments-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>append</h4>
+<pre>public&nbsp;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a>&nbsp;append(<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a>&nbsp;fragments)</pre>
+<div class="block">Create new <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> from the current content appending <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>fragments</code> - must not be null</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the new <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> containing all existing fragments and the given
+<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> as last elements.</dd>
+</dl>
+</li>
+</ul>
+<a name="isEmpty--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isEmpty</h4>
+<pre>public&nbsp;boolean&nbsp;isEmpty()</pre>
+<div class="block">Return true if this <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> contains no <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>fragments</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if this <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support"><code>RepositoryComposition.RepositoryFragments</code></a> contains no <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>fragments</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="iterator--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>iterator</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;&nbsp;iterator()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#iterator--" title="class or interface in java.lang">iterator</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="stream--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stream</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;&nbsp;stream()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/springframework/data/util/Streamable.html#stream--">Streamable</a></code></span></div>
+<div class="block">Creates a non-parallel <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream"><code>Stream</code></a> of the underlying <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang"><code>Iterable</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../org/springframework/data/util/Streamable.html#stream--">stream</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support">RepositoryFragment</a>&lt;?&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream"><code>Stream</code></a> of <a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>fragments</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="methods--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>methods</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&gt;&nbsp;methods()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream"><code>Stream</code></a> of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect"><code>methods</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="invoke-java.lang.reflect.Method-java.lang.Object:A-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invoke</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;invoke(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method,
+                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;args)
+              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></pre>
+<div class="block">Invoke <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect"><code>Method</code></a> by resolving the</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>method</code> - </dd>
+<dd><code>args</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="toString--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Generated.html?is-external=true" title="class or interface in javax.annotation">@Generated</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Generated.html?is-external=true#value--" title="class or interface in javax.annotation">value</a>="lombok")
+public&nbsp;boolean&nbsp;equals(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="canEqual-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canEqual</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Generated.html?is-external=true" title="class or interface in javax.annotation">@Generated</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Generated.html?is-external=true#value--" title="class or interface in javax.annotation">value</a>="lombok")
+protected&nbsp;boolean&nbsp;canEqual(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;other)</pre>
+</li>
+</ul>
+<a name="hashCode--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Generated.html?is-external=true" title="class or interface in javax.annotation">@Generated</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Generated.html?is-external=true#value--" title="class or interface in javax.annotation">value</a>="lombok")
+public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/RepositoryComposition.RepositoryFragments.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryComposition.html" title="class in org.springframework.data.repository.core.support"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../../org/springframework/data/repository/core/support/RepositoryFactoryBeanSupport.html" title="class in org.springframework.data.repository.core.support"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" target="_top">Frames</a></li>
+<li><a href="RepositoryComposition.RepositoryFragments.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

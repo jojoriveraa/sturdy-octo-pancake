@@ -1,0 +1,574 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AnnotationBasedPersistentProperty (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="AnnotationBasedPersistentProperty (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";var methods={"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AnnotationBasedPersistentProperty.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../org/springframework/data/mapping/model/BasicPersistentEntity.html" title="class in org.springframework.data.mapping.model"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" target="_top">Frames</a></li>
+<li><a href="AnnotationBasedPersistentProperty.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.mapping.model</div>
+<h2 title="Class AnnotationBasedPersistentProperty" class="title">Class AnnotationBasedPersistentProperty&lt;P extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;P&gt;&gt;</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">org.springframework.data.mapping.model.AbstractPersistentProperty</a>&lt;P&gt;</li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.mapping.model.AnnotationBasedPersistentProperty&lt;P&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;P&gt;</dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="typeNameLabel">AnnotationBasedPersistentProperty&lt;P extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;P&gt;&gt;</span>
+extends <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">AbstractPersistentProperty</a>&lt;P&gt;</pre>
+<div class="block">Special <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> that takes annotations at a property into account.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke, Christoph Strobl, Mark Paluch</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="property.summary">
+
+</a>
+<h3>Property Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Property Summary table, listing properties, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Type</th>
+<th class="colLast" scope="col">Property and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#isIdProperty">isId</a></span></code>
+<div class="block">Gets the value of the property idProperty.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#isVersionProperty">isVersion</a></span></code>
+<div class="block">Gets the value of the property versionProperty.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#AnnotationBasedPersistentProperty-org.springframework.data.mapping.model.Property-org.springframework.data.mapping.PersistentEntity-org.springframework.data.mapping.model.SimpleTypeHolder-">AnnotationBasedPersistentProperty</a></span>(<a href="../../../../../org/springframework/data/mapping/model/Property.html" title="class in org.springframework.data.mapping.model">Property</a>&nbsp;property,
+<a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping">PersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&nbsp;owner,
+<a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html" title="class in org.springframework.data.mapping.model">SimpleTypeHolder</a>&nbsp;simpleTypeHolder)</code>
+<div class="block">Creates a new <a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="class in org.springframework.data.mapping.model"><code>AnnotationBasedPersistentProperty</code></a>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>&lt;A extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;<br>A</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#findAnnotation-java.lang.Class-">findAnnotation</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;A&gt;&nbsp;annotationType)</code>
+<div class="block">Returns the annotation found for the current <a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="class in org.springframework.data.mapping.model"><code>AnnotationBasedPersistentProperty</code></a>.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>&lt;A extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;<br>A</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#findPropertyOrOwnerAnnotation-java.lang.Class-">findPropertyOrOwnerAnnotation</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;A&gt;&nbsp;annotationType)</code>
+<div class="block">Looks up the annotation of the given type on the property and the owning type if no annotation can be found on it.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#getSpelExpression--">getSpelExpression</a></span>()</code>
+<div class="block">Inspects a potentially available <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/annotation/Value.html?is-external=true" title="class or interface in org.springframework.beans.factory.annotation"><code>Value</code></a> annotation at the property and returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> value of
+it.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#isAnnotationPresent-java.lang.Class-">isAnnotationPresent</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotationType)</code>
+<div class="block">Returns whether the property carries the an annotation of the given type.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#isAssociation--">isAssociation</a></span>()</code>
+<div class="block">Considers the property an <a href="../../../../../org/springframework/data/mapping/Association.html" title="class in org.springframework.data.mapping"><code>Association</code></a> if it is annotated with <a href="../../../../../org/springframework/data/annotation/Reference.html" title="annotation in org.springframework.data.annotation"><code>Reference</code></a>.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#isIdProperty--">isIdProperty</a></span>()</code>
+<div class="block">Gets the value of the property idProperty.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#isTransient--">isTransient</a></span>()</code>
+<div class="block">Considers plain transient fields, fields annotated with <a href="../../../../../org/springframework/data/annotation/Transient.html" title="annotation in org.springframework.data.annotation"><code>Transient</code></a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/annotation/Value.html?is-external=true" title="class or interface in org.springframework.beans.factory.annotation"><code>Value</code></a> or <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html?is-external=true" title="class or interface in org.springframework.beans.factory.annotation"><code>Autowired</code></a> as
+transient.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#isVersionProperty--">isVersionProperty</a></span>()</code>
+<div class="block">Gets the value of the property versionProperty.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#isWritable--">isWritable</a></span>()</code>
+<div class="block">Returns whether the current property is writable, i.e. if the value held for it shall be written to the data store.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#toString--">toString</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html#usePropertyAccess--">usePropertyAccess</a></span>()</code>
+<div class="block">Returns whether property access shall be used for reading the property value.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.data.mapping.model.AbstractPersistentProperty">
+
+</a>
+<h3>Methods inherited from class&nbsp;org.springframework.data.mapping.model.<a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">AbstractPersistentProperty</a></h3>
+<code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#createAssociation--">createAssociation</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#equals-java.lang.Object-">equals</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getActualType--">getActualType</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getAssociation--">getAssociation</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getComponentType--">getComponentType</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getField--">getField</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getGetter--">getGetter</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getMapValueType--">getMapValueType</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getName--">getName</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getOwner--">getOwner</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getPersistentEntityType--">getPersistentEntityType</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getProperty--">getProperty</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getRawType--">getRawType</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getSetter--">getSetter</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getType--">getType</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getTypeInformation--">getTypeInformation</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#hashCode--">hashCode</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#isArray--">isArray</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#isCollectionLike--">isCollectionLike</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#isEntity--">isEntity</a>, <a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#isMap--">isMap</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.data.mapping.PersistentProperty">
+
+</a>
+<h3>Methods inherited from interface&nbsp;org.springframework.data.mapping.<a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a></h3>
+<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getPersistentEntityTypes--">getPersistentEntityTypes</a>, <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getRequiredAnnotation-java.lang.Class-">getRequiredAnnotation</a>, <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getRequiredAssociation--">getRequiredAssociation</a>, <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getRequiredField--">getRequiredField</a>, <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getRequiredGetter--">getRequiredGetter</a>, <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getRequiredSetter--">getRequiredSetter</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="property.detail">
+
+</a>
+<h3>Property Detail</h3>
+<a name="isIdProperty">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isId</h4>
+<pre>public&nbsp;boolean isIdProperty</pre>
+<div class="block">Gets the value of the property idProperty.</div>
+</li>
+</ul>
+<a name="isVersionProperty">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isVersion</h4>
+<pre>public&nbsp;boolean isVersionProperty</pre>
+<div class="block">Gets the value of the property versionProperty.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="AnnotationBasedPersistentProperty-org.springframework.data.mapping.model.Property-org.springframework.data.mapping.PersistentEntity-org.springframework.data.mapping.model.SimpleTypeHolder-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AnnotationBasedPersistentProperty</h4>
+<pre>public&nbsp;AnnotationBasedPersistentProperty(<a href="../../../../../org/springframework/data/mapping/model/Property.html" title="class in org.springframework.data.mapping.model">Property</a>&nbsp;property,
+                                         <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping">PersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&nbsp;owner,
+                                         <a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html" title="class in org.springframework.data.mapping.model">SimpleTypeHolder</a>&nbsp;simpleTypeHolder)</pre>
+<div class="block">Creates a new <a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="class in org.springframework.data.mapping.model"><code>AnnotationBasedPersistentProperty</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>property</code> - must not be null.</dd>
+<dd><code>owner</code> - must not be null.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="getSpelExpression--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSpelExpression</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSpelExpression()</pre>
+<div class="block">Inspects a potentially available <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/annotation/Value.html?is-external=true" title="class or interface in org.springframework.beans.factory.annotation"><code>Value</code></a> annotation at the property and returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> value of
+it.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getSpelExpression--">getSpelExpression</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getSpelExpression--">getSpelExpression</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">AbstractPersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>null if no expression defined.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#getSpelExpression--"><code>AbstractPersistentProperty.getSpelExpression()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="isTransient--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isTransient</h4>
+<pre>public&nbsp;boolean&nbsp;isTransient()</pre>
+<div class="block">Considers plain transient fields, fields annotated with <a href="../../../../../org/springframework/data/annotation/Transient.html" title="annotation in org.springframework.data.annotation"><code>Transient</code></a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/annotation/Value.html?is-external=true" title="class or interface in org.springframework.beans.factory.annotation"><code>Value</code></a> or <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html?is-external=true" title="class or interface in org.springframework.beans.factory.annotation"><code>Autowired</code></a> as
+transient.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#isTransient--">isTransient</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#isTransient--">isTransient</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">AbstractPersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#isTransient--"><code>PersistentProperty.isTransient()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="isIdProperty--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isIdProperty</h4>
+<pre>public&nbsp;boolean&nbsp;isIdProperty()</pre>
+<div class="block">Gets the value of the property idProperty.</div>
+</li>
+</ul>
+<a name="isVersionProperty--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isVersionProperty</h4>
+<pre>public&nbsp;boolean&nbsp;isVersionProperty()</pre>
+<div class="block">Gets the value of the property versionProperty.</div>
+</li>
+</ul>
+<a name="isAssociation--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAssociation</h4>
+<pre>public&nbsp;boolean&nbsp;isAssociation()</pre>
+<div class="block">Considers the property an <a href="../../../../../org/springframework/data/mapping/Association.html" title="class in org.springframework.data.mapping"><code>Association</code></a> if it is annotated with <a href="../../../../../org/springframework/data/annotation/Reference.html" title="annotation in org.springframework.data.annotation"><code>Reference</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#isAssociation--">isAssociation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#isAssociation--">isAssociation</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">AbstractPersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="isWritable--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isWritable</h4>
+<pre>public&nbsp;boolean&nbsp;isWritable()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#isWritable--">PersistentProperty</a></code></span></div>
+<div class="block">Returns whether the current property is writable, i.e. if the value held for it shall be written to the data store.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#isWritable--">isWritable</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#isWritable--">isWritable</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">AbstractPersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="findAnnotation-java.lang.Class-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findAnnotation</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+public&nbsp;&lt;A extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;A&nbsp;findAnnotation(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;A&gt;&nbsp;annotationType)</pre>
+<div class="block">Returns the annotation found for the current <a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="class in org.springframework.data.mapping.model"><code>AnnotationBasedPersistentProperty</code></a>. Will prefer getters or
+setters annotations over ones found at the backing field as the former can be used to reconfigure the metadata in
+subclasses.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>annotationType</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>null if annotation type not found on property.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/annotation/AnnotationUtils.html?is-external=true#findAnnotation-java.lang.reflect.Method-java.lang.Class-" title="class or interface in org.springframework.core.annotation"><code>AnnotationUtils.findAnnotation(Method, Class)</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="findPropertyOrOwnerAnnotation-java.lang.Class-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findPropertyOrOwnerAnnotation</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+public&nbsp;&lt;A extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;A&nbsp;findPropertyOrOwnerAnnotation(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;A&gt;&nbsp;annotationType)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#findPropertyOrOwnerAnnotation-java.lang.Class-">PersistentProperty</a></code></span></div>
+<div class="block">Looks up the annotation of the given type on the property and the owning type if no annotation can be found on it.
+Useful to lookup annotations that can be configured on the type but overridden on an individual property.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>annotationType</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the annotation of the given type. Can be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="isAnnotationPresent-java.lang.Class-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAnnotationPresent</h4>
+<pre>public&nbsp;boolean&nbsp;isAnnotationPresent(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotationType)</pre>
+<div class="block">Returns whether the property carries the an annotation of the given type.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>annotationType</code> - the annotation type to look up.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="usePropertyAccess--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>usePropertyAccess</h4>
+<pre>public&nbsp;boolean&nbsp;usePropertyAccess()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#usePropertyAccess--">PersistentProperty</a></code></span></div>
+<div class="block">Returns whether property access shall be used for reading the property value. This means it will use the getter
+instead of field access.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#usePropertyAccess--">usePropertyAccess</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#usePropertyAccess--">usePropertyAccess</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">AbstractPersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="toString--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html#toString--">toString</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model">AbstractPersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" title="type parameter in AnnotationBasedPersistentProperty">P</a>&gt;&gt;</code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AnnotationBasedPersistentProperty.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/mapping/model/AbstractPersistentProperty.html" title="class in org.springframework.data.mapping.model"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../org/springframework/data/mapping/model/BasicPersistentEntity.html" title="class in org.springframework.data.mapping.model"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/mapping/model/AnnotationBasedPersistentProperty.html" target="_top">Frames</a></li>
+<li><a href="AnnotationBasedPersistentProperty.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

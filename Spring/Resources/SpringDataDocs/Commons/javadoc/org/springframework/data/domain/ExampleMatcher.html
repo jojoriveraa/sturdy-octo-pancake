@@ -1,0 +1,768 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ExampleMatcher (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="ExampleMatcher (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":18,"i6":18,"i7":6,"i8":18,"i9":17,"i10":17,"i11":17,"i12":18,"i13":6,"i14":6,"i15":18,"i16":6,"i17":18,"i18":6,"i19":18,"i20":6,"i21":6,"i22":6};var tabs={65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/ExampleMatcher.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/domain/ExampleMatcher.html" target="_top">Frames</a></li>
+<li><a href="ExampleMatcher.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.domain</div>
+<h2 title="Interface ExampleMatcher" class="title">Interface ExampleMatcher</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public interface <span class="typeNameLabel">ExampleMatcher</span></pre>
+<div class="block">Specification for property path matching to use in query by example (QBE). An <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> can be created
+for a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang"><code>object type</code></a>. Instances of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> can be either <a href="../../../../org/springframework/data/domain/ExampleMatcher.html#matchingAll--"><code>matchingAll()</code></a> or
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.html#matchingAny--"><code>matchingAny()</code></a> and settings can be tuned <code>with...</code> methods in a fluent style. <code>with...</code> methods
+return a copy of the <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> instance with the specified setting. Null-handling defaults to
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html#IGNORE"><code>ExampleMatcher.NullHandler.IGNORE</code></a> and case-sensitive <a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html#DEFAULT"><code>ExampleMatcher.StringMatcher.DEFAULT</code></a> string matching.
+<p>
+This class is immutable.</div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.12</dd>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Christoph Strobl, Mark Paluch, Oliver Gierke, Jens Schauder</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="nested.class.summary">
+
+</a>
+<h3>Nested Class Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain">ExampleMatcher.GenericPropertyMatcher</a></span></code>
+<div class="block">A generic property matcher that specifies <a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html" title="enum in org.springframework.data.domain"><code>string matching</code></a> and case sensitivity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatchers.html" title="class in org.springframework.data.domain">ExampleMatcher.GenericPropertyMatchers</a></span></code>
+<div class="block">Predefined property matchers to create a <a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain"><code>ExampleMatcher.GenericPropertyMatcher</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.MatcherConfigurer.html" title="interface in org.springframework.data.domain">ExampleMatcher.MatcherConfigurer</a>&lt;<a href="../../../../org/springframework/data/domain/ExampleMatcher.MatcherConfigurer.html" title="type parameter in ExampleMatcher.MatcherConfigurer">T</a>&gt;</span></code>
+<div class="block">Callback to configure a matcher.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.MatchMode.html" title="enum in org.springframework.data.domain">ExampleMatcher.MatchMode</a></span></code>
+<div class="block">The match modes to expose so that clients can find about how to concatenate the predicates.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.NoOpPropertyValueTransformer.html" title="enum in org.springframework.data.domain">ExampleMatcher.NoOpPropertyValueTransformer</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html" title="enum in org.springframework.data.domain">ExampleMatcher.NullHandler</a></span></code>
+<div class="block">Null handling for creating criterion out of an <a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><code>Example</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.PropertySpecifier.html" title="class in org.springframework.data.domain">ExampleMatcher.PropertySpecifier</a></span></code>
+<div class="block">Define specific property handling for a Dot-Path.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.PropertySpecifiers.html" title="class in org.springframework.data.domain">ExampleMatcher.PropertySpecifiers</a></span></code>
+<div class="block">Define specific property handling for Dot-Paths.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.PropertyValueTransformer.html" title="interface in org.springframework.data.domain">ExampleMatcher.PropertyValueTransformer</a></span></code>
+<div class="block">Allows to transform the property value before it is used in the query.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html" title="enum in org.springframework.data.domain">ExampleMatcher.StringMatcher</a></span></code>
+<div class="block">Match modes for treatment of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> values.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html" title="enum in org.springframework.data.domain">ExampleMatcher.StringMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#getDefaultStringMatcher--">getDefaultStringMatcher</a></span>()</code>
+<div class="block">Get defined <a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html" title="enum in org.springframework.data.domain"><code>ExampleMatcher.StringMatcher</code></a>.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#getIgnoredPaths--">getIgnoredPaths</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.MatchMode.html" title="enum in org.springframework.data.domain">ExampleMatcher.MatchMode</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#getMatchMode--">getMatchMode</a></span>()</code>
+<div class="block">Get the match mode of the <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html" title="enum in org.springframework.data.domain">ExampleMatcher.NullHandler</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#getNullHandler--">getNullHandler</a></span>()</code>
+<div class="block">Get defined null handling.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.PropertySpecifiers.html" title="class in org.springframework.data.domain">ExampleMatcher.PropertySpecifiers</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#getPropertySpecifiers--">getPropertySpecifiers</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#isAllMatching--">isAllMatching</a></span>()</code>
+<div class="block">Returns whether all of the predicates of the <a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><code>Example</code></a> are supposed to match.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#isAnyMatching--">isAnyMatching</a></span>()</code>
+<div class="block">Returns whether it's sufficient that any of the predicates of the <a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><code>Example</code></a> match.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#isIgnoreCaseEnabled--">isIgnoreCaseEnabled</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#isIgnoredPath-java.lang.String-">isIgnoredPath</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#matching--">matching</a></span>()</code>
+<div class="block">Create a new <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> including all non-null properties by default matching <strong>all</strong>
+predicates derived from the example.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#matchingAll--">matchingAll</a></span>()</code>
+<div class="block">Create a new <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> including all non-null properties by default matching <strong>all</strong>
+predicates derived from the example.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#matchingAny--">matchingAny</a></span>()</code>
+<div class="block">Create a new <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> including all non-null properties by default matching <strong>any</strong>
+predicate derived from the example.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>default <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withIgnoreCase--">withIgnoreCase</a></span>()</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with ignoring case sensitivity by default.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withIgnoreCase-boolean-">withIgnoreCase</a></span>(boolean&nbsp;defaultIgnoreCase)</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with <code>defaultIgnoreCase</code>.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withIgnoreCase-java.lang.String...-">withIgnoreCase</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;propertyPaths)</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with ignore case sensitivity for the <code>propertyPaths</code>.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withIgnoreNullValues--">withIgnoreNullValues</a></span>()</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with treatment for null values of
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html#IGNORE"><code>ExampleMatcher.NullHandler.IGNORE</code></a>.</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withIgnorePaths-java.lang.String...-">withIgnorePaths</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;ignoredPaths)</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>propertyPaths</code>.</div>
+</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withIncludeNullValues--">withIncludeNullValues</a></span>()</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with treatment for null values of
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html#INCLUDE"><code>ExampleMatcher.NullHandler.INCLUDE</code></a> .</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withMatcher-java.lang.String-org.springframework.data.domain.ExampleMatcher.GenericPropertyMatcher-">withMatcher</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyPath,
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain">ExampleMatcher.GenericPropertyMatcher</a>&nbsp;genericPropertyMatcher)</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>GenericPropertyMatcher</code> for the
+<code>propertyPath</code>.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withMatcher-java.lang.String-org.springframework.data.domain.ExampleMatcher.MatcherConfigurer-">withMatcher</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyPath,
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.MatcherConfigurer.html" title="interface in org.springframework.data.domain">ExampleMatcher.MatcherConfigurer</a>&lt;<a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain">ExampleMatcher.GenericPropertyMatcher</a>&gt;&nbsp;matcherConfigurer)</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>GenericPropertyMatcher</code> for the
+<code>propertyPath</code>.</div>
+</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withNullHandler-org.springframework.data.domain.ExampleMatcher.NullHandler-">withNullHandler</a></span>(<a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html" title="enum in org.springframework.data.domain">ExampleMatcher.NullHandler</a>&nbsp;nullHandler)</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>nullHandler</code>.</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withStringMatcher-org.springframework.data.domain.ExampleMatcher.StringMatcher-">withStringMatcher</a></span>(<a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html" title="enum in org.springframework.data.domain">ExampleMatcher.StringMatcher</a>&nbsp;defaultStringMatcher)</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified string matching of <code>defaultStringMatcher</code>.</div>
+</td>
+</tr>
+<tr id="i22" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#withTransformer-java.lang.String-org.springframework.data.domain.ExampleMatcher.PropertyValueTransformer-">withTransformer</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyPath,
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.PropertyValueTransformer.html" title="interface in org.springframework.data.domain">ExampleMatcher.PropertyValueTransformer</a>&nbsp;propertyValueTransformer)</code>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>PropertyValueTransformer</code> for the
+<code>propertyPath</code>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="matching--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>matching</h4>
+<pre>static&nbsp;<a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;matching()</pre>
+<div class="block">Create a new <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> including all non-null properties by default matching <strong>all</strong>
+predicates derived from the example.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../org/springframework/data/domain/ExampleMatcher.html#matchingAll--"><code>matchingAll()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="matchingAny--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>matchingAny</h4>
+<pre>static&nbsp;<a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;matchingAny()</pre>
+<div class="block">Create a new <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> including all non-null properties by default matching <strong>any</strong>
+predicate derived from the example.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="matchingAll--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>matchingAll</h4>
+<pre>static&nbsp;<a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;matchingAll()</pre>
+<div class="block">Create a new <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> including all non-null properties by default matching <strong>all</strong>
+predicates derived from the example.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withIgnorePaths-java.lang.String...-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withIgnorePaths</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withIgnorePaths(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;ignoredPaths)</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>propertyPaths</code>. This instance is immutable
+and unaffected by this method call.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ignoredPaths</code> - must not be null and not empty.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withStringMatcher-org.springframework.data.domain.ExampleMatcher.StringMatcher-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withStringMatcher</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withStringMatcher(<a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html" title="enum in org.springframework.data.domain">ExampleMatcher.StringMatcher</a>&nbsp;defaultStringMatcher)</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified string matching of <code>defaultStringMatcher</code>.
+This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>defaultStringMatcher</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withIgnoreCase--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withIgnoreCase</h4>
+<pre>default&nbsp;<a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withIgnoreCase()</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with ignoring case sensitivity by default. This instance is immutable
+and unaffected by this method call.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withIgnoreCase-boolean-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withIgnoreCase</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withIgnoreCase(boolean&nbsp;defaultIgnoreCase)</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with <code>defaultIgnoreCase</code>. This instance is immutable and
+unaffected by this method call.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>defaultIgnoreCase</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withMatcher-java.lang.String-org.springframework.data.domain.ExampleMatcher.MatcherConfigurer-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withMatcher</h4>
+<pre>default&nbsp;<a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withMatcher(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyPath,
+                                   <a href="../../../../org/springframework/data/domain/ExampleMatcher.MatcherConfigurer.html" title="interface in org.springframework.data.domain">ExampleMatcher.MatcherConfigurer</a>&lt;<a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain">ExampleMatcher.GenericPropertyMatcher</a>&gt;&nbsp;matcherConfigurer)</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>GenericPropertyMatcher</code> for the
+<code>propertyPath</code>. This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>propertyPath</code> - must not be null.</dd>
+<dd><code>matcherConfigurer</code> - callback to configure a <a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain"><code>ExampleMatcher.GenericPropertyMatcher</code></a>, must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withMatcher-java.lang.String-org.springframework.data.domain.ExampleMatcher.GenericPropertyMatcher-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withMatcher</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withMatcher(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyPath,
+                           <a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain">ExampleMatcher.GenericPropertyMatcher</a>&nbsp;genericPropertyMatcher)</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>GenericPropertyMatcher</code> for the
+<code>propertyPath</code>. This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>propertyPath</code> - must not be null.</dd>
+<dd><code>genericPropertyMatcher</code> - callback to configure a <a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain"><code>ExampleMatcher.GenericPropertyMatcher</code></a>, must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withTransformer-java.lang.String-org.springframework.data.domain.ExampleMatcher.PropertyValueTransformer-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withTransformer</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withTransformer(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyPath,
+                               <a href="../../../../org/springframework/data/domain/ExampleMatcher.PropertyValueTransformer.html" title="interface in org.springframework.data.domain">ExampleMatcher.PropertyValueTransformer</a>&nbsp;propertyValueTransformer)</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>PropertyValueTransformer</code> for the
+<code>propertyPath</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>propertyPath</code> - must not be null.</dd>
+<dd><code>propertyValueTransformer</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withIgnoreCase-java.lang.String...-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withIgnoreCase</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withIgnoreCase(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;propertyPaths)</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with ignore case sensitivity for the <code>propertyPaths</code>. This
+instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>propertyPaths</code> - must not be null and not empty.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withIncludeNullValues--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withIncludeNullValues</h4>
+<pre>default&nbsp;<a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withIncludeNullValues()</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with treatment for null values of
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html#INCLUDE"><code>ExampleMatcher.NullHandler.INCLUDE</code></a> . This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withIgnoreNullValues--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withIgnoreNullValues</h4>
+<pre>default&nbsp;<a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withIgnoreNullValues()</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with treatment for null values of
+<a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html#IGNORE"><code>ExampleMatcher.NullHandler.IGNORE</code></a>. This instance is immutable and unaffected by this method call.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="withNullHandler-org.springframework.data.domain.ExampleMatcher.NullHandler-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withNullHandler</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain">ExampleMatcher</a>&nbsp;withNullHandler(<a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html" title="enum in org.springframework.data.domain">ExampleMatcher.NullHandler</a>&nbsp;nullHandler)</pre>
+<div class="block">Returns a copy of this <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a> with the specified <code>nullHandler</code>. This instance is immutable
+and unaffected by this method call.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>nullHandler</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>new instance of <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="getNullHandler--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNullHandler</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.NullHandler.html" title="enum in org.springframework.data.domain">ExampleMatcher.NullHandler</a>&nbsp;getNullHandler()</pre>
+<div class="block">Get defined null handling.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>never null</dd>
+</dl>
+</li>
+</ul>
+<a name="getDefaultStringMatcher--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultStringMatcher</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html" title="enum in org.springframework.data.domain">ExampleMatcher.StringMatcher</a>&nbsp;getDefaultStringMatcher()</pre>
+<div class="block">Get defined <a href="../../../../org/springframework/data/domain/ExampleMatcher.StringMatcher.html" title="enum in org.springframework.data.domain"><code>ExampleMatcher.StringMatcher</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>never null.</dd>
+</dl>
+</li>
+</ul>
+<a name="isIgnoreCaseEnabled--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isIgnoreCaseEnabled</h4>
+<pre>boolean&nbsp;isIgnoreCaseEnabled()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> should be matched with ignore case option.</dd>
+</dl>
+</li>
+</ul>
+<a name="isIgnoredPath-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isIgnoredPath</h4>
+<pre>default&nbsp;boolean&nbsp;isIgnoredPath(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path)</pre>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>path</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>return true if path was set to be ignored.</dd>
+</dl>
+</li>
+</ul>
+<a name="getIgnoredPaths--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIgnoredPaths</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getIgnoredPaths()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>unmodifiable <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util"><code>Set</code></a> of ignored paths.</dd>
+</dl>
+</li>
+</ul>
+<a name="getPropertySpecifiers--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPropertySpecifiers</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.PropertySpecifiers.html" title="class in org.springframework.data.domain">ExampleMatcher.PropertySpecifiers</a>&nbsp;getPropertySpecifiers()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../org/springframework/data/domain/ExampleMatcher.PropertySpecifiers.html" title="class in org.springframework.data.domain"><code>ExampleMatcher.PropertySpecifiers</code></a> within the <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="isAllMatching--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAllMatching</h4>
+<pre>default&nbsp;boolean&nbsp;isAllMatching()</pre>
+<div class="block">Returns whether all of the predicates of the <a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><code>Example</code></a> are supposed to match. If false is
+returned, it's sufficient if any of the predicates derived from the <a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><code>Example</code></a> match.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>whether all of the predicates of the <a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><code>Example</code></a> are supposed to match or any of them is sufficient.</dd>
+</dl>
+</li>
+</ul>
+<a name="isAnyMatching--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAnyMatching</h4>
+<pre>default&nbsp;boolean&nbsp;isAnyMatching()</pre>
+<div class="block">Returns whether it's sufficient that any of the predicates of the <a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><code>Example</code></a> match. If false is
+returned, all predicates derived from the example need to match to produce results.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>whether it's sufficient that any of the predicates of the <a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><code>Example</code></a> match or all need to match.</dd>
+</dl>
+</li>
+</ul>
+<a name="getMatchMode--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getMatchMode</h4>
+<pre><a href="../../../../org/springframework/data/domain/ExampleMatcher.MatchMode.html" title="enum in org.springframework.data.domain">ExampleMatcher.MatchMode</a>&nbsp;getMatchMode()</pre>
+<div class="block">Get the match mode of the <a href="../../../../org/springframework/data/domain/ExampleMatcher.html" title="interface in org.springframework.data.domain"><code>ExampleMatcher</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>never null.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.0</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/ExampleMatcher.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/domain/Example.html" title="interface in org.springframework.data.domain"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/domain/ExampleMatcher.GenericPropertyMatcher.html" title="class in org.springframework.data.domain"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/domain/ExampleMatcher.html" target="_top">Frames</a></li>
+<li><a href="ExampleMatcher.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

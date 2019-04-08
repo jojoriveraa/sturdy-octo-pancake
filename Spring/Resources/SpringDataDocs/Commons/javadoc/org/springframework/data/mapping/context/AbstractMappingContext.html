@@ -1,0 +1,731 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AbstractMappingContext (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="AbstractMappingContext (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":6,"i4":6,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AbstractMappingContext.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../org/springframework/data/mapping/context/InvalidPersistentPropertyPath.html" title="class in org.springframework.data.mapping.context"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/mapping/context/AbstractMappingContext.html" target="_top">Frames</a></li>
+<li><a href="AbstractMappingContext.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.mapping.context</div>
+<h2 title="Class AbstractMappingContext" class="title">Class AbstractMappingContext&lt;E extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,P&gt;,P extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;P&gt;&gt;</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.mapping.context.AbstractMappingContext&lt;E,P&gt;</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>E</code> - the concrete <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> type the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a> implementation creates</dd>
+<dd><code>P</code> - the concrete <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> type the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a> implementation creates</dd>
+</dl>
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/Aware.html?is-external=true" title="class or interface in org.springframework.beans.factory">Aware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true" title="class or interface in org.springframework.beans.factory">InitializingBean</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/ApplicationEventPublisherAware.html?is-external=true" title="class or interface in org.springframework.context">ApplicationEventPublisherAware</a>, <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;E,P&gt;</dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="typeNameLabel">AbstractMappingContext&lt;E extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,P&gt;,P extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;P&gt;&gt;</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;E,P&gt;, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/ApplicationEventPublisherAware.html?is-external=true" title="class or interface in org.springframework.context">ApplicationEventPublisherAware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true" title="class or interface in org.springframework.beans.factory">InitializingBean</a></pre>
+<div class="block">Base class to build mapping metadata and thus create instances of <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> and
+<a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>.
+<p>
+The implementation uses a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html?is-external=true" title="class or interface in java.util.concurrent.locks"><code>ReentrantReadWriteLock</code></a> to make sure <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> are completely
+populated before accessing them from outside.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Jon Brisbin, Oliver Gierke, Michael Hunger, Thomas Darimont, Tomasz Wysocki, Mark Paluch, Mikael Klamra, Christoph Strobl</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#AbstractMappingContext--">AbstractMappingContext</a></span>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#addPersistentEntity-java.lang.Class-">addPersistentEntity</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type)</code>
+<div class="block">Adds the given type to the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#addPersistentEntity-org.springframework.data.util.TypeInformation-">addPersistentEntity</a></span>(<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&nbsp;typeInformation)</code>
+<div class="block">Adds the given <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a> to the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#afterPropertiesSet--">afterPropertiesSet</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>protected abstract &lt;T&gt;&nbsp;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#createPersistentEntity-org.springframework.data.util.TypeInformation-">createPersistentEntity</a></span>(<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;T&gt;&nbsp;typeInformation)</code>
+<div class="block">Creates the concrete <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> instance.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>protected abstract <a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#createPersistentProperty-org.springframework.data.mapping.model.Property-E-org.springframework.data.mapping.model.SimpleTypeHolder-">createPersistentProperty</a></span>(<a href="../../../../../org/springframework/data/mapping/model/Property.html" title="class in org.springframework.data.mapping.model">Property</a>&nbsp;property,
+<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&nbsp;owner,
+<a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html" title="class in org.springframework.data.mapping.model">SimpleTypeHolder</a>&nbsp;simpleTypeHolder)</code>
+<div class="block">Creates the concrete instance of <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#getManagedTypes--">getManagedTypes</a></span>()</code>
+<div class="block">Returns the <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a>s for all <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a>s in the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#getPersistentEntities--">getPersistentEntities</a></span>()</code>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a>s held in the context.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#getPersistentEntity-java.lang.Class-">getPersistentEntity</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type)</code>
+<div class="block">Returns a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> for the given <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang"><code>Class</code></a>.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#getPersistentEntity-P-">getPersistentEntity</a></span>(<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&nbsp;persistentProperty)</code>
+<div class="block">Returns the <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> mapped by the given <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#getPersistentEntity-org.springframework.data.util.TypeInformation-">getPersistentEntity</a></span>(<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&nbsp;type)</code>
+<div class="block">Returns a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> for the given <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a>.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#getPersistentPropertyPath-org.springframework.data.mapping.context.InvalidPersistentPropertyPath-">getPersistentPropertyPath</a></span>(<a href="../../../../../org/springframework/data/mapping/context/InvalidPersistentPropertyPath.html" title="class in org.springframework.data.mapping.context">InvalidPersistentPropertyPath</a>&nbsp;invalidPath)</code>
+<div class="block">Returns the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> for the resolvable part of the given
+<a href="../../../../../org/springframework/data/mapping/context/InvalidPersistentPropertyPath.html" title="class in org.springframework.data.mapping.context"><code>InvalidPersistentPropertyPath</code></a>.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#getPersistentPropertyPath-org.springframework.data.mapping.PropertyPath-">getPersistentPropertyPath</a></span>(<a href="../../../../../org/springframework/data/mapping/PropertyPath.html" title="class in org.springframework.data.mapping">PropertyPath</a>&nbsp;propertyPath)</code>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>s for the given path expression based on the given <a href="../../../../../org/springframework/data/mapping/PropertyPath.html" title="class in org.springframework.data.mapping"><code>PropertyPath</code></a>.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#getPersistentPropertyPath-java.lang.String-java.lang.Class-">getPersistentPropertyPath</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyPath,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type)</code>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>s for the given dot path notation based on the given type.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#hasPersistentEntityFor-java.lang.Class-">hasPersistentEntityFor</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type)</code>
+<div class="block">Returns whether the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a> currently contains a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> for the type.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#initialize--">initialize</a></span>()</code>
+<div class="block">Initializes the mapping context.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#setApplicationEventPublisher-org.springframework.context.ApplicationEventPublisher-">setApplicationEventPublisher</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/ApplicationEventPublisher.html?is-external=true" title="class or interface in org.springframework.context">ApplicationEventPublisher</a>&nbsp;applicationEventPublisher)</code>&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#setInitialEntitySet-java.util.Set-">setInitialEntitySet</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&gt;&nbsp;initialEntitySet)</code>
+<div class="block">Sets the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util"><code>Set</code></a> of types to populate the context initially.</div>
+</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#setSimpleTypeHolder-org.springframework.data.mapping.model.SimpleTypeHolder-">setSimpleTypeHolder</a></span>(<a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html" title="class in org.springframework.data.mapping.model">SimpleTypeHolder</a>&nbsp;simpleTypes)</code>
+<div class="block">Configures the <a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html" title="class in org.springframework.data.mapping.model"><code>SimpleTypeHolder</code></a> to be used by the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>.</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#setStrict-boolean-">setStrict</a></span>(boolean&nbsp;strict)</code>
+<div class="block">Configures whether the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a> is in strict mode which means, that it will throw
+<a href="../../../../../org/springframework/data/mapping/MappingException.html" title="class in org.springframework.data.mapping"><code>MappingException</code></a>s in case one tries to lookup a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> not already in the context.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#shouldCreatePersistentEntityFor-org.springframework.data.util.TypeInformation-">shouldCreatePersistentEntityFor</a></span>(<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&nbsp;type)</code>
+<div class="block">Returns whether a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> instance should be created for the given <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a>.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.data.mapping.context.MappingContext">
+
+</a>
+<h3>Methods inherited from interface&nbsp;org.springframework.data.mapping.context.<a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a></h3>
+<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getRequiredPersistentEntity-java.lang.Class-">getRequiredPersistentEntity</a>, <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getRequiredPersistentEntity-P-">getRequiredPersistentEntity</a>, <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getRequiredPersistentEntity-org.springframework.data.util.TypeInformation-">getRequiredPersistentEntity</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="AbstractMappingContext--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AbstractMappingContext</h4>
+<pre>public&nbsp;AbstractMappingContext()</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="setApplicationEventPublisher-org.springframework.context.ApplicationEventPublisher-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setApplicationEventPublisher</h4>
+<pre>public&nbsp;void&nbsp;setApplicationEventPublisher(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/ApplicationEventPublisher.html?is-external=true" title="class or interface in org.springframework.context">ApplicationEventPublisher</a>&nbsp;applicationEventPublisher)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/ApplicationEventPublisherAware.html?is-external=true#setApplicationEventPublisher-org.springframework.context.ApplicationEventPublisher-" title="class or interface in org.springframework.context">setApplicationEventPublisher</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/ApplicationEventPublisherAware.html?is-external=true" title="class or interface in org.springframework.context">ApplicationEventPublisherAware</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setInitialEntitySet-java.util.Set-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setInitialEntitySet</h4>
+<pre>public&nbsp;void&nbsp;setInitialEntitySet(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&gt;&nbsp;initialEntitySet)</pre>
+<div class="block">Sets the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util"><code>Set</code></a> of types to populate the context initially.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>initialEntitySet</code> - </dd>
+</dl>
+</li>
+</ul>
+<a name="setStrict-boolean-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setStrict</h4>
+<pre>public&nbsp;void&nbsp;setStrict(boolean&nbsp;strict)</pre>
+<div class="block">Configures whether the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a> is in strict mode which means, that it will throw
+<a href="../../../../../org/springframework/data/mapping/MappingException.html" title="class in org.springframework.data.mapping"><code>MappingException</code></a>s in case one tries to lookup a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> not already in the context. This
+defaults to false so that unknown types will be transparently added to the MappingContext if not known
+in advance.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>strict</code> - </dd>
+</dl>
+</li>
+</ul>
+<a name="setSimpleTypeHolder-org.springframework.data.mapping.model.SimpleTypeHolder-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSimpleTypeHolder</h4>
+<pre>public&nbsp;void&nbsp;setSimpleTypeHolder(<a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html" title="class in org.springframework.data.mapping.model">SimpleTypeHolder</a>&nbsp;simpleTypes)</pre>
+<div class="block">Configures the <a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html" title="class in org.springframework.data.mapping.model"><code>SimpleTypeHolder</code></a> to be used by the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>. Allows customization of what
+types will be regarded as simple types and thus not recursively analyzed.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>simpleTypes</code> - must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getPersistentEntities--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPersistentEntities</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&gt;&nbsp;getPersistentEntities()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentEntities--">MappingContext</a></code></span></div>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a>s held in the context.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentEntities--">getPersistentEntities</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>never null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getPersistentEntity-java.lang.Class-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPersistentEntity</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+public&nbsp;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&nbsp;getPersistentEntity(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentEntity-java.lang.Class-">MappingContext</a></code></span></div>
+<div class="block">Returns a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> for the given <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang"><code>Class</code></a>. Will return <code>null</code> for types that are
+considered simple ones.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentEntity-java.lang.Class-">getPersistentEntity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>null if no <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> found for type.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html#isSimpleType-java.lang.Class-"><code>SimpleTypeHolder.isSimpleType(Class)</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="hasPersistentEntityFor-java.lang.Class-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasPersistentEntityFor</h4>
+<pre>public&nbsp;boolean&nbsp;hasPersistentEntityFor(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#hasPersistentEntityFor-java.lang.Class-">MappingContext</a></code></span></div>
+<div class="block">Returns whether the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a> currently contains a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> for the type.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#hasPersistentEntityFor-java.lang.Class-">hasPersistentEntityFor</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> present for given type.</dd>
+</dl>
+</li>
+</ul>
+<a name="getPersistentEntity-org.springframework.data.util.TypeInformation-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPersistentEntity</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+public&nbsp;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&nbsp;getPersistentEntity(<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&nbsp;type)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentEntity-org.springframework.data.util.TypeInformation-">MappingContext</a></code></span></div>
+<div class="block">Returns a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> for the given <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a>. Will return <code>null</code> for types that
+are considered simple ones.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentEntity-org.springframework.data.util.TypeInformation-">getPersistentEntity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>null if no <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> found for <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a>.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html#isSimpleType-java.lang.Class-"><code>SimpleTypeHolder.isSimpleType(Class)</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="getPersistentEntity-org.springframework.data.mapping.PersistentProperty-">
+
+</a><a name="getPersistentEntity-P-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPersistentEntity</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+public&nbsp;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&nbsp;getPersistentEntity(<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&nbsp;persistentProperty)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentEntity-P-">MappingContext</a></code></span></div>
+<div class="block">Returns the <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> mapped by the given <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentEntity-P-">getPersistentEntity</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>persistentProperty</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> mapped by the given <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> or null if no
+<a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> exists for it or the <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> does not refer to an entity (the
+type of the property is considered simple see
+<a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html#isSimpleType-java.lang.Class-"><code>SimpleTypeHolder.isSimpleType(Class)</code></a>).</dd>
+</dl>
+</li>
+</ul>
+<a name="getPersistentPropertyPath-org.springframework.data.mapping.PropertyPath-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPersistentPropertyPath</h4>
+<pre>public&nbsp;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&nbsp;getPersistentPropertyPath(<a href="../../../../../org/springframework/data/mapping/PropertyPath.html" title="class in org.springframework.data.mapping">PropertyPath</a>&nbsp;propertyPath)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentPropertyPath-org.springframework.data.mapping.PropertyPath-">MappingContext</a></code></span></div>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>s for the given path expression based on the given <a href="../../../../../org/springframework/data/mapping/PropertyPath.html" title="class in org.springframework.data.mapping"><code>PropertyPath</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentPropertyPath-org.springframework.data.mapping.PropertyPath-">getPersistentPropertyPath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>propertyPath</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> representing the given <a href="../../../../../org/springframework/data/mapping/PropertyPath.html" title="class in org.springframework.data.mapping"><code>PropertyPath</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="getPersistentPropertyPath-java.lang.String-java.lang.Class-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPersistentPropertyPath</h4>
+<pre>public&nbsp;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&nbsp;getPersistentPropertyPath(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyPath,
+                                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentPropertyPath-java.lang.String-java.lang.Class-">MappingContext</a></code></span></div>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>s for the given dot path notation based on the given type.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentPropertyPath-java.lang.String-java.lang.Class-">getPersistentPropertyPath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>propertyPath</code> - must not be null.</dd>
+<dd><code>type</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> representing the given property path on the given type.</dd>
+</dl>
+</li>
+</ul>
+<a name="getPersistentPropertyPath-org.springframework.data.mapping.context.InvalidPersistentPropertyPath-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPersistentPropertyPath</h4>
+<pre>public&nbsp;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&nbsp;getPersistentPropertyPath(<a href="../../../../../org/springframework/data/mapping/context/InvalidPersistentPropertyPath.html" title="class in org.springframework.data.mapping.context">InvalidPersistentPropertyPath</a>&nbsp;invalidPath)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentPropertyPath-org.springframework.data.mapping.context.InvalidPersistentPropertyPath-">MappingContext</a></code></span></div>
+<div class="block">Returns the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> for the resolvable part of the given
+<a href="../../../../../org/springframework/data/mapping/context/InvalidPersistentPropertyPath.html" title="class in org.springframework.data.mapping.context"><code>InvalidPersistentPropertyPath</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getPersistentPropertyPath-org.springframework.data.mapping.context.InvalidPersistentPropertyPath-">getPersistentPropertyPath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>invalidPath</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> for the resolvable part of the given
+<a href="../../../../../org/springframework/data/mapping/context/InvalidPersistentPropertyPath.html" title="class in org.springframework.data.mapping.context"><code>InvalidPersistentPropertyPath</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="addPersistentEntity-java.lang.Class-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPersistentEntity</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&gt;&nbsp;addPersistentEntity(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type)</pre>
+<div class="block">Adds the given type to the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="addPersistentEntity-org.springframework.data.util.TypeInformation-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPersistentEntity</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&gt;&nbsp;addPersistentEntity(<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&nbsp;typeInformation)</pre>
+<div class="block">Adds the given <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a> to the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>typeInformation</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getManagedTypes--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getManagedTypes</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&gt;&nbsp;getManagedTypes()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getManagedTypes--">MappingContext</a></code></span></div>
+<div class="block">Returns the <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a>s for all <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a>s in the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html#getManagedTypes--">getManagedTypes</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a> extends <a href="../../../../../org/springframework/data/mapping/model/MutablePersistentEntity.html" title="interface in org.springframework.data.mapping.model">MutablePersistentEntity</a>&lt;?,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;,<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a> extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&gt;&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>all <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a>s for the <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a>s in the <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="createPersistentEntity-org.springframework.data.util.TypeInformation-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createPersistentEntity</h4>
+<pre>protected abstract&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&nbsp;createPersistentEntity(<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;T&gt;&nbsp;typeInformation)</pre>
+<div class="block">Creates the concrete <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> instance.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - </dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>typeInformation</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="createPersistentProperty-org.springframework.data.mapping.model.Property-org.springframework.data.mapping.model.MutablePersistentEntity-org.springframework.data.mapping.model.SimpleTypeHolder-">
+
+</a><a name="createPersistentProperty-org.springframework.data.mapping.model.Property-E-org.springframework.data.mapping.model.SimpleTypeHolder-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createPersistentProperty</h4>
+<pre>protected abstract&nbsp;<a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">P</a>&nbsp;createPersistentProperty(<a href="../../../../../org/springframework/data/mapping/model/Property.html" title="class in org.springframework.data.mapping.model">Property</a>&nbsp;property,
+                                              <a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html" title="type parameter in AbstractMappingContext">E</a>&nbsp;owner,
+                                              <a href="../../../../../org/springframework/data/mapping/model/SimpleTypeHolder.html" title="class in org.springframework.data.mapping.model">SimpleTypeHolder</a>&nbsp;simpleTypeHolder)</pre>
+<div class="block">Creates the concrete instance of <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>property</code> - </dd>
+<dd><code>owner</code> - </dd>
+<dd><code>simpleTypeHolder</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="afterPropertiesSet--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>afterPropertiesSet</h4>
+<pre>public&nbsp;void&nbsp;afterPropertiesSet()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true#afterPropertiesSet--" title="class or interface in org.springframework.beans.factory">afterPropertiesSet</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true" title="class or interface in org.springframework.beans.factory">InitializingBean</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="initialize--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initialize</h4>
+<pre>public&nbsp;void&nbsp;initialize()</pre>
+<div class="block">Initializes the mapping context. Will add the types configured through <a href="../../../../../org/springframework/data/mapping/context/AbstractMappingContext.html#setInitialEntitySet-java.util.Set-"><code>setInitialEntitySet(Set)</code></a> to the
+context.</div>
+</li>
+</ul>
+<a name="shouldCreatePersistentEntityFor-org.springframework.data.util.TypeInformation-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>shouldCreatePersistentEntityFor</h4>
+<pre>protected&nbsp;boolean&nbsp;shouldCreatePersistentEntityFor(<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&nbsp;type)</pre>
+<div class="block">Returns whether a <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> instance should be created for the given <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a>. By
+default this will reject all types considered simple and non-supported Kotlin classes, but it might be necessary to
+tweak that in case you have registered custom converters for top level types (which renders them to be considered
+simple) but still need meta-information about them.
+<p /></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - will never be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AbstractMappingContext.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../org/springframework/data/mapping/context/InvalidPersistentPropertyPath.html" title="class in org.springframework.data.mapping.context"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/mapping/context/AbstractMappingContext.html" target="_top">Frames</a></li>
+<li><a href="AbstractMappingContext.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

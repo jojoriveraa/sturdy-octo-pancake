@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AuditingHandler (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="AuditingHandler (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AuditingHandler.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/auditing/AuditableBeanWrapperFactory.html" title="interface in org.springframework.data.auditing"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/auditing/CurrentDateTimeProvider.html" title="enum in org.springframework.data.auditing"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/auditing/AuditingHandler.html" target="_top">Frames</a></li>
+<li><a href="AuditingHandler.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.auditing</div>
+<h2 title="Class AuditingHandler" class="title">Class AuditingHandler</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.auditing.AuditingHandler</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true" title="class or interface in org.springframework.beans.factory">InitializingBean</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../org/springframework/data/auditing/IsNewAwareAuditingHandler.html" title="class in org.springframework.data.auditing">IsNewAwareAuditingHandler</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">AuditingHandler</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true" title="class or interface in org.springframework.beans.factory">InitializingBean</a></pre>
+<div class="block">Auditing handler to mark entity objects created and modified.</div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.5</dd>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke, Christoph Strobl</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#AuditingHandler-org.springframework.data.mapping.context.MappingContext-">AuditingHandler</a></span>(<a href="../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;? extends <a href="../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping">PersistentEntity</a>&lt;?,?&gt;,? extends <a href="../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;?&gt;&gt;&nbsp;mappingContext)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">use <a href="../../../../org/springframework/data/auditing/AuditingHandler.html#AuditingHandler-org.springframework.data.mapping.context.PersistentEntities-"><code>AuditingHandler(PersistentEntities)</code></a> instead.</span></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#AuditingHandler-org.springframework.data.mapping.context.PersistentEntities-">AuditingHandler</a></span>(<a href="../../../../org/springframework/data/mapping/context/PersistentEntities.html" title="class in org.springframework.data.mapping.context">PersistentEntities</a>&nbsp;entities)</code>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/auditing/AuditableBeanWrapper.html" title="interface in org.springframework.data.auditing"><code>AuditableBeanWrapper</code></a> using the given <a href="../../../../org/springframework/data/mapping/context/PersistentEntities.html" title="class in org.springframework.data.mapping.context"><code>PersistentEntities</code></a> when looking up auditing
+metadata via reflection.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#afterPropertiesSet--">afterPropertiesSet</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#isAuditable-java.lang.Object-">isAuditable</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</code>
+<div class="block">Returns whether the given source is considered to be auditable in the first place</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#markCreated-java.lang.Object-">markCreated</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</code>
+<div class="block">Marks the given object as created.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#markModified-java.lang.Object-">markModified</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</code>
+<div class="block">Marks the given object as modified.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#setAuditorAware-org.springframework.data.domain.AuditorAware-">setAuditorAware</a></span>(<a href="../../../../org/springframework/data/domain/AuditorAware.html" title="interface in org.springframework.data.domain">AuditorAware</a>&lt;?&gt;&nbsp;auditorAware)</code>
+<div class="block">Setter to inject a <code>AuditorAware</code> component to retrieve the current auditor.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#setDateTimeForNow-boolean-">setDateTimeForNow</a></span>(boolean&nbsp;dateTimeForNow)</code>
+<div class="block">Setter do determine if <code>Auditable#setCreatedDate(DateTime)</code> and
+<code>Auditable#setLastModifiedDate(DateTime)</code> shall be filled with the current Java time.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#setDateTimeProvider-org.springframework.data.auditing.DateTimeProvider-">setDateTimeProvider</a></span>(<a href="../../../../org/springframework/data/auditing/DateTimeProvider.html" title="interface in org.springframework.data.auditing">DateTimeProvider</a>&nbsp;dateTimeProvider)</code>
+<div class="block">Sets the <a href="../../../../org/springframework/data/auditing/DateTimeProvider.html" title="interface in org.springframework.data.auditing"><code>DateTimeProvider</code></a> to be used to determine the dates to be set.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/auditing/AuditingHandler.html#setModifyOnCreation-boolean-">setModifyOnCreation</a></span>(boolean&nbsp;modifyOnCreation)</code>
+<div class="block">Set this to false if you want to treat entity creation as modification and thus set the current date as
+modification date, too.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="AuditingHandler-org.springframework.data.mapping.context.MappingContext-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AuditingHandler</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;AuditingHandler(<a href="../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context">MappingContext</a>&lt;? extends <a href="../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping">PersistentEntity</a>&lt;?,?&gt;,? extends <a href="../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;?&gt;&gt;&nbsp;mappingContext)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../../org/springframework/data/auditing/AuditingHandler.html#AuditingHandler-org.springframework.data.mapping.context.PersistentEntities-"><code>AuditingHandler(PersistentEntities)</code></a> instead.</span></div>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/auditing/AuditableBeanWrapper.html" title="interface in org.springframework.data.auditing"><code>AuditableBeanWrapper</code></a> using the given <a href="../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a> when looking up auditing metadata
+via reflection.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>mappingContext</code> - must not be null.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.8</dd>
+</dl>
+</li>
+</ul>
+<a name="AuditingHandler-org.springframework.data.mapping.context.PersistentEntities-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AuditingHandler</h4>
+<pre>public&nbsp;AuditingHandler(<a href="../../../../org/springframework/data/mapping/context/PersistentEntities.html" title="class in org.springframework.data.mapping.context">PersistentEntities</a>&nbsp;entities)</pre>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/auditing/AuditableBeanWrapper.html" title="interface in org.springframework.data.auditing"><code>AuditableBeanWrapper</code></a> using the given <a href="../../../../org/springframework/data/mapping/context/PersistentEntities.html" title="class in org.springframework.data.mapping.context"><code>PersistentEntities</code></a> when looking up auditing
+metadata via reflection.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>entities</code> - must not be null.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.10</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="setAuditorAware-org.springframework.data.domain.AuditorAware-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAuditorAware</h4>
+<pre>public&nbsp;void&nbsp;setAuditorAware(<a href="../../../../org/springframework/data/domain/AuditorAware.html" title="interface in org.springframework.data.domain">AuditorAware</a>&lt;?&gt;&nbsp;auditorAware)</pre>
+<div class="block">Setter to inject a <code>AuditorAware</code> component to retrieve the current auditor.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>auditorAware</code> - must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="setDateTimeForNow-boolean-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDateTimeForNow</h4>
+<pre>public&nbsp;void&nbsp;setDateTimeForNow(boolean&nbsp;dateTimeForNow)</pre>
+<div class="block">Setter do determine if <code>Auditable#setCreatedDate(DateTime)</code> and
+<code>Auditable#setLastModifiedDate(DateTime)</code> shall be filled with the current Java time. Defaults to
+<code>true</code>. One might set this to <code>false</code> to use database features to set entity time.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dateTimeForNow</code> - the dateTimeForNow to set</dd>
+</dl>
+</li>
+</ul>
+<a name="setModifyOnCreation-boolean-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setModifyOnCreation</h4>
+<pre>public&nbsp;void&nbsp;setModifyOnCreation(boolean&nbsp;modifyOnCreation)</pre>
+<div class="block">Set this to false if you want to treat entity creation as modification and thus set the current date as
+modification date, too. Defaults to <code>true</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>modifyOnCreation</code> - if modification information shall be set on creation, too</dd>
+</dl>
+</li>
+</ul>
+<a name="setDateTimeProvider-org.springframework.data.auditing.DateTimeProvider-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDateTimeProvider</h4>
+<pre>public&nbsp;void&nbsp;setDateTimeProvider(<a href="../../../../org/springframework/data/auditing/DateTimeProvider.html" title="interface in org.springframework.data.auditing">DateTimeProvider</a>&nbsp;dateTimeProvider)</pre>
+<div class="block">Sets the <a href="../../../../org/springframework/data/auditing/DateTimeProvider.html" title="interface in org.springframework.data.auditing"><code>DateTimeProvider</code></a> to be used to determine the dates to be set.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dateTimeProvider</code> - </dd>
+</dl>
+</li>
+</ul>
+<a name="markCreated-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>markCreated</h4>
+<pre>public&nbsp;void&nbsp;markCreated(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</pre>
+<div class="block">Marks the given object as created.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>source</code> - </dd>
+</dl>
+</li>
+</ul>
+<a name="markModified-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>markModified</h4>
+<pre>public&nbsp;void&nbsp;markModified(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</pre>
+<div class="block">Marks the given object as modified.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>source</code> - </dd>
+</dl>
+</li>
+</ul>
+<a name="isAuditable-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isAuditable</h4>
+<pre>protected final&nbsp;boolean&nbsp;isAuditable(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</pre>
+<div class="block">Returns whether the given source is considered to be auditable in the first place</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>source</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="afterPropertiesSet--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>afterPropertiesSet</h4>
+<pre>public&nbsp;void&nbsp;afterPropertiesSet()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true#afterPropertiesSet--" title="class or interface in org.springframework.beans.factory">afterPropertiesSet</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true" title="class or interface in org.springframework.beans.factory">InitializingBean</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AuditingHandler.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/auditing/AuditableBeanWrapperFactory.html" title="interface in org.springframework.data.auditing"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/auditing/CurrentDateTimeProvider.html" title="enum in org.springframework.data.auditing"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/auditing/AuditingHandler.html" target="_top">Frames</a></li>
+<li><a href="AuditingHandler.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

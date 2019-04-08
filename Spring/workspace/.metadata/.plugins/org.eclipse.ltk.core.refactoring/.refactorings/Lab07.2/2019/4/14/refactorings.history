@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;items&apos; from expression &apos;catalog.findByKeyword(keyword)&apos;&#x0D;&#x0A;- Original project: &apos;Lab07.2&apos;&#x0D;&#x0A;- Variable name: &apos;items&apos;&#x0D;&#x0A;- Destination method: &apos;com.javatunes.web.HomeController.processSearch()&apos;&#x0D;&#x0A;- Variable expression: &apos;catalog.findByKeyword(keyword)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;items&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java&lt;com.javatunes.web{HomeController.java" name="items" replace="true" selection="993 30" stamp="1554329317262" version="1.0"/>
+</session>

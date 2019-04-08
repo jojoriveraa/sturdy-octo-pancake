@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MergingPersistenceUnitManager (Spring Data JPA 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="MergingPersistenceUnitManager (Spring Data JPA 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/MergingPersistenceUnitManager.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data JPA</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/jpa/support/ClasspathScanningPersistenceUnitPostProcessor.html" title="class in org.springframework.data.jpa.support"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/jpa/support/MergingPersistenceUnitManager.html" target="_top">Frames</a></li>
+<li><a href="MergingPersistenceUnitManager.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.jpa.support</div>
+<h2 title="Class MergingPersistenceUnitManager" class="title">Class MergingPersistenceUnitManager</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.jpa.support.MergingPersistenceUnitManager</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/Aware.html?is-external=true" title="class or interface in org.springframework.beans.factory">Aware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/InitializingBean.html?is-external=true" title="class or interface in org.springframework.beans.factory">InitializingBean</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/ResourceLoaderAware.html?is-external=true" title="class or interface in org.springframework.context">ResourceLoaderAware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/context/weaving/LoadTimeWeaverAware.html?is-external=true" title="class or interface in org.springframework.context.weaving">LoadTimeWeaverAware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/PersistenceUnitManager.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">PersistenceUnitManager</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">MergingPersistenceUnitManager</span>
+extends <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">DefaultPersistenceUnitManager</a></pre>
+<div class="block">Extends <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit"><code>DefaultPersistenceUnitManager</code></a> to merge configurations of one persistence unit residing in multiple
+<code>persistence.xml</code> files into one. This is necessary to allow the declaration of entities in seperate modules.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
+
+</a>
+<h3>Fields inherited from class&nbsp;org.springframework.orm.jpa.persistenceunit.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">DefaultPersistenceUnitManager</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#DEFAULT_PERSISTENCE_XML_LOCATION" title="class or interface in org.springframework.orm.jpa.persistenceunit">DEFAULT_PERSISTENCE_XML_LOCATION</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#logger" title="class or interface in org.springframework.orm.jpa.persistenceunit">logger</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#ORIGINAL_DEFAULT_PERSISTENCE_UNIT_NAME" title="class or interface in org.springframework.orm.jpa.persistenceunit">ORIGINAL_DEFAULT_PERSISTENCE_UNIT_NAME</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#ORIGINAL_DEFAULT_PERSISTENCE_UNIT_ROOT_LOCATION" title="class or interface in org.springframework.orm.jpa.persistenceunit">ORIGINAL_DEFAULT_PERSISTENCE_UNIT_ROOT_LOCATION</a></code></li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/jpa/support/MergingPersistenceUnitManager.html#MergingPersistenceUnitManager--">MergingPersistenceUnitManager</a></span>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/jpa/support/MergingPersistenceUnitManager.html#isPersistenceUnitOverrideAllowed--">isPersistenceUnitOverrideAllowed</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/jpa/support/MergingPersistenceUnitManager.html#postProcessPersistenceUnitInfo-org.springframework.orm.jpa.persistenceunit.MutablePersistenceUnitInfo-">postProcessPersistenceUnitInfo</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/MutablePersistenceUnitInfo.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">MutablePersistenceUnitInfo</a>&nbsp;pui)</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
+
+</a>
+<h3>Methods inherited from class&nbsp;org.springframework.orm.jpa.persistenceunit.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">DefaultPersistenceUnitManager</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#afterPropertiesSet--" title="class or interface in org.springframework.orm.jpa.persistenceunit">afterPropertiesSet</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#getDataSourceLookup--" title="class or interface in org.springframework.orm.jpa.persistenceunit">getDataSourceLookup</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#getDefaultDataSource--" title="class or interface in org.springframework.orm.jpa.persistenceunit">getDefaultDataSource</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#getDefaultJtaDataSource--" title="class or interface in org.springframework.orm.jpa.persistenceunit">getDefaultJtaDataSource</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#getLoadTimeWeaver--" title="class or interface in org.springframework.orm.jpa.persistenceunit">getLoadTimeWeaver</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#getPersistenceUnitInfo-java.lang.String-" title="class or interface in org.springframework.orm.jpa.persistenceunit">getPersistenceUnitInfo</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#getPersistenceUnitPostProcessors--" title="class or interface in org.springframework.orm.jpa.persistenceunit">getPersistenceUnitPostProcessors</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#obtainDefaultPersistenceUnitInfo--" title="class or interface in org.springframework.orm.jpa.persistenceunit">obtainDefaultPersistenceUnitInfo</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#obtainPersistenceUnitInfo-java.lang.String-" title="class or interface in org.springframework.orm.jpa.persistenceunit">obtainPersistenceUnitInfo</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#preparePersistenceUnitInfos--" title="class or interface in org.springframework.orm.jpa.persistenceunit">preparePersistenceUnitInfos</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setDataSourceLookup-org.springframework.jdbc.datasource.lookup.DataSourceLookup-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setDataSourceLookup</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setDataSources-java.util.Map-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setDataSources</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setDefaultDataSource-javax.sql.DataSource-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setDefaultDataSource</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setDefaultJtaDataSource-javax.sql.DataSource-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setDefaultJtaDataSource</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setDefaultPersistenceUnitName-java.lang.String-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setDefaultPersistenceUnitName</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setDefaultPersistenceUnitRootLocation-java.lang.String-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setDefaultPersistenceUnitRootLocation</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setLoadTimeWeaver-org.springframework.instrument.classloading.LoadTimeWeaver-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setLoadTimeWeaver</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setMappingResources-java.lang.String...-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setMappingResources</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setPackagesToScan-java.lang.String...-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setPackagesToScan</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setPersistenceUnitPostProcessors-org.springframework.orm.jpa.persistenceunit.PersistenceUnitPostProcessor...-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setPersistenceUnitPostProcessors</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setPersistenceXmlLocation-java.lang.String-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setPersistenceXmlLocation</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setPersistenceXmlLocations-java.lang.String...-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setPersistenceXmlLocations</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setResourceLoader-org.springframework.core.io.ResourceLoader-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setResourceLoader</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setSharedCacheMode-javax.persistence.SharedCacheMode-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setSharedCacheMode</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#setValidationMode-javax.persistence.ValidationMode-" title="class or interface in org.springframework.orm.jpa.persistenceunit">setValidationMode</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="MergingPersistenceUnitManager--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>MergingPersistenceUnitManager</h4>
+<pre>public&nbsp;MergingPersistenceUnitManager()</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="postProcessPersistenceUnitInfo-org.springframework.orm.jpa.persistenceunit.MutablePersistenceUnitInfo-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postProcessPersistenceUnitInfo</h4>
+<pre>protected&nbsp;void&nbsp;postProcessPersistenceUnitInfo(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/MutablePersistenceUnitInfo.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">MutablePersistenceUnitInfo</a>&nbsp;pui)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#postProcessPersistenceUnitInfo-org.springframework.orm.jpa.persistenceunit.MutablePersistenceUnitInfo-" title="class or interface in org.springframework.orm.jpa.persistenceunit">postProcessPersistenceUnitInfo</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">DefaultPersistenceUnitManager</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="isPersistenceUnitOverrideAllowed--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isPersistenceUnitOverrideAllowed</h4>
+<pre>protected&nbsp;boolean&nbsp;isPersistenceUnitOverrideAllowed()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true#isPersistenceUnitOverrideAllowed--" title="class or interface in org.springframework.orm.jpa.persistenceunit">isPersistenceUnitOverrideAllowed</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html?is-external=true" title="class or interface in org.springframework.orm.jpa.persistenceunit">DefaultPersistenceUnitManager</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/MergingPersistenceUnitManager.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data JPA</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/jpa/support/ClasspathScanningPersistenceUnitPostProcessor.html" title="class in org.springframework.data.jpa.support"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/jpa/support/MergingPersistenceUnitManager.html" target="_top">Frames</a></li>
+<li><a href="MergingPersistenceUnitManager.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

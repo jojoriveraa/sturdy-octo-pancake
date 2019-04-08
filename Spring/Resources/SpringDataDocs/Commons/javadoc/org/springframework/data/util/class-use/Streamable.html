@@ -1,0 +1,650 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uses of Interface org.springframework.data.util.Streamable (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="Uses of Interface org.springframework.data.util.Streamable (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../../../../../overview-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/util/class-use/Streamable.html" target="_top">Frames</a></li>
+<li><a href="Streamable.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+<div class="header">
+<h2 title="Uses of Interface org.springframework.data.util.Streamable" class="title">Uses of Interface<br>org.springframework.data.util.Streamable</h2>
+</div>
+<div class="classUseContainer">
+<ul class="blockList">
+<li class="blockList">
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
+<caption><span>Packages that use <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.springframework.data.convert">org.springframework.data.convert</a></td>
+<td class="colLast">
+<div class="block">General purpose conversion framework to read objects from a data store abstraction and write it back.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.springframework.data.domain">org.springframework.data.domain</a></td>
+<td class="colLast">
+<div class="block">Central domain abstractions especially to be used in combination with the
+<a href="../../../../../org/springframework/data/repository/Repository.html" title="interface in org.springframework.data.repository"><code>Repository</code></a> abstraction.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.springframework.data.geo">org.springframework.data.geo</a></td>
+<td class="colLast">
+<div class="block">Value types representing geo-spatial concepts.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.springframework.data.history">org.springframework.data.history</a></td>
+<td class="colLast">
+<div class="block">Basic interfaces and value objects for histography API.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.springframework.data.mapping">org.springframework.data.mapping</a></td>
+<td class="colLast">
+<div class="block">Base package for the mapping subsystem.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.springframework.data.mapping.context">org.springframework.data.mapping.context</a></td>
+<td class="colLast">
+<div class="block">Mapping context API and implementation base classes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.springframework.data.querydsl">org.springframework.data.querydsl</a></td>
+<td class="colLast">
+<div class="block">Querydsl integration support classes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.springframework.data.repository.config">org.springframework.data.repository.config</a></td>
+<td class="colLast">
+<div class="block">Support classes for repository namespace and JavaConfig integration.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.springframework.data.repository.core">org.springframework.data.repository.core</a></td>
+<td class="colLast">
+<div class="block">Core abstractions for repository implementation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.springframework.data.repository.core.support">org.springframework.data.repository.core.support</a></td>
+<td class="colLast">
+<div class="block">Base classes to implement repositories for various data stores.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.springframework.data.repository.query">org.springframework.data.repository.query</a></td>
+<td class="colLast">
+<div class="block">Support classes to work with query methods.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.springframework.data.repository.query.parser">org.springframework.data.repository.query.parser</a></td>
+<td class="colLast">
+<div class="block">Support classes for parsing queries from method names.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.springframework.data.util">org.springframework.data.util</a></td>
+<td class="colLast">
+<div class="block">Core utility APIs such as a type information framework to resolve generic types.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<ul class="blockList">
+<li class="blockList"><a name="org.springframework.data.convert">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/convert/package-summary.html">org.springframework.data.convert</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/springframework/data/convert/package-summary.html">org.springframework.data.convert</a> that return <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.ConverterRegistration.html?is-external=true" title="class or interface in org.springframework.data.convert">org.springframework.data.convert.CustomConversions.ConverterRegistration</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">CustomConversions.StoreConversions.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/convert/CustomConversions.StoreConversions.html#getRegistrationsFor-java.lang.Object-">getRegistrationsFor</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;converter)</code>
+<div class="block">Returns <code>ConverterRegistration</code>s for the given converter.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.domain">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/domain/package-summary.html">org.springframework.data.domain</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/domain/package-summary.html">org.springframework.data.domain</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/domain/Page.html" title="interface in org.springframework.data.domain">Page</a>&lt;T&gt;</span></code>
+<div class="block">A page is a sublist of a list of objects.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/domain/Slice.html" title="interface in org.springframework.data.domain">Slice</a>&lt;T&gt;</span></code>
+<div class="block">A slice of data that indicates whether there's a next or previous slice available.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/domain/package-summary.html">org.springframework.data.domain</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/domain/PageImpl.html" title="class in org.springframework.data.domain">PageImpl</a>&lt;T&gt;</span></code>
+<div class="block">Basic <code>Page</code> implementation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/domain/SliceImpl.html" title="class in org.springframework.data.domain">SliceImpl</a>&lt;T&gt;</span></code>
+<div class="block">Default implementation of <a href="../../../../../org/springframework/data/domain/Slice.html" title="interface in org.springframework.data.domain"><code>Slice</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain">Sort</a></span></code>
+<div class="block">Sort option for queries.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.geo">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/geo/package-summary.html">org.springframework.data.geo</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/geo/package-summary.html">org.springframework.data.geo</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/geo/GeoPage.html" title="class in org.springframework.data.geo">GeoPage</a>&lt;T&gt;</span></code>
+<div class="block">Custom <a href="../../../../../org/springframework/data/domain/Page.html" title="interface in org.springframework.data.domain"><code>Page</code></a> to carry the average distance retrieved from the <a href="../../../../../org/springframework/data/geo/GeoResults.html" title="class in org.springframework.data.geo"><code>GeoResults</code></a> the <a href="../../../../../org/springframework/data/geo/GeoPage.html" title="class in org.springframework.data.geo"><code>GeoPage</code></a> is set up
+from.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.history">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/history/package-summary.html">org.springframework.data.history</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/history/package-summary.html">org.springframework.data.history</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/history/Revisions.html" title="class in org.springframework.data.history">Revisions</a>&lt;N extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a> &amp; <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;N&gt;,T&gt;</span></code>
+<div class="block">Simple wrapper class for a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util"><code>List</code></a> of <a href="../../../../../org/springframework/data/history/Revisions.html" title="class in org.springframework.data.history"><code>Revisions</code></a> allowing to canonically access the latest revision.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/history/RevisionSort.html" title="class in org.springframework.data.history">RevisionSort</a></span></code>
+<div class="block">A dedicated <a href="../../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a> implementation that allows the definition of the ordering of revisions independently of the
+property name the revision number is held in.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.mapping">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/mapping/package-summary.html">org.springframework.data.mapping</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/mapping/package-summary.html">org.springframework.data.mapping</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/PropertyPath.html" title="class in org.springframework.data.mapping">PropertyPath</a></span></code>
+<div class="block">Abstraction of a <a href="../../../../../org/springframework/data/mapping/PropertyPath.html" title="class in org.springframework.data.mapping"><code>PropertyPath</code></a> of a domain class.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.mapping.context">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/mapping/context/package-summary.html">org.springframework.data.mapping.context</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/mapping/context/package-summary.html">org.springframework.data.mapping.context</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentEntities.html" title="class in org.springframework.data.mapping.context">PersistentEntities</a></span></code>
+<div class="block">Value object to access <a href="../../../../../org/springframework/data/mapping/PersistentEntity.html" title="interface in org.springframework.data.mapping"><code>PersistentEntity</code></a> instances managed by <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>s.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/springframework/data/mapping/context/package-summary.html">org.springframework.data.mapping.context</a> that return <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util">TypeInformation</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">PersistentEntities.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentEntities.html#getManagedTypes--">getManagedTypes</a></span>()</code>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/util/TypeInformation.html" title="interface in org.springframework.data.util"><code>TypeInformation</code></a> exposed by the registered <a href="../../../../../org/springframework/data/mapping/context/MappingContext.html" title="interface in org.springframework.data.mapping.context"><code>MappingContext</code></a>s.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.querydsl">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/querydsl/package-summary.html">org.springframework.data.querydsl</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/querydsl/package-summary.html">org.springframework.data.querydsl</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/querydsl/QSort.html" title="class in org.springframework.data.querydsl">QSort</a></span></code>
+<div class="block">Sort option for queries that wraps a Querydsl <code>OrderSpecifier</code>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.repository.config">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/repository/config/package-summary.html">org.springframework.data.repository.config</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/springframework/data/repository/config/package-summary.html">org.springframework.data.repository.config</a> that return <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">XmlRepositoryConfigurationSource.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/XmlRepositoryConfigurationSource.html#getBasePackages--">getBasePackages</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DefaultRepositoryConfiguration.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/DefaultRepositoryConfiguration.html#getBasePackages--">getBasePackages</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryConfiguration.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html#getBasePackages--">getBasePackages</a></span>()</code>
+<div class="block">Returns the base packages that the repository was scanned under.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">AnnotationRepositoryConfigurationSource.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getBasePackages--">getBasePackages</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryConfigurationSource.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getBasePackages--">getBasePackages</a></span>()</code>
+<div class="block">Returns the base packages the repository interfaces shall be found under.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config">BeanDefinition</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryConfigurationSourceSupport.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#getCandidates-org.springframework.core.io.ResourceLoader-">getCandidates</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/io/ResourceLoader.html?is-external=true" title="class or interface in org.springframework.core.io">ResourceLoader</a>&nbsp;loader)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config">BeanDefinition</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryConfigurationSource.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getCandidates-org.springframework.core.io.ResourceLoader-">getCandidates</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/io/ResourceLoader.html?is-external=true" title="class or interface in org.springframework.core.io">ResourceLoader</a>&nbsp;loader)</code>
+<div class="block">Returns the source <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a>s of the repository interfaces to create repository instances for.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">XmlRepositoryConfigurationSource.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/XmlRepositoryConfigurationSource.html#getExcludeFilters--">getExcludeFilters</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DefaultRepositoryConfiguration.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/DefaultRepositoryConfiguration.html#getExcludeFilters--">getExcludeFilters</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryConfigurationSourceSupport.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#getExcludeFilters--">getExcludeFilters</a></span>()</code>
+<div class="block">Return the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter"><code>TypeFilter</code></a>s to define which types to exclude when scanning for repositories.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryConfiguration.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html#getExcludeFilters--">getExcludeFilters</a></span>()</code>
+<div class="block">Returns the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter"><code>TypeFilter</code></a>s to be used to exclude packages from repository scanning.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">AnnotationRepositoryConfigurationSource.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getExcludeFilters--">getExcludeFilters</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryConfigurationSource.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getExcludeFilters--">getExcludeFilters</a></span>()</code>
+<div class="block">Return the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter"><code>TypeFilter</code></a>s to define which types to exclude when scanning for repositories or repository
+implementations.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DefaultRepositoryConfiguration.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/DefaultRepositoryConfiguration.html#getImplementationBasePackages--">getImplementationBasePackages</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryConfiguration.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html#getImplementationBasePackages--">getImplementationBasePackages</a></span>()</code>
+<div class="block">Returns the base packages to scan for repository implementations.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.repository.core">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/repository/core/package-summary.html">org.springframework.data.repository.core</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/springframework/data/repository/core/package-summary.html">org.springframework.data.repository.core</a> that return <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">RepositoryInformation.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/core/RepositoryInformation.html#getQueryMethods--">getQueryMethods</a></span>()</code>
+<div class="block">Returns all methods considered to be query methods.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.repository.core.support">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/repository/core/support/package-summary.html">org.springframework.data.repository.core.support</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/repository/core/support/package-summary.html">org.springframework.data.repository.core.support</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/core/support/RepositoryComposition.RepositoryFragments.html" title="class in org.springframework.data.repository.core.support">RepositoryComposition.RepositoryFragments</a></span></code>
+<div class="block">Value object representing an ordered list of <a href="../../../../../org/springframework/data/repository/core/support/RepositoryFragment.html" title="interface in org.springframework.data.repository.core.support"><code>fragments</code></a>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.repository.query">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/repository/query/package-summary.html">org.springframework.data.repository.query</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/repository/query/package-summary.html">org.springframework.data.repository.query</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/query/DefaultParameters.html" title="class in org.springframework.data.repository.query">DefaultParameters</a></span></code>
+<div class="block">Default implementation of <a href="../../../../../org/springframework/data/repository/query/Parameters.html" title="class in org.springframework.data.repository.query"><code>Parameters</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/query/Parameters.html" title="class in org.springframework.data.repository.query">Parameters</a>&lt;S extends <a href="../../../../../org/springframework/data/repository/query/Parameters.html" title="class in org.springframework.data.repository.query">Parameters</a>&lt;S,T&gt;,T extends <a href="../../../../../org/springframework/data/repository/query/Parameter.html" title="class in org.springframework.data.repository.query">Parameter</a>&gt;</span></code>
+<div class="block">Abstracts method parameters that have to be bound to query parameters or applied to the query independently.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.repository.query.parser">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/repository/query/parser/package-summary.html">org.springframework.data.repository.query.parser</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../../org/springframework/data/repository/query/parser/package-summary.html">org.springframework.data.repository.query.parser</a> that implement <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/query/parser/PartTree.html" title="class in org.springframework.data.repository.query.parser">PartTree</a></span></code>
+<div class="block">Class to parse a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> into a tree or <a href="../../../../../org/springframework/data/repository/query/parser/PartTree.OrPart.html" title="class in org.springframework.data.repository.query.parser"><code>PartTree.OrPart</code></a>s consisting of simple <a href="../../../../../org/springframework/data/repository/query/parser/Part.html" title="class in org.springframework.data.repository.query.parser"><code>Part</code></a> instances in turn.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/query/parser/PartTree.OrPart.html" title="class in org.springframework.data.repository.query.parser">PartTree.OrPart</a></span></code>
+<div class="block">A part of the parsed source that results from splitting up the resource around Or keywords.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/springframework/data/repository/query/parser/package-summary.html">org.springframework.data.repository.query.parser</a> that return <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="../../../../../org/springframework/data/repository/query/parser/Part.html" title="class in org.springframework.data.repository.query.parser">Part</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">PartTree.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/query/parser/PartTree.html#getParts--">getParts</a></span>()</code>
+<div class="block">Returns an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang"><code>Iterable</code></a> of all parts contained in the <a href="../../../../../org/springframework/data/repository/query/parser/PartTree.html" title="class in org.springframework.data.repository.query.parser"><code>PartTree</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="../../../../../org/springframework/data/repository/query/parser/Part.html" title="class in org.springframework.data.repository.query.parser">Part</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">PartTree.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/query/parser/PartTree.html#getParts-org.springframework.data.repository.query.parser.Part.Type-">getParts</a></span>(<a href="../../../../../org/springframework/data/repository/query/parser/Part.Type.html" title="enum in org.springframework.data.repository.query.parser">Part.Type</a>&nbsp;type)</code>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/repository/query/parser/Part.html" title="class in org.springframework.data.repository.query.parser"><code>Part</code></a>s of the <a href="../../../../../org/springframework/data/repository/query/parser/PartTree.html" title="class in org.springframework.data.repository.query.parser"><code>PartTree</code></a> of the given <a href="../../../../../org/springframework/data/repository/query/parser/Part.Type.html" title="enum in org.springframework.data.repository.query.parser"><code>Part.Type</code></a>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.springframework.data.util">
+
+</a>
+<h3>Uses of <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a> in <a href="../../../../../org/springframework/data/util/package-summary.html">org.springframework.data.util</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/springframework/data/util/package-summary.html">org.springframework.data.util</a> that return <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;T&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Streamable.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/util/Streamable.html#empty--">empty</a></span>()</code>
+<div class="block">Returns an empty <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util"><code>Streamable</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="../../../../../org/springframework/data/util/Streamable.html" title="type parameter in Streamable">T</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Streamable.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/util/Streamable.html#filter-java.util.function.Predicate-">filter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function">Predicate</a>&lt;? super <a href="../../../../../org/springframework/data/util/Streamable.html" title="type parameter in Streamable">T</a>&gt;&nbsp;predicate)</code>
+<div class="block">Returns a new <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util"><code>Streamable</code></a> that will apply the given filter <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html?is-external=true" title="class or interface in java.util.function"><code>Predicate</code></a> to the current one.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>default &lt;R&gt;&nbsp;<a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;R&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Streamable.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/util/Streamable.html#flatMap-java.util.function.Function-">flatMap</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super <a href="../../../../../org/springframework/data/util/Streamable.html" title="type parameter in Streamable">T</a>,? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;? extends R&gt;&gt;&nbsp;mapper)</code>
+<div class="block">Returns a new <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util"><code>Streamable</code></a> that will apply the given <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function"><code>Function</code></a> to the current one.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default &lt;R&gt;&nbsp;<a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;R&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Streamable.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/util/Streamable.html#map-java.util.function.Function-">map</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;? super <a href="../../../../../org/springframework/data/util/Streamable.html" title="type parameter in Streamable">T</a>,? extends R&gt;&nbsp;mapper)</code>
+<div class="block">Returns a new <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util"><code>Streamable</code></a> that will apply the given <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function"><code>Function</code></a> to the current one.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;T&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Streamable.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/util/Streamable.html#of-java.lang.Iterable-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;&nbsp;iterable)</code>
+<div class="block">Returns a <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util"><code>Streamable</code></a> for the given <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang"><code>Iterable</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;T&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Streamable.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/util/Streamable.html#of-java.util.function.Supplier-">of</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function">Supplier</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html?is-external=true" title="class or interface in java.util.stream">Stream</a>&lt;T&gt;&gt;&nbsp;supplier)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;<a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;T&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Streamable.</span><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/util/Streamable.html#of-T...-">of</a></span>(T...&nbsp;t)</code>
+<div class="block">Returns a <a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util"><code>Streamable</code></a> with the given elements.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../../../../../overview-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/util/class-use/Streamable.html" target="_top">Frames</a></li>
+<li><a href="Streamable.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

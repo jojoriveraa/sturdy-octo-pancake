@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CatalogTest (2)" project="Lab04.2" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.javatunes.service.CatalogTest" time="0.6">
+    <testcase name="test1_testCatalogFindByIdPositive" classname="com.javatunes.service.CatalogTest" time="0.225"/>
+    <testcase name="test2_testDeletePositive" classname="com.javatunes.service.CatalogTest" time="0.359"/>
+    <testcase name="test3_testSizePositive" classname="com.javatunes.service.CatalogTest" time="0.016"/>
+  </testsuite>
+</testrun>

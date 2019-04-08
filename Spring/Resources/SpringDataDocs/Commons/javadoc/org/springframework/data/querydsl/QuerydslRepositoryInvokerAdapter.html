@@ -1,0 +1,521 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>QuerydslRepositoryInvokerAdapter (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="QuerydslRepositoryInvokerAdapter (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/QuerydslRepositoryInvokerAdapter.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/querydsl/QuerydslPredicateExecutor.html" title="interface in org.springframework.data.querydsl"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/querydsl/QuerydslUtils.html" title="class in org.springframework.data.querydsl"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html" target="_top">Frames</a></li>
+<li><a href="QuerydslRepositoryInvokerAdapter.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.querydsl</div>
+<h2 title="Class QuerydslRepositoryInvokerAdapter" class="title">Class QuerydslRepositoryInvokerAdapter</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.querydsl.QuerydslRepositoryInvokerAdapter</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html" title="interface in org.springframework.data.repository.support">RepositoryInvocationInformation</a>, <a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">QuerydslRepositoryInvokerAdapter</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a></pre>
+<div class="block"><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support"><code>RepositoryInvoker</code></a> that is aware of a <a href="../../../../org/springframework/data/querydsl/QuerydslPredicateExecutor.html" title="interface in org.springframework.data.querydsl"><code>QuerydslPredicateExecutor</code></a> and <code>Predicate</code> to be executed
+for all flavors of <code>findAll(…)</code>. All other calls are forwarded to the configured delegate.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#QuerydslRepositoryInvokerAdapter-org.springframework.data.repository.support.RepositoryInvoker-org.springframework.data.querydsl.QuerydslPredicateExecutor-com.querydsl.core.types.Predicate-">QuerydslRepositoryInvokerAdapter</a></span>(<a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a>&nbsp;delegate,
+<a href="../../../../org/springframework/data/querydsl/QuerydslPredicateExecutor.html" title="interface in org.springframework.data.querydsl">QuerydslPredicateExecutor</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;executor,
+com.querydsl.core.types.Predicate&nbsp;predicate)</code>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html" title="class in org.springframework.data.querydsl"><code>QuerydslRepositoryInvokerAdapter</code></a> for the given delegate <a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support"><code>RepositoryInvoker</code></a>,
+<a href="../../../../org/springframework/data/querydsl/QuerydslPredicateExecutor.html" title="interface in org.springframework.data.querydsl"><code>QuerydslPredicateExecutor</code></a> and Querydsl <code>Predicate</code>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#hasDeleteMethod--">hasDeleteMethod</a></span>()</code>
+<div class="block">Returns whether the repository has a method to delete objects.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#hasFindAllMethod--">hasFindAllMethod</a></span>()</code>
+<div class="block">Returns whether the repository has a method to find all objects.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#hasFindOneMethod--">hasFindOneMethod</a></span>()</code>
+<div class="block">Returns whether the repository has a method to find a single object.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#hasSaveMethod--">hasSaveMethod</a></span>()</code>
+<div class="block">Returns whether the repository has a method to save objects.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#invokeDeleteById-java.lang.Object-">invokeDeleteById</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;id)</code>
+<div class="block">Invokes the method equivalent to <a href="../../../../org/springframework/data/repository/CrudRepository.html#deleteById-ID-"><code>CrudRepository.deleteById(Object)</code></a>.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#invokeFindAll-org.springframework.data.domain.Pageable-">invokeFindAll</a></span>(<a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;pageable)</code>
+<div class="block">Invokes the find-all method of the underlying repository using the method taking a <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> as parameter if
+available (i.e. the equivalent to
+<a href="../../../../org/springframework/data/repository/PagingAndSortingRepository.html#findAll-org.springframework.data.domain.Pageable-"><code>PagingAndSortingRepository.findAll(Pageable)</code></a>), using the method taking
+a <a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a> if available (i.e. the equivalent to
+<a href="../../../../org/springframework/data/repository/PagingAndSortingRepository.html#findAll-org.springframework.data.domain.Sort-"><code>PagingAndSortingRepository.findAll(Sort)</code></a> by extracting the <a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a>
+contained in the given <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a>) or the plain equivalent to
+<a href="../../../../org/springframework/data/repository/CrudRepository.html#findAll--"><code>CrudRepository.findAll()</code></a>.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#invokeFindAll-org.springframework.data.domain.Sort-">invokeFindAll</a></span>(<a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain">Sort</a>&nbsp;sort)</code>
+<div class="block">Invokes the find-all method of the underlying repository using the method taking a <a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a> as parameter if
+available (i.e. the equivalent to
+<a href="../../../../org/springframework/data/repository/PagingAndSortingRepository.html#findAll-org.springframework.data.domain.Sort-"><code>PagingAndSortingRepository.findAll(Sort)</code></a>) or the plain equivalent to
+<a href="../../../../org/springframework/data/repository/CrudRepository.html#findAll--"><code>CrudRepository.findAll()</code></a>.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#invokeFindById-java.lang.Object-">invokeFindById</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;id)</code>
+<div class="block">Invokes the method equivalent to <a href="../../../../org/springframework/data/repository/CrudRepository.html#findById-ID-"><code>CrudRepository.findById(Object)</code></a>.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#invokeQueryMethod-java.lang.reflect.Method-org.springframework.util.MultiValueMap-org.springframework.data.domain.Pageable-org.springframework.data.domain.Sort-">invokeQueryMethod</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/util/MultiValueMap.html?is-external=true" title="class or interface in org.springframework.util">MultiValueMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;parameters,
+<a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;pageable,
+<a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain">Sort</a>&nbsp;sort)</code>
+<div class="block">Invokes the query method backed by the given <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect"><code>Method</code></a> using the given parameters, <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> and
+<a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a>.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>&lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html#invokeSave-T-">invokeSave</a></span>(T&nbsp;object)</code>
+<div class="block">Invokes the method equivalent to <a href="../../../../org/springframework/data/repository/CrudRepository.html#save-S-"><code>CrudRepository.save(Object)</code></a> on the
+repository.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="QuerydslRepositoryInvokerAdapter-org.springframework.data.repository.support.RepositoryInvoker-org.springframework.data.querydsl.QuerydslPredicateExecutor-com.querydsl.core.types.Predicate-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>QuerydslRepositoryInvokerAdapter</h4>
+<pre>public&nbsp;QuerydslRepositoryInvokerAdapter(<a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a>&nbsp;delegate,
+                                        <a href="../../../../org/springframework/data/querydsl/QuerydslPredicateExecutor.html" title="interface in org.springframework.data.querydsl">QuerydslPredicateExecutor</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;executor,
+                                        com.querydsl.core.types.Predicate&nbsp;predicate)</pre>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html" title="class in org.springframework.data.querydsl"><code>QuerydslRepositoryInvokerAdapter</code></a> for the given delegate <a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support"><code>RepositoryInvoker</code></a>,
+<a href="../../../../org/springframework/data/querydsl/QuerydslPredicateExecutor.html" title="interface in org.springframework.data.querydsl"><code>QuerydslPredicateExecutor</code></a> and Querydsl <code>Predicate</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>delegate</code> - must not be null.</dd>
+<dd><code>executor</code> - must not be null.</dd>
+<dd><code>predicate</code> - can be null.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="invokeFindAll-org.springframework.data.domain.Pageable-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invokeFindAll</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;invokeFindAll(<a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;pageable)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeFindAll-org.springframework.data.domain.Pageable-">RepositoryInvoker</a></code></span></div>
+<div class="block">Invokes the find-all method of the underlying repository using the method taking a <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> as parameter if
+available (i.e. the equivalent to
+<a href="../../../../org/springframework/data/repository/PagingAndSortingRepository.html#findAll-org.springframework.data.domain.Pageable-"><code>PagingAndSortingRepository.findAll(Pageable)</code></a>), using the method taking
+a <a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a> if available (i.e. the equivalent to
+<a href="../../../../org/springframework/data/repository/PagingAndSortingRepository.html#findAll-org.springframework.data.domain.Sort-"><code>PagingAndSortingRepository.findAll(Sort)</code></a> by extracting the <a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a>
+contained in the given <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a>) or the plain equivalent to
+<a href="../../../../org/springframework/data/repository/CrudRepository.html#findAll--"><code>CrudRepository.findAll()</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeFindAll-org.springframework.data.domain.Pageable-">invokeFindAll</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pageable</code> - can be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the result of the invocation of the find-all method.</dd>
+</dl>
+</li>
+</ul>
+<a name="invokeFindAll-org.springframework.data.domain.Sort-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invokeFindAll</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;invokeFindAll(<a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain">Sort</a>&nbsp;sort)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeFindAll-org.springframework.data.domain.Sort-">RepositoryInvoker</a></code></span></div>
+<div class="block">Invokes the find-all method of the underlying repository using the method taking a <a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a> as parameter if
+available (i.e. the equivalent to
+<a href="../../../../org/springframework/data/repository/PagingAndSortingRepository.html#findAll-org.springframework.data.domain.Sort-"><code>PagingAndSortingRepository.findAll(Sort)</code></a>) or the plain equivalent to
+<a href="../../../../org/springframework/data/repository/CrudRepository.html#findAll--"><code>CrudRepository.findAll()</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeFindAll-org.springframework.data.domain.Sort-">invokeFindAll</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the result of the invocation of the find-all method.</dd>
+</dl>
+</li>
+</ul>
+<a name="hasDeleteMethod--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasDeleteMethod</h4>
+<pre>public&nbsp;boolean&nbsp;hasDeleteMethod()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html#hasDeleteMethod--">RepositoryInvocationInformation</a></code></span></div>
+<div class="block">Returns whether the repository has a method to delete objects.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html#hasDeleteMethod--">hasDeleteMethod</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html" title="interface in org.springframework.data.repository.support">RepositoryInvocationInformation</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="hasFindAllMethod--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasFindAllMethod</h4>
+<pre>public&nbsp;boolean&nbsp;hasFindAllMethod()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html#hasFindAllMethod--">RepositoryInvocationInformation</a></code></span></div>
+<div class="block">Returns whether the repository has a method to find all objects.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html#hasFindAllMethod--">hasFindAllMethod</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html" title="interface in org.springframework.data.repository.support">RepositoryInvocationInformation</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="hasFindOneMethod--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasFindOneMethod</h4>
+<pre>public&nbsp;boolean&nbsp;hasFindOneMethod()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html#hasFindOneMethod--">RepositoryInvocationInformation</a></code></span></div>
+<div class="block">Returns whether the repository has a method to find a single object.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html#hasFindOneMethod--">hasFindOneMethod</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html" title="interface in org.springframework.data.repository.support">RepositoryInvocationInformation</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="hasSaveMethod--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasSaveMethod</h4>
+<pre>public&nbsp;boolean&nbsp;hasSaveMethod()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html#hasSaveMethod--">RepositoryInvocationInformation</a></code></span></div>
+<div class="block">Returns whether the repository has a method to save objects.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html#hasSaveMethod--">hasSaveMethod</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvocationInformation.html" title="interface in org.springframework.data.repository.support">RepositoryInvocationInformation</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="invokeDeleteById-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invokeDeleteById</h4>
+<pre>public&nbsp;void&nbsp;invokeDeleteById(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;id)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeDeleteById-java.lang.Object-">RepositoryInvoker</a></code></span></div>
+<div class="block">Invokes the method equivalent to <a href="../../../../org/springframework/data/repository/CrudRepository.html#deleteById-ID-"><code>CrudRepository.deleteById(Object)</code></a>. The
+given id is assumed to be of a type convertible into the actual identifier type of the backing repository.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeDeleteById-java.lang.Object-">invokeDeleteById</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="invokeFindById-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invokeFindById</h4>
+<pre>public&nbsp;&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;T&gt;&nbsp;invokeFindById(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;id)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeFindById-java.lang.Object-">RepositoryInvoker</a></code></span></div>
+<div class="block">Invokes the method equivalent to <a href="../../../../org/springframework/data/repository/CrudRepository.html#findById-ID-"><code>CrudRepository.findById(Object)</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeFindById-java.lang.Object-">invokeFindById</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the entity with the given id.</dd>
+</dl>
+</li>
+</ul>
+<a name="invokeQueryMethod-java.lang.reflect.Method-org.springframework.util.MultiValueMap-org.springframework.data.domain.Pageable-org.springframework.data.domain.Sort-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invokeQueryMethod</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;invokeQueryMethod(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a>&nbsp;method,
+                                          <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/util/MultiValueMap.html?is-external=true" title="class or interface in org.springframework.util">MultiValueMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;parameters,
+                                          <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;pageable,
+                                          <a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain">Sort</a>&nbsp;sort)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeQueryMethod-java.lang.reflect.Method-org.springframework.util.MultiValueMap-org.springframework.data.domain.Pageable-org.springframework.data.domain.Sort-">RepositoryInvoker</a></code></span></div>
+<div class="block">Invokes the query method backed by the given <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect"><code>Method</code></a> using the given parameters, <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> and
+<a href="../../../../org/springframework/data/domain/Sort.html" title="class in org.springframework.data.domain"><code>Sort</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeQueryMethod-java.lang.reflect.Method-org.springframework.util.MultiValueMap-org.springframework.data.domain.Pageable-org.springframework.data.domain.Sort-">invokeQueryMethod</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>method</code> - must not be null.</dd>
+<dd><code>parameters</code> - must not be null.</dd>
+<dd><code>pageable</code> - must not be null.</dd>
+<dd><code>sort</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the result of the invoked query method.</dd>
+</dl>
+</li>
+</ul>
+<a name="invokeSave-java.lang.Object-">
+
+</a><a name="invokeSave-T-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>invokeSave</h4>
+<pre>public&nbsp;&lt;T&gt;&nbsp;T&nbsp;invokeSave(T&nbsp;object)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeSave-T-">RepositoryInvoker</a></code></span></div>
+<div class="block">Invokes the method equivalent to <a href="../../../../org/springframework/data/repository/CrudRepository.html#save-S-"><code>CrudRepository.save(Object)</code></a> on the
+repository.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html#invokeSave-T-">invokeSave</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/repository/support/RepositoryInvoker.html" title="interface in org.springframework.data.repository.support">RepositoryInvoker</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the result of the invocation of the save method</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/QuerydslRepositoryInvokerAdapter.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/querydsl/QuerydslPredicateExecutor.html" title="interface in org.springframework.data.querydsl"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/querydsl/QuerydslUtils.html" title="class in org.springframework.data.querydsl"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/querydsl/QuerydslRepositoryInvokerAdapter.html" target="_top">Frames</a></li>
+<li><a href="QuerydslRepositoryInvokerAdapter.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

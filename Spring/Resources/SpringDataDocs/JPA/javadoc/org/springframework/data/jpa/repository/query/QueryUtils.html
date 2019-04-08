@@ -1,0 +1,574 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>QueryUtils (Spring Data JPA 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="QueryUtils (Spring Data JPA 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":9,"i1":9,"i2":9,"i3":41,"i4":41,"i5":41,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9};var tabs={65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/QueryUtils.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data JPA</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/springframework/data/jpa/repository/query/Procedure.html" title="annotation in org.springframework.data.jpa.repository.query"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/springframework/data/jpa/repository/query/QueryUtils.html" target="_top">Frames</a></li>
+<li><a href="QueryUtils.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.jpa.repository.query</div>
+<h2 title="Class QueryUtils" class="title">Class QueryUtils</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.jpa.repository.query.QueryUtils</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public abstract class <span class="typeNameLabel">QueryUtils</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Simple utility class to create JPA queries.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke, Kevin Raymond, Thomas Darimont, Komi Innocent, Christoph Strobl, Mark Paluch, Sébastien Péralta, Jens Schauder</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#COUNT_QUERY_STRING">COUNT_QUERY_STRING</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#DELETE_ALL_QUERY_STRING">DELETE_ALL_QUERY_STRING</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;javax.persistence.Query</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#applyAndBind-java.lang.String-java.lang.Iterable-javax.persistence.EntityManager-">applyAndBind</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queryString,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;&nbsp;entities,
+javax.persistence.EntityManager&nbsp;entityManager)</code>
+<div class="block">Creates a where-clause referencing the given entities and appends it to the given query string.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#applySorting-java.lang.String-org.springframework.data.domain.Sort-">applySorting</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query,
+<a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain">Sort</a>&nbsp;sort)</code>
+<div class="block">Adds order by clause to the JPQL query.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#applySorting-java.lang.String-org.springframework.data.domain.Sort-java.lang.String-">applySorting</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query,
+<a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain">Sort</a>&nbsp;sort,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias)</code>
+<div class="block">Adds order by clause to the JPQL query.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#createCountQueryFor-java.lang.String-">createCountQueryFor</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;originalQuery)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">use <code>DeclaredQuery.deriveCountQuery(String, String)</code> instead.</span></div>
+</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#createCountQueryFor-java.lang.String-java.lang.String-">createCountQueryFor</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;originalQuery,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;countProjection)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">use <code>DeclaredQuery.deriveCountQuery(String, String)</code> instead.</span></div>
+</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#detectAlias-java.lang.String-">detectAlias</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">use <code>DeclaredQuery.getAlias()</code> instead.</span></div>
+</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#getExistsQueryString-java.lang.String-java.lang.String-java.lang.Iterable-">getExistsQueryString</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;entityName,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;countQueryPlaceHolder,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;idAttributes)</code>
+<div class="block">Returns the query string to execute an exists query for the given id attributes.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#getProjection-java.lang.String-">getProjection</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query)</code>
+<div class="block">Returns the projection part of the query, i.e. everything between <code>select</code> and <code>from</code>.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#getQueryString-java.lang.String-java.lang.String-">getQueryString</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;template,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;entityName)</code>
+<div class="block">Returns the query string for the given class name.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#hasConstructorExpression-java.lang.String-">hasConstructorExpression</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query)</code>
+<div class="block">Returns whether the given JPQL query contains a constructor expression.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#hasNamedParameter-javax.persistence.Query-">hasNamedParameter</a></span>(javax.persistence.Query&nbsp;query)</code>
+<div class="block">Returns whether the given <code>Query</code> contains named parameters.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;javax.persistence.criteria.Order&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/QueryUtils.html#toOrders-org.springframework.data.domain.Sort-javax.persistence.criteria.From-javax.persistence.criteria.CriteriaBuilder-">toOrders</a></span>(<a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain">Sort</a>&nbsp;sort,
+javax.persistence.criteria.From&lt;?,?&gt;&nbsp;from,
+javax.persistence.criteria.CriteriaBuilder&nbsp;cb)</code>
+<div class="block">Turns the given <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain"><code>Sort</code></a> into <code>Order</code>s.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+
+</a>
+<h3>Field Detail</h3>
+<a name="COUNT_QUERY_STRING">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COUNT_QUERY_STRING</h4>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> COUNT_QUERY_STRING</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../constant-values.html#org.springframework.data.jpa.repository.query.QueryUtils.COUNT_QUERY_STRING">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="DELETE_ALL_QUERY_STRING">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DELETE_ALL_QUERY_STRING</h4>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DELETE_ALL_QUERY_STRING</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../constant-values.html#org.springframework.data.jpa.repository.query.QueryUtils.DELETE_ALL_QUERY_STRING">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="getExistsQueryString-java.lang.String-java.lang.String-java.lang.Iterable-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getExistsQueryString</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getExistsQueryString(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;entityName,
+                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;countQueryPlaceHolder,
+                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;idAttributes)</pre>
+<div class="block">Returns the query string to execute an exists query for the given id attributes.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>entityName</code> - the name of the entity to create the query for, must not be null.</dd>
+<dd><code>countQueryPlaceHolder</code> - the placeholder for the count clause, must not be null.</dd>
+<dd><code>idAttributes</code> - the id attributes for the entity, must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getQueryString-java.lang.String-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getQueryString</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getQueryString(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;template,
+                                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;entityName)</pre>
+<div class="block">Returns the query string for the given class name.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>template</code> - must not be null.</dd>
+<dd><code>entityName</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the template with placeholders replaced by the entityName. Guaranteed to be not null.</dd>
+</dl>
+</li>
+</ul>
+<a name="applySorting-java.lang.String-org.springframework.data.domain.Sort-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>applySorting</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;applySorting(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query,
+                                  <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain">Sort</a>&nbsp;sort)</pre>
+<div class="block">Adds order by clause to the JPQL query. Uses the first alias to bind the sorting property to.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>query</code> - the query string to which sorting is applied</dd>
+<dd><code>sort</code> - the sort specification to apply.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the modified query string.</dd>
+</dl>
+</li>
+</ul>
+<a name="applySorting-java.lang.String-org.springframework.data.domain.Sort-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>applySorting</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;applySorting(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query,
+                                  <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain">Sort</a>&nbsp;sort,
+                                  <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;alias)</pre>
+<div class="block">Adds order by clause to the JPQL query.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>query</code> - the query string to which sorting is applied. Must not be null or empty.</dd>
+<dd><code>sort</code> - the sort specification to apply.</dd>
+<dd><code>alias</code> - the alias to be used in the order by clause. May be null or empty.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the modified query string.</dd>
+</dl>
+</li>
+</ul>
+<a name="detectAlias-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>detectAlias</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;detectAlias(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <code>DeclaredQuery.getAlias()</code> instead.</span></div>
+<div class="block">Resolves the alias for the entity to be retrieved from the given JPA query.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>query</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Might return null.</dd>
+</dl>
+</li>
+</ul>
+<a name="applyAndBind-java.lang.String-java.lang.Iterable-javax.persistence.EntityManager-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>applyAndBind</h4>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;javax.persistence.Query&nbsp;applyAndBind(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;queryString,
+                                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;&nbsp;entities,
+                                                       javax.persistence.EntityManager&nbsp;entityManager)</pre>
+<div class="block">Creates a where-clause referencing the given entities and appends it to the given query string. Binds the given
+entities to the query.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - type of the entities.</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>queryString</code> - must not be null.</dd>
+<dd><code>entities</code> - must not be null.</dd>
+<dd><code>entityManager</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Guaranteed to be not null.</dd>
+</dl>
+</li>
+</ul>
+<a name="createCountQueryFor-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCountQueryFor</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;createCountQueryFor(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;originalQuery)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <code>DeclaredQuery.deriveCountQuery(String, String)</code> instead.</span></div>
+<div class="block">Creates a count projected query from the given original query.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>originalQuery</code> - must not be null or empty.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Guaranteed to be not null.</dd>
+</dl>
+</li>
+</ul>
+<a name="createCountQueryFor-java.lang.String-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCountQueryFor</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;createCountQueryFor(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;originalQuery,
+                                                     <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;countProjection)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <code>DeclaredQuery.deriveCountQuery(String, String)</code> instead.</span></div>
+<div class="block">Creates a count projected query from the given original query.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>originalQuery</code> - must not be null.</dd>
+<dd><code>countProjection</code> - may be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a query String to be used a count query for pagination. Guaranteed to be not null.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.6</dd>
+</dl>
+</li>
+</ul>
+<a name="hasNamedParameter-javax.persistence.Query-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasNamedParameter</h4>
+<pre>public static&nbsp;boolean&nbsp;hasNamedParameter(javax.persistence.Query&nbsp;query)</pre>
+<div class="block">Returns whether the given <code>Query</code> contains named parameters.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>query</code> - Must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>whether the given <code>Query</code> contains named parameters.</dd>
+</dl>
+</li>
+</ul>
+<a name="toOrders-org.springframework.data.domain.Sort-javax.persistence.criteria.From-javax.persistence.criteria.CriteriaBuilder-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toOrders</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;javax.persistence.criteria.Order&gt;&nbsp;toOrders(<a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain">Sort</a>&nbsp;sort,
+                                                              javax.persistence.criteria.From&lt;?,?&gt;&nbsp;from,
+                                                              javax.persistence.criteria.CriteriaBuilder&nbsp;cb)</pre>
+<div class="block">Turns the given <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain"><code>Sort</code></a> into <code>Order</code>s.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>sort</code> - the <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html?is-external=true" title="class or interface in org.springframework.data.domain"><code>Sort</code></a> instance to be transformed into JPA <code>Order</code>s.</dd>
+<dd><code>from</code> - must not be null.</dd>
+<dd><code>cb</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util"><code>List</code></a> of <code>Order</code>s.</dd>
+</dl>
+</li>
+</ul>
+<a name="hasConstructorExpression-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasConstructorExpression</h4>
+<pre>public static&nbsp;boolean&nbsp;hasConstructorExpression(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query)</pre>
+<div class="block">Returns whether the given JPQL query contains a constructor expression.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>query</code> - must not be null or empty.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.10</dd>
+</dl>
+</li>
+</ul>
+<a name="getProjection-java.lang.String-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getProjection</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getProjection(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;query)</pre>
+<div class="block">Returns the projection part of the query, i.e. everything between <code>select</code> and <code>from</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>query</code> - must not be null or empty.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.10.2</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/QueryUtils.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data JPA</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../org/springframework/data/jpa/repository/query/Procedure.html" title="annotation in org.springframework.data.jpa.repository.query"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/springframework/data/jpa/repository/query/QueryUtils.html" target="_top">Frames</a></li>
+<li><a href="QueryUtils.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

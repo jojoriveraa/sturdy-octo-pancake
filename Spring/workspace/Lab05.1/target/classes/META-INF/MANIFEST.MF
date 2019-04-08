@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Boot JPA Lab
+Implementation-Version: 1.0
+Built-By: Administrator
+Implementation-Vendor-Id: com.javatunes
+Build-Jdk: 1.8.0_201
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/spring-boot-JPA
+Created-By: Maven Integration for Eclipse
+

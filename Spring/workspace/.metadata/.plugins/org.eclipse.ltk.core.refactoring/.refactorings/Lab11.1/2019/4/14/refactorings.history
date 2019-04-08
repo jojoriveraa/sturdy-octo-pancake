@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;forEntity&apos; from expression &apos;rt.getForEntity(ID_URI,MusicItem.class)&apos;&#x0D;&#x0A;- Original project: &apos;Lab11.1&apos;&#x0D;&#x0A;- Variable name: &apos;forEntity&apos;&#x0D;&#x0A;- Destination method: &apos;com.javatunes.rest.client.RestClient.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;rt.getForEntity(ID_URI,MusicItem.class)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;forEntity&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java&lt;com.javatunes.rest.client{RestClient.java" name="forEntity" replace="true" selection="1931 40" stamp="1554486858269" version="1.0"/>
+</session>

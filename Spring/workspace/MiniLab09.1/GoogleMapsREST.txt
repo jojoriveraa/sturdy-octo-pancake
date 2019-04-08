@@ -1,0 +1,43 @@
+Quick Guide to Google Maps REST API
+-----------------------------------
+
+BASE URI - all requests begin with this.
+http://maps.googleapis.com/maps/api/directions
+
+Examples:
+http://maps.googleapis.com/maps/api/directions/json?origin=Seattle&destination=Bellevue
+
+http://maps.googleapis.com/maps/api/directions/xml?origin=Chicago&destination=Miami
+
+Boston to Boise by bike, avoiding highways, in German:
+[this one has lengthy load time - think about what we're asking for!]
+http://maps.googleapis.com/maps/api/directions/xml?origin=Boston&destination=Boise&mode=bicycling&avoid=highways&language=de
+
+For any of the above, omit the destination parameter - try both JSON and XML formats.
+
+-----
+
+General Format:
+
+GET http://maps.googleapis.com/maps/api/directions/FORMAT?origin=ORIGIN&destination=DESTINATION&key=API_KEY
+
+0. Replace API_KEY with yours [works without one, so just omit this]
+1. Replace FORMAT with either json (recommended) or xml
+2. Replace ORIGIN and DESTINATION
+3. Provide additional optional parameters
+
+Additional optional parameters include (not exhaustive):
+mode
+ driving (default)
+ walking
+ bicycling
+ transit
+avoid
+ tolls
+ highways
+ ferries
+language
+ en, es, de, fr ...
+
+Documentation Page:
+http://developers.google.com/maps/documentation/directions/start

@@ -1,0 +1,689 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RepositoryConfigurationExtensionSupport (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="RepositoryConfigurationExtensionSupport (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":10,"i4":6,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":9,"i15":9,"i16":10};var tabs={65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/RepositoryConfigurationExtensionSupport.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html" target="_top">Frames</a></li>
+<li><a href="RepositoryConfigurationExtensionSupport.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.repository.config</div>
+<h2 title="Class RepositoryConfigurationExtensionSupport" class="title">Class RepositoryConfigurationExtensionSupport</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="typeNameLabel">RepositoryConfigurationExtensionSupport</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></pre>
+<div class="block">Base implementation of <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationExtension</code></a> to ease the implementation of the interface. Will
+default the default named query location based on a module prefix provided by implementors (see
+<a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getModulePrefix--"><code>getModulePrefix()</code></a>). Stubs out the post-processing methods as they might not be needed by default.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke, Mark Paluch, Christoph Strobl</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#RepositoryConfigurationExtensionSupport--">RepositoryConfigurationExtensionSupport</a></span>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getDefaultNamedQueryLocation--">getDefaultNamedQueryLocation</a></span>()</code>
+<div class="block">Returns the default location of the Spring Data named queries.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getIdentifyingAnnotations--">getIdentifyingAnnotations</a></span>()</code>
+<div class="block">Return the annotations to scan domain types for when evaluating repository interfaces for store assignment.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getIdentifyingTypes--">getIdentifyingTypes</a></span>()</code>
+<div class="block">Returns the types that indicate a store match when inspecting repositories for strict matches.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getModuleName--">getModuleName</a></span>()</code>
+<div class="block">Returns the descriptive name of the module.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>protected abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getModulePrefix--">getModulePrefix</a></span>()</code>
+<div class="block">Returns the prefix of the module to be used to create the default location for Spring Data named queries.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>protected &lt;T extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&gt;<br><a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config">RepositoryConfiguration</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getRepositoryConfiguration-org.springframework.beans.factory.config.BeanDefinition-T-">getRepositoryConfiguration</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config">BeanDefinition</a>&nbsp;definition,
+T&nbsp;configSource)</code>
+<div class="block">Creates a actual <a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfiguration</code></a> instance for the given <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a> and
+interface name.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config">RepositoryConfiguration</a>&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getRepositoryConfigurations-T-org.springframework.core.io.ResourceLoader-">getRepositoryConfigurations</a></span>(T&nbsp;configSource,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/io/ResourceLoader.html?is-external=true" title="class or interface in org.springframework.core.io">ResourceLoader</a>&nbsp;loader)</code>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfiguration</code></a>s obtained through the given <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a>.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&gt;<br><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config">RepositoryConfiguration</a>&lt;T&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getRepositoryConfigurations-T-org.springframework.core.io.ResourceLoader-boolean-">getRepositoryConfigurations</a></span>(T&nbsp;configSource,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/io/ResourceLoader.html?is-external=true" title="class or interface in org.springframework.core.io">ResourceLoader</a>&nbsp;loader,
+boolean&nbsp;strictMatchesOnly)</code>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfiguration</code></a>s obtained through the given <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a>.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#hasBean-java.lang.Class-org.springframework.beans.factory.support.BeanDefinitionRegistry-">hasBean</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry)</code>
+<div class="block">Returns whether the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>BeanDefinitionRegistry</code></a> already contains a bean of the given type assuming the
+bean name has been auto-generated.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#isStrictRepositoryCandidate-org.springframework.data.repository.core.RepositoryMetadata-">isStrictRepositoryCandidate</a></span>(<a href="../../../../../org/springframework/data/repository/core/RepositoryMetadata.html" title="interface in org.springframework.data.repository.core">RepositoryMetadata</a>&nbsp;metadata)</code>
+<div class="block">Returns whether the given repository metadata is a candidate for bean definition creation in the strict repository
+detection mode.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.AnnotationRepositoryConfigurationSource-">postProcess</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionBuilder.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionBuilder</a>&nbsp;builder,
+<a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html" title="class in org.springframework.data.repository.config">AnnotationRepositoryConfigurationSource</a>&nbsp;config)</code>
+<div class="block">Callback to post process the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a> built from annotations and tweak the configuration if
+necessary.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.RepositoryConfigurationSource-">postProcess</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionBuilder.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionBuilder</a>&nbsp;builder,
+<a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&nbsp;source)</code>
+<div class="block">Callback to post process the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a> and tweak the configuration if necessary.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.XmlRepositoryConfigurationSource-">postProcess</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionBuilder.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionBuilder</a>&nbsp;builder,
+<a href="../../../../../org/springframework/data/repository/config/XmlRepositoryConfigurationSource.html" title="class in org.springframework.data.repository.config">XmlRepositoryConfigurationSource</a>&nbsp;config)</code>
+<div class="block">Callback to post process the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a> built from XML and tweak the configuration if necessary.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#registerBeansForRoot-org.springframework.beans.factory.support.BeanDefinitionRegistry-org.springframework.data.repository.config.RepositoryConfigurationSource-">registerBeansForRoot</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry,
+<a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&nbsp;configurationSource)</code>
+<div class="block">Callback to register additional bean definitions for a repositories root node.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#registerIfNotAlreadyRegistered-org.springframework.beans.factory.support.AbstractBeanDefinition-org.springframework.beans.factory.support.BeanDefinitionRegistry-java.lang.String-java.lang.Object-">registerIfNotAlreadyRegistered</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/AbstractBeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">AbstractBeanDefinition</a>&nbsp;bean,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;beanName,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</code>
+<div class="block">Registers the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/AbstractBeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>AbstractBeanDefinition</code></a> with the given registry with the given bean name unless the
+registry already contains a bean with that name.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#registerWithSourceAndGeneratedBeanName-org.springframework.beans.factory.support.BeanDefinitionRegistry-org.springframework.beans.factory.support.AbstractBeanDefinition-java.lang.Object-">registerWithSourceAndGeneratedBeanName</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/AbstractBeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">AbstractBeanDefinition</a>&nbsp;bean,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</code>
+<div class="block">Sets the given source on the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/AbstractBeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>AbstractBeanDefinition</code></a> and registers it inside the given
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>BeanDefinitionRegistry</code></a>.</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#useRepositoryConfiguration-org.springframework.data.repository.core.RepositoryMetadata-">useRepositoryConfiguration</a></span>(<a href="../../../../../org/springframework/data/repository/core/RepositoryMetadata.html" title="interface in org.springframework.data.repository.core">RepositoryMetadata</a>&nbsp;metadata)</code>
+<div class="block">Return whether to use the configuration for the repository with the given metadata.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.data.repository.config.RepositoryConfigurationExtension">
+
+</a>
+<h3>Methods inherited from interface&nbsp;org.springframework.data.repository.config.<a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></h3>
+<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getRepositoryFactoryBeanClassName--">getRepositoryFactoryBeanClassName</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="RepositoryConfigurationExtensionSupport--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>RepositoryConfigurationExtensionSupport</h4>
+<pre>public&nbsp;RepositoryConfigurationExtensionSupport()</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="getModuleName--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getModuleName</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getModuleName()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getModuleName--">RepositoryConfigurationExtension</a></code></span></div>
+<div class="block">Returns the descriptive name of the module.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getModuleName--">getModuleName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getRepositoryConfigurations-org.springframework.data.repository.config.RepositoryConfigurationSource-org.springframework.core.io.ResourceLoader-">
+
+</a><a name="getRepositoryConfigurations-T-org.springframework.core.io.ResourceLoader-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRepositoryConfigurations</h4>
+<pre>public&nbsp;&lt;T extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config">RepositoryConfiguration</a>&lt;T&gt;&gt;&nbsp;getRepositoryConfigurations(T&nbsp;configSource,
+                                                                                                                    <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/io/ResourceLoader.html?is-external=true" title="class or interface in org.springframework.core.io">ResourceLoader</a>&nbsp;loader)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getRepositoryConfigurations-T-org.springframework.core.io.ResourceLoader-">RepositoryConfigurationExtension</a></code></span></div>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfiguration</code></a>s obtained through the given <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getRepositoryConfigurations-T-org.springframework.core.io.ResourceLoader-">getRepositoryConfigurations</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>configSource</code> - must not be null.</dd>
+<dd><code>loader</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getRepositoryConfigurations-org.springframework.data.repository.config.RepositoryConfigurationSource-org.springframework.core.io.ResourceLoader-boolean-">
+
+</a><a name="getRepositoryConfigurations-T-org.springframework.core.io.ResourceLoader-boolean-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRepositoryConfigurations</h4>
+<pre>public&nbsp;&lt;T extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config">RepositoryConfiguration</a>&lt;T&gt;&gt;&nbsp;getRepositoryConfigurations(T&nbsp;configSource,
+                                                                                                                    <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/io/ResourceLoader.html?is-external=true" title="class or interface in org.springframework.core.io">ResourceLoader</a>&nbsp;loader,
+                                                                                                                    boolean&nbsp;strictMatchesOnly)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getRepositoryConfigurations-T-org.springframework.core.io.ResourceLoader-boolean-">RepositoryConfigurationExtension</a></code></span></div>
+<div class="block">Returns all <a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfiguration</code></a>s obtained through the given <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getRepositoryConfigurations-T-org.springframework.core.io.ResourceLoader-boolean-">getRepositoryConfigurations</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></code></dd>
+<dd><code>strictMatchesOnly</code> - whether to return strict repository matches only. Handing in true will cause
+the repository interfaces and domain types handled to be checked whether they are managed by the current
+store.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getDefaultNamedQueryLocation--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDefaultNamedQueryLocation</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDefaultNamedQueryLocation()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getDefaultNamedQueryLocation--">RepositoryConfigurationExtension</a></code></span></div>
+<div class="block">Returns the default location of the Spring Data named queries.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#getDefaultNamedQueryLocation--">getDefaultNamedQueryLocation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>must not be null or empty.</dd>
+</dl>
+</li>
+</ul>
+<a name="registerBeansForRoot-org.springframework.beans.factory.support.BeanDefinitionRegistry-org.springframework.data.repository.config.RepositoryConfigurationSource-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>registerBeansForRoot</h4>
+<pre>public&nbsp;void&nbsp;registerBeansForRoot(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry,
+                                 <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&nbsp;configurationSource)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#registerBeansForRoot-org.springframework.beans.factory.support.BeanDefinitionRegistry-org.springframework.data.repository.config.RepositoryConfigurationSource-">RepositoryConfigurationExtension</a></code></span></div>
+<div class="block">Callback to register additional bean definitions for a repositories root node. This usually includes
+beans you have to set up once independently of the number of repositories to be created. Will be called before any
+repositories bean definitions have been registered.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#registerBeansForRoot-org.springframework.beans.factory.support.BeanDefinitionRegistry-org.springframework.data.repository.config.RepositoryConfigurationSource-">registerBeansForRoot</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getModulePrefix--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getModulePrefix</h4>
+<pre>protected abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getModulePrefix()</pre>
+<div class="block">Returns the prefix of the module to be used to create the default location for Spring Data named queries.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.RepositoryConfigurationSource-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postProcess</h4>
+<pre>public&nbsp;void&nbsp;postProcess(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionBuilder.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionBuilder</a>&nbsp;builder,
+                        <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&nbsp;source)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.RepositoryConfigurationSource-">RepositoryConfigurationExtension</a></code></span></div>
+<div class="block">Callback to post process the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a> and tweak the configuration if necessary.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.RepositoryConfigurationSource-">postProcess</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>builder</code> - will never be null.</dd>
+<dd><code>source</code> - will never be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.AnnotationRepositoryConfigurationSource-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postProcess</h4>
+<pre>public&nbsp;void&nbsp;postProcess(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionBuilder.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionBuilder</a>&nbsp;builder,
+                        <a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html" title="class in org.springframework.data.repository.config">AnnotationRepositoryConfigurationSource</a>&nbsp;config)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.AnnotationRepositoryConfigurationSource-">RepositoryConfigurationExtension</a></code></span></div>
+<div class="block">Callback to post process the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a> built from annotations and tweak the configuration if
+necessary.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.AnnotationRepositoryConfigurationSource-">postProcess</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>builder</code> - will never be null.</dd>
+<dd><code>config</code> - will never be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.XmlRepositoryConfigurationSource-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postProcess</h4>
+<pre>public&nbsp;void&nbsp;postProcess(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionBuilder.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionBuilder</a>&nbsp;builder,
+                        <a href="../../../../../org/springframework/data/repository/config/XmlRepositoryConfigurationSource.html" title="class in org.springframework.data.repository.config">XmlRepositoryConfigurationSource</a>&nbsp;config)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.XmlRepositoryConfigurationSource-">RepositoryConfigurationExtension</a></code></span></div>
+<div class="block">Callback to post process the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a> built from XML and tweak the configuration if necessary.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html#postProcess-org.springframework.beans.factory.support.BeanDefinitionBuilder-org.springframework.data.repository.config.XmlRepositoryConfigurationSource-">postProcess</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationExtension</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>builder</code> - will never be null.</dd>
+<dd><code>config</code> - will never be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getIdentifyingAnnotations--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIdentifyingAnnotations</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&gt;&nbsp;getIdentifyingAnnotations()</pre>
+<div class="block">Return the annotations to scan domain types for when evaluating repository interfaces for store assignment. Modules
+should return the annotations that identify a domain type as managed by the store explicitly.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.9</dd>
+</dl>
+</li>
+</ul>
+<a name="getIdentifyingTypes--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIdentifyingTypes</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&gt;&nbsp;getIdentifyingTypes()</pre>
+<div class="block">Returns the types that indicate a store match when inspecting repositories for strict matches.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.9</dd>
+</dl>
+</li>
+</ul>
+<a name="registerWithSourceAndGeneratedBeanName-org.springframework.beans.factory.support.BeanDefinitionRegistry-org.springframework.beans.factory.support.AbstractBeanDefinition-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>registerWithSourceAndGeneratedBeanName</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;registerWithSourceAndGeneratedBeanName(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry,
+                                                            <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/AbstractBeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">AbstractBeanDefinition</a>&nbsp;bean,
+                                                            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</pre>
+<div class="block">Sets the given source on the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/AbstractBeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>AbstractBeanDefinition</code></a> and registers it inside the given
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>BeanDefinitionRegistry</code></a>. For <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a>s to be registerd once-and-only-once for all
+configuration elements (annotation or XML), prefer calling
+<a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#registerIfNotAlreadyRegistered-org.springframework.beans.factory.support.AbstractBeanDefinition-org.springframework.beans.factory.support.BeanDefinitionRegistry-java.lang.String-java.lang.Object-"><code>registerIfNotAlreadyRegistered(AbstractBeanDefinition, BeanDefinitionRegistry, String, Object)</code></a> with a
+dedicated bean name to avoid the bead definition being registered multiple times. *</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>registry</code> - must not be null.</dd>
+<dd><code>bean</code> - must not be null.</dd>
+<dd><code>source</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the bean name generated for the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config"><code>BeanDefinition</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="registerIfNotAlreadyRegistered-org.springframework.beans.factory.support.AbstractBeanDefinition-org.springframework.beans.factory.support.BeanDefinitionRegistry-java.lang.String-java.lang.Object-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>registerIfNotAlreadyRegistered</h4>
+<pre>public static&nbsp;void&nbsp;registerIfNotAlreadyRegistered(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/AbstractBeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">AbstractBeanDefinition</a>&nbsp;bean,
+                                                  <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry,
+                                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;beanName,
+                                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;source)</pre>
+<div class="block">Registers the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/AbstractBeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>AbstractBeanDefinition</code></a> with the given registry with the given bean name unless the
+registry already contains a bean with that name.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>bean</code> - must not be null.</dd>
+<dd><code>registry</code> - must not be null.</dd>
+<dd><code>beanName</code> - must not be null or empty.</dd>
+<dd><code>source</code> - must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="hasBean-java.lang.Class-org.springframework.beans.factory.support.BeanDefinitionRegistry-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasBean</h4>
+<pre>public static&nbsp;boolean&nbsp;hasBean(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;type,
+                              <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry)</pre>
+<div class="block">Returns whether the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support"><code>BeanDefinitionRegistry</code></a> already contains a bean of the given type assuming the
+bean name has been auto-generated.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - </dd>
+<dd><code>registry</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getRepositoryConfiguration-org.springframework.beans.factory.config.BeanDefinition-org.springframework.data.repository.config.RepositoryConfigurationSource-">
+
+</a><a name="getRepositoryConfiguration-org.springframework.beans.factory.config.BeanDefinition-T-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRepositoryConfiguration</h4>
+<pre>protected&nbsp;&lt;T extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a>&gt;&nbsp;<a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config">RepositoryConfiguration</a>&lt;T&gt;&nbsp;getRepositoryConfiguration(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/config/BeanDefinition.html?is-external=true" title="class or interface in org.springframework.beans.factory.config">BeanDefinition</a>&nbsp;definition,
+                                                                                                          T&nbsp;configSource)</pre>
+<div class="block">Creates a actual <a href="../../../../../org/springframework/data/repository/config/RepositoryConfiguration.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfiguration</code></a> instance for the given <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a> and
+interface name. Defaults to the <a href="../../../../../org/springframework/data/repository/config/DefaultRepositoryConfiguration.html" title="class in org.springframework.data.repository.config"><code>DefaultRepositoryConfiguration</code></a> but allows sub-classes to override this to
+customize the behavior.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>definition</code> - will never be null or empty.</dd>
+<dd><code>configSource</code> - will never be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="isStrictRepositoryCandidate-org.springframework.data.repository.core.RepositoryMetadata-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isStrictRepositoryCandidate</h4>
+<pre>protected&nbsp;boolean&nbsp;isStrictRepositoryCandidate(<a href="../../../../../org/springframework/data/repository/core/RepositoryMetadata.html" title="interface in org.springframework.data.repository.core">RepositoryMetadata</a>&nbsp;metadata)</pre>
+<div class="block">Returns whether the given repository metadata is a candidate for bean definition creation in the strict repository
+detection mode. The default implementation inspects the domain type managed for a set of well-known annotations
+(see <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html#getIdentifyingAnnotations--"><code>getIdentifyingAnnotations()</code></a>). If none of them is found, the candidate is discarded. Implementations
+should make sure, the only return true if they're really sure the interface handed to the method is
+really a store interface.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>repositoryInterface</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.9</dd>
+</dl>
+</li>
+</ul>
+<a name="useRepositoryConfiguration-org.springframework.data.repository.core.RepositoryMetadata-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>useRepositoryConfiguration</h4>
+<pre>protected&nbsp;boolean&nbsp;useRepositoryConfiguration(<a href="../../../../../org/springframework/data/repository/core/RepositoryMetadata.html" title="interface in org.springframework.data.repository.core">RepositoryMetadata</a>&nbsp;metadata)</pre>
+<div class="block">Return whether to use the configuration for the repository with the given metadata. Defaults to true.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>metadata</code> - will never be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/RepositoryConfigurationExtensionSupport.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationExtension.html" title="interface in org.springframework.data.repository.config"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/repository/config/RepositoryConfigurationExtensionSupport.html" target="_top">Frames</a></li>
+<li><a href="RepositoryConfigurationExtensionSupport.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

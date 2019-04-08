@@ -1,0 +1,10 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Mar 19 20:06:46 EDT 2018
+https\://dl.bintray.com/rabbitmq/maven-milestones/.lastUpdated=1521504404450
+https\://repo.spring.io/milestone/.error=
+https\://repo.spring.io/snapshot/.error=
+https\://repo.spring.io/milestone/.lastUpdated=1521504398205
+https\://repo.spring.io/snapshot/.lastUpdated=1521504400044
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1521504406959
+https\://dl.bintray.com/rabbitmq/maven-milestones/.error=
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact net.bytebuddy\:byte-buddy\:jar\:1.7.10 from/to central (https\://repo.maven.apache.org/maven2)\: /Users/yaakov/.m2/repository/net/bytebuddy/byte-buddy/1.7.10/aether-0ab50594-f8a6-4061-a2dd-20ba7e486c35-byte-buddy-1.7.10.jar-in-progress (No such file or directory)

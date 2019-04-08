@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PersistentPropertyPath (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="PersistentPropertyPath (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PersistentPropertyPath.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/mapping/context/PersistentEntities.html" title="class in org.springframework.data.mapping.context"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/mapping/context/PersistentPropertyPath.html" target="_top">Frames</a></li>
+<li><a href="PersistentPropertyPath.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.mapping.context</div>
+<h2 title="Interface PersistentPropertyPath" class="title">Interface PersistentPropertyPath&lt;T extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;T&gt;&gt;</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Superinterfaces:</dt>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;</dd>
+</dl>
+<hr>
+<br>
+<pre>public interface <span class="typeNameLabel">PersistentPropertyPath&lt;T extends <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping">PersistentProperty</a>&lt;T&gt;&gt;</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;T&gt;</pre>
+<div class="block">Abstraction of a path of <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>s.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#getBaseProperty--">getBaseProperty</a></span>()</code>
+<div class="block">Returns the first property in the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a>.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#getExtensionForBaseOf-org.springframework.data.mapping.context.PersistentPropertyPath-">getExtensionForBaseOf</a></span>(<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&gt;&nbsp;base)</code>
+<div class="block">Returns the sub-path of the current one as if it was based on the given base path.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#getLeafProperty--">getLeafProperty</a></span>()</code>
+<div class="block">Returns the last property in the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a>.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#getLength--">getLength</a></span>()</code>
+<div class="block">Returns the length of the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a>.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#getParentPath--">getParentPath</a></span>()</code>
+<div class="block">Returns the parent path of the current <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a>, i.e. the path without the leaf property.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#isBasePathOf-org.springframework.data.mapping.context.PersistentPropertyPath-">isBasePathOf</a></span>(<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&gt;&nbsp;path)</code>
+<div class="block">Returns whether the given <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> is a base path of the current one.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#isEmpty--">isEmpty</a></span>()</code>
+<div class="block">Returns whether the path is empty.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#toDotPath--">toDotPath</a></span>()</code>
+<div class="block">Returns the dot based path notation using <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getName--"><code>PersistentProperty.getName()</code></a>.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#toDotPath-org.springframework.core.convert.converter.Converter-">toDotPath</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/convert/converter/Converter.html?is-external=true" title="class or interface in org.springframework.core.convert.converter">Converter</a>&lt;? super <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;converter)</code>
+<div class="block">Returns the dot based path notation using the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/convert/converter/Converter.html?is-external=true" title="class or interface in org.springframework.core.convert.converter"><code>Converter</code></a> to translate individual
+<a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>s to path segments.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#toPath-java.lang.String-">toPath</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;delimiter)</code>
+<div class="block">Returns a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> path with the given delimiter based on the <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getName--"><code>PersistentProperty.getName()</code></a>.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html#toPath-java.lang.String-org.springframework.core.convert.converter.Converter-">toPath</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;delimiter,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/convert/converter/Converter.html?is-external=true" title="class or interface in org.springframework.core.convert.converter">Converter</a>&lt;? super <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;converter)</code>
+<div class="block">Returns a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> path with the given delimiter using the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/convert/converter/Converter.html?is-external=true" title="class or interface in org.springframework.core.convert.converter"><code>Converter</code></a> for
+<a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> to String conversion.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Iterable">
+
+</a>
+<h3>Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#forEach-java.util.function.Consumer-" title="class or interface in java.lang">forEach</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#iterator--" title="class or interface in java.lang">iterator</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#spliterator--" title="class or interface in java.lang">spliterator</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="toDotPath--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toDotPath</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toDotPath()</pre>
+<div class="block">Returns the dot based path notation using <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getName--"><code>PersistentProperty.getName()</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="toDotPath-org.springframework.core.convert.converter.Converter-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toDotPath</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toDotPath(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/convert/converter/Converter.html?is-external=true" title="class or interface in org.springframework.core.convert.converter">Converter</a>&lt;? super <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;converter)</pre>
+<div class="block">Returns the dot based path notation using the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/convert/converter/Converter.html?is-external=true" title="class or interface in org.springframework.core.convert.converter"><code>Converter</code></a> to translate individual
+<a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a>s to path segments.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>converter</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="toPath-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toPath</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toPath(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;delimiter)</pre>
+<div class="block">Returns a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> path with the given delimiter based on the <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html#getName--"><code>PersistentProperty.getName()</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>delimiter</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="toPath-java.lang.String-org.springframework.core.convert.converter.Converter-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toPath</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toPath(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;delimiter,
+                        <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/convert/converter/Converter.html?is-external=true" title="class or interface in org.springframework.core.convert.converter">Converter</a>&lt;? super <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;converter)</pre>
+<div class="block">Returns a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> path with the given delimiter using the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/convert/converter/Converter.html?is-external=true" title="class or interface in org.springframework.core.convert.converter"><code>Converter</code></a> for
+<a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> to String conversion.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>delimiter</code> - must not be null.</dd>
+<dd><code>converter</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getLeafProperty--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLeafProperty</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&nbsp;getLeafProperty()</pre>
+<div class="block">Returns the last property in the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a>. So for <code>foo.bar</code> it will return the
+<a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> for <code>bar</code>. For a simple <code>foo</code> it returns <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> for
+<code>foo</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getBaseProperty--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBaseProperty</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&nbsp;getBaseProperty()</pre>
+<div class="block">Returns the first property in the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a>. So for <code>foo.bar</code> it will return the
+<a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> for <code>foo</code>. For a simple <code>foo</code> it returns <a href="../../../../../org/springframework/data/mapping/PersistentProperty.html" title="interface in org.springframework.data.mapping"><code>PersistentProperty</code></a> for
+<code>foo</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="isBasePathOf-org.springframework.data.mapping.context.PersistentPropertyPath-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isBasePathOf</h4>
+<pre>boolean&nbsp;isBasePathOf(<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&gt;&nbsp;path)</pre>
+<div class="block">Returns whether the given <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> is a base path of the current one. This means that the
+current <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> is basically an extension of the given one.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>path</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getExtensionForBaseOf-org.springframework.data.mapping.context.PersistentPropertyPath-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getExtensionForBaseOf</h4>
+<pre><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&gt;&nbsp;getExtensionForBaseOf(<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&gt;&nbsp;base)</pre>
+<div class="block">Returns the sub-path of the current one as if it was based on the given base path. So for a current path
+<code>foo.bar</code> and a given base <code>foo</code> it would return <code>bar</code>. If the given path is not a base of the
+the current one the current <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a> will be returned as is.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>base</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getParentPath--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParentPath</h4>
+<pre><a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context">PersistentPropertyPath</a>&lt;<a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="type parameter in PersistentPropertyPath">T</a>&gt;&nbsp;getParentPath()</pre>
+<div class="block">Returns the parent path of the current <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a>, i.e. the path without the leaf property.
+This happens up to the base property. So for a direct property reference calling this method will result in
+returning the property.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getLength--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLength</h4>
+<pre>int&nbsp;getLength()</pre>
+<div class="block">Returns the length of the <a href="../../../../../org/springframework/data/mapping/context/PersistentPropertyPath.html" title="interface in org.springframework.data.mapping.context"><code>PersistentPropertyPath</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="isEmpty--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isEmpty</h4>
+<pre>boolean&nbsp;isEmpty()</pre>
+<div class="block">Returns whether the path is empty.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.11</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PersistentPropertyPath.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/springframework/data/mapping/context/PersistentEntities.html" title="class in org.springframework.data.mapping.context"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/mapping/context/PersistentPropertyPath.html" target="_top">Frames</a></li>
+<li><a href="PersistentPropertyPath.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

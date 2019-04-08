@@ -1,0 +1,585 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AnnotationRepositoryConfigurationSource (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="AnnotationRepositoryConfigurationSource (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AnnotationRepositoryConfigurationSource.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../org/springframework/data/repository/config/CustomRepositoryImplementationDetector.html" title="class in org.springframework.data.repository.config"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html" target="_top">Frames</a></li>
+<li><a href="AnnotationRepositoryConfigurationSource.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.org.springframework.data.repository.config.RepositoryConfigurationSourceSupport">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.repository.config</div>
+<h2 title="Class AnnotationRepositoryConfigurationSource" class="title">Class AnnotationRepositoryConfigurationSource</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html" title="class in org.springframework.data.repository.config">org.springframework.data.repository.config.RepositoryConfigurationSourceSupport</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.repository.config.AnnotationRepositoryConfigurationSource</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">AnnotationRepositoryConfigurationSource</span>
+extends <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationSourceSupport</a></pre>
+<div class="block">Annotation based <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config"><code>RepositoryConfigurationSource</code></a>.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke, Thomas Darimont, Peter Rietzler, Jens Schauder, Mark Paluch</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.org.springframework.data.repository.config.RepositoryConfigurationSourceSupport">
+
+</a>
+<h3>Fields inherited from class&nbsp;org.springframework.data.repository.config.<a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationSourceSupport</a></h3>
+<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#DEFAULT_REPOSITORY_IMPL_POSTFIX">DEFAULT_REPOSITORY_IMPL_POSTFIX</a></code></li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#AnnotationRepositoryConfigurationSource-org.springframework.core.type.AnnotationMetadata-java.lang.Class-org.springframework.core.io.ResourceLoader-org.springframework.core.env.Environment-org.springframework.beans.factory.support.BeanDefinitionRegistry-">AnnotationRepositoryConfigurationSource</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/AnnotationMetadata.html?is-external=true" title="class or interface in org.springframework.core.type">AnnotationMetadata</a>&nbsp;metadata,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/io/ResourceLoader.html?is-external=true" title="class or interface in org.springframework.core.io">ResourceLoader</a>&nbsp;resourceLoader,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/env/Environment.html?is-external=true" title="class or interface in org.springframework.core.env">Environment</a>&nbsp;environment,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry)</code>
+<div class="block">Creates a new <a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html" title="class in org.springframework.data.repository.config"><code>AnnotationRepositoryConfigurationSource</code></a> from the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/AnnotationMetadata.html?is-external=true" title="class or interface in org.springframework.core.type"><code>AnnotationMetadata</code></a> and
+annotation.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getAttribute-java.lang.String-">getAttribute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Returns the value for the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> attribute with the given name.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/annotation/AnnotationAttributes.html?is-external=true" title="class or interface in org.springframework.core.annotation">AnnotationAttributes</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getAttributes--">getAttributes</a></span>()</code>
+<div class="block">Returns the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/annotation/AnnotationAttributes.html?is-external=true" title="class or interface in org.springframework.core.annotation"><code>AnnotationAttributes</code></a> of the annotation configured.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getBasePackages--">getBasePackages</a></span>()</code>
+<div class="block">Returns the base packages the repository interfaces shall be found under.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/AnnotationMetadata.html?is-external=true" title="class or interface in org.springframework.core.type">AnnotationMetadata</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getEnableAnnotationMetadata--">getEnableAnnotationMetadata</a></span>()</code>
+<div class="block">Returns the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/AnnotationMetadata.html?is-external=true" title="class or interface in org.springframework.core.type"><code>AnnotationMetadata</code></a> for the <code>@Enable</code> annotation that triggered the configuration.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getExcludeFilters--">getExcludeFilters</a></span>()</code>
+<div class="block">Return the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter"><code>TypeFilter</code></a>s to define which types to exclude when scanning for repositories.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getIncludeFilters--">getIncludeFilters</a></span>()</code>
+<div class="block">Return the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter"><code>TypeFilter</code></a>s to define which types to include when scanning for repositories.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getNamedQueryLocation--">getNamedQueryLocation</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getQueryLookupStrategyKey--">getQueryLookupStrategyKey</a></span>()</code>
+<div class="block">Returns the <code>QueryLookupStrategy.Key</code> to define how query methods shall be resolved.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getRepositoryBaseClassName--">getRepositoryBaseClassName</a></span>()</code>
+<div class="block">Returns the name of the repository base class to be used or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true#empty--" title="class or interface in java.util"><code>Optional.empty()</code></a> if the store specific defaults
+shall be applied.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getRepositoryFactoryBeanClassName--">getRepositoryFactoryBeanClassName</a></span>()</code>
+<div class="block">Returns the name of the repository factory bean class or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true#empty--" title="class or interface in java.util"><code>Optional.empty()</code></a> if not defined in the source.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getRepositoryImplementationPostfix--">getRepositoryImplementationPostfix</a></span>()</code>
+<div class="block">Returns the configured postfix to be used for looking up custom implementation classes.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#getSource--">getSource</a></span>()</code>
+<div class="block">Returns the actual source object that the configuration originated from.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#shouldConsiderNestedRepositories--">shouldConsiderNestedRepositories</a></span>()</code>
+<div class="block">Returns whether we should consider nested repositories, i.e. repository interface definitions nested in other
+classes.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html#usesExplicitFilters--">usesExplicitFilters</a></span>()</code>
+<div class="block">Returns whether the configuration uses explicit filtering to scan for repository types.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.data.repository.config.RepositoryConfigurationSourceSupport">
+
+</a>
+<h3>Methods inherited from class&nbsp;org.springframework.data.repository.config.<a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationSourceSupport</a></h3>
+<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#generateBeanName-org.springframework.beans.factory.config.BeanDefinition-">generateBeanName</a>, <a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#getCandidates-org.springframework.core.io.ResourceLoader-">getCandidates</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="AnnotationRepositoryConfigurationSource-org.springframework.core.type.AnnotationMetadata-java.lang.Class-org.springframework.core.io.ResourceLoader-org.springframework.core.env.Environment-org.springframework.beans.factory.support.BeanDefinitionRegistry-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AnnotationRepositoryConfigurationSource</h4>
+<pre>public&nbsp;AnnotationRepositoryConfigurationSource(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/AnnotationMetadata.html?is-external=true" title="class or interface in org.springframework.core.type">AnnotationMetadata</a>&nbsp;metadata,
+                                               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html?is-external=true" title="class or interface in java.lang.annotation">Annotation</a>&gt;&nbsp;annotation,
+                                               <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/io/ResourceLoader.html?is-external=true" title="class or interface in org.springframework.core.io">ResourceLoader</a>&nbsp;resourceLoader,
+                                               <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/env/Environment.html?is-external=true" title="class or interface in org.springframework.core.env">Environment</a>&nbsp;environment,
+                                               <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html?is-external=true" title="class or interface in org.springframework.beans.factory.support">BeanDefinitionRegistry</a>&nbsp;registry)</pre>
+<div class="block">Creates a new <a href="../../../../../org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html" title="class in org.springframework.data.repository.config"><code>AnnotationRepositoryConfigurationSource</code></a> from the given <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/AnnotationMetadata.html?is-external=true" title="class or interface in org.springframework.core.type"><code>AnnotationMetadata</code></a> and
+annotation.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>metadata</code> - must not be null.</dd>
+<dd><code>annotation</code> - must not be null.</dd>
+<dd><code>resourceLoader</code> - must not be null.</dd>
+<dd><code>environment</code> - must not be null.</dd>
+<dd><code>registry</code> - must not be null.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="getBasePackages--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBasePackages</h4>
+<pre>public&nbsp;<a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getBasePackages()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getBasePackages--">RepositoryConfigurationSource</a></code></span></div>
+<div class="block">Returns the base packages the repository interfaces shall be found under.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getQueryLookupStrategyKey--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getQueryLookupStrategyKey</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getQueryLookupStrategyKey()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getQueryLookupStrategyKey--">RepositoryConfigurationSource</a></code></span></div>
+<div class="block">Returns the <code>QueryLookupStrategy.Key</code> to define how query methods shall be resolved.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getNamedQueryLocation--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNamedQueryLocation</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getNamedQueryLocation()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getRepositoryImplementationPostfix--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRepositoryImplementationPostfix</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getRepositoryImplementationPostfix()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getRepositoryImplementationPostfix--">RepositoryConfigurationSource</a></code></span></div>
+<div class="block">Returns the configured postfix to be used for looking up custom implementation classes.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the postfix to use or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true#empty--" title="class or interface in java.util"><code>Optional.empty()</code></a> in case none is configured.</dd>
+</dl>
+</li>
+</ul>
+<a name="getSource--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSource</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;getSource()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getSource--">RepositoryConfigurationSource</a></code></span></div>
+<div class="block">Returns the actual source object that the configuration originated from. Will be used by the tooling to give visual
+feedback on where the repository instances actually come from. @return.</div>
+</li>
+</ul>
+<a name="getIncludeFilters--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIncludeFilters</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;&nbsp;getIncludeFilters()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#getIncludeFilters--">RepositoryConfigurationSourceSupport</a></code></span></div>
+<div class="block">Return the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter"><code>TypeFilter</code></a>s to define which types to include when scanning for repositories. Default
+implementation returns an empty collection.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#getIncludeFilters--">getIncludeFilters</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationSourceSupport</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getExcludeFilters--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getExcludeFilters</h4>
+<pre>public&nbsp;<a href="../../../../../org/springframework/data/util/Streamable.html" title="interface in org.springframework.data.util">Streamable</a>&lt;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter">TypeFilter</a>&gt;&nbsp;getExcludeFilters()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#getExcludeFilters--">RepositoryConfigurationSourceSupport</a></code></span></div>
+<div class="block">Return the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/filter/TypeFilter.html?is-external=true" title="class or interface in org.springframework.core.type.filter"><code>TypeFilter</code></a>s to define which types to exclude when scanning for repositories. Default
+implementation returns an empty collection.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getExcludeFilters--">getExcludeFilters</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html" title="interface in org.springframework.data.repository.config">RepositoryConfigurationSource</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#getExcludeFilters--">getExcludeFilters</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationSourceSupport</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getRepositoryFactoryBeanClassName--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRepositoryFactoryBeanClassName</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getRepositoryFactoryBeanClassName()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getRepositoryFactoryBeanClassName--">RepositoryConfigurationSource</a></code></span></div>
+<div class="block">Returns the name of the repository factory bean class or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true#empty--" title="class or interface in java.util"><code>Optional.empty()</code></a> if not defined in the source.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getRepositoryBaseClassName--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRepositoryBaseClassName</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getRepositoryBaseClassName()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getRepositoryBaseClassName--">RepositoryConfigurationSource</a></code></span></div>
+<div class="block">Returns the name of the repository base class to be used or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true#empty--" title="class or interface in java.util"><code>Optional.empty()</code></a> if the store specific defaults
+shall be applied.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="getAttributes--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAttributes</h4>
+<pre>public&nbsp;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/annotation/AnnotationAttributes.html?is-external=true" title="class or interface in org.springframework.core.annotation">AnnotationAttributes</a>&nbsp;getAttributes()</pre>
+<div class="block">Returns the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/annotation/AnnotationAttributes.html?is-external=true" title="class or interface in org.springframework.core.annotation"><code>AnnotationAttributes</code></a> of the annotation configured.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the attributes will never be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getEnableAnnotationMetadata--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEnableAnnotationMetadata</h4>
+<pre>public&nbsp;<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/AnnotationMetadata.html?is-external=true" title="class or interface in org.springframework.core.type">AnnotationMetadata</a>&nbsp;getEnableAnnotationMetadata()</pre>
+<div class="block">Returns the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/type/AnnotationMetadata.html?is-external=true" title="class or interface in org.springframework.core.type"><code>AnnotationMetadata</code></a> for the <code>@Enable</code> annotation that triggered the configuration.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the enableAnnotationMetadata</dd>
+</dl>
+</li>
+</ul>
+<a name="shouldConsiderNestedRepositories--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shouldConsiderNestedRepositories</h4>
+<pre>public&nbsp;boolean&nbsp;shouldConsiderNestedRepositories()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#shouldConsiderNestedRepositories--">RepositoryConfigurationSourceSupport</a></code></span></div>
+<div class="block">Returns whether we should consider nested repositories, i.e. repository interface definitions nested in other
+classes.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html#shouldConsiderNestedRepositories--">shouldConsiderNestedRepositories</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSourceSupport.html" title="class in org.springframework.data.repository.config">RepositoryConfigurationSourceSupport</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if the container should look for nested repository interface definitions.</dd>
+</dl>
+</li>
+</ul>
+<a name="getAttribute-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAttribute</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;getAttribute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#getAttribute-java.lang.String-">RepositoryConfigurationSource</a></code></span></div>
+<div class="block">Returns the value for the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> attribute with the given name. The name is expected to be handed in
+camel-case.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - must not be null or empty.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the attribute with the given name or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true#empty--" title="class or interface in java.util"><code>Optional.empty()</code></a> if not configured or empty.</dd>
+</dl>
+</li>
+</ul>
+<a name="usesExplicitFilters--">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>usesExplicitFilters</h4>
+<pre>public&nbsp;boolean&nbsp;usesExplicitFilters()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../org/springframework/data/repository/config/RepositoryConfigurationSource.html#usesExplicitFilters--">RepositoryConfigurationSource</a></code></span></div>
+<div class="block">Returns whether the configuration uses explicit filtering to scan for repository types.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>whether the configuration uses explicit filtering to scan for repository types.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AnnotationRepositoryConfigurationSource.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../org/springframework/data/repository/config/CustomRepositoryImplementationDetector.html" title="class in org.springframework.data.repository.config"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/springframework/data/repository/config/AnnotationRepositoryConfigurationSource.html" target="_top">Frames</a></li>
+<li><a href="AnnotationRepositoryConfigurationSource.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.org.springframework.data.repository.config.RepositoryConfigurationSourceSupport">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

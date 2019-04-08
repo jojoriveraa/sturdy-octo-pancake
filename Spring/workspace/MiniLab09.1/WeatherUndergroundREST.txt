@@ -1,0 +1,44 @@
+Quick Guide to Weather Underground REST API
+-------------------------------------------
+
+BASE URI - all requests begin with this, then you add path segments to specify what you want.
+http://api.wunderground.com/api/dc81cbd4c7cd0745  ->  the string following the 'api' is an API key (see bottom of this file)
+
+Examples:
+http://api.wunderground.com/api/dc81cbd4c7cd0745/conditions/forecast/q/98126.xml
+
+http://api.wunderground.com/api/dc81cbd4c7cd0745/conditions/astronomy/q/WA/Seattle.json
+
+http://api.wunderground.com/api/dc81cbd4c7cd0745/geolookup/conditions/alerts/q/KSEA.xml
+
+http://api.wunderground.com/api/dc81cbd4c7cd0745/forecast/tide/lang:DL/q/WA/Forks.json
+[using lang:DL as a setting for German (should really be DE !)]
+
+-----
+
+General Format:
+
+GET http://api.wunderground.com/api/API_KEY/FEATURES/SETTINGS/q/QUERY.FORMAT
+
+0. Replace API_KEY with yours
+1. Replace FEATURES with a path-style list of features, e.g,. /conditions/forecast
+2. Replace SETTINGS similarly [but the defaults are good (English)], so you can just omit this
+3. Replace QUERY with the location spec, e.g., 98126 or /WA/Seattle
+4. Replace FORMAT with either .json or .xml
+
+NOTE: don't forget that darn little 'q' when building the URI !
+
+Some of the FEATURES available:
+geolookup
+conditions
+forecast
+hourly
+astronomy
+tide
+
+-----
+
+We registered for the API key by providing some basic information:
+company name and website, contact email, etc.
+
+Feel free to use it, but please don't do anything that gets us in trouble.  :|

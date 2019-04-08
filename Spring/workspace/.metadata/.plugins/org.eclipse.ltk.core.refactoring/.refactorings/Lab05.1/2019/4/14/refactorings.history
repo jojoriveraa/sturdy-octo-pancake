@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;itemByName&apos; in &apos;com.javatunes.service.CatalogTest.testFindOnePositive()&apos; to &apos;itemByKeyword&apos;&#x0D;&#x0A;- Original project: &apos;Lab05.1&apos;&#x0D;&#x0A;- Original element: &apos;com.javatunes.service.CatalogTest.testFindOnePositive().itemByName&apos;&#x0D;&#x0A;- Renamed element: &apos;itemByName&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;itemByName&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/test\/java&lt;com.javatunes.service{CatalogTest.java[CatalogTest~testFindOnePositive@itemByName!1103!1141!1113!1122!QMusicItem;!0!false" name="itemByKeyword" references="true" stamp="1554235168081" version="1.0"/>
+</session>

@@ -1,0 +1,454 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ProjectingJackson2HttpMessageConverter (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="ProjectingJackson2HttpMessageConverter (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/ProjectingJackson2HttpMessageConverter.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/web/ProjectedPayload.html" title="annotation in org.springframework.data.web"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/web/ProxyingHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html" target="_top">Frames</a></li>
+<li><a href="ProjectingJackson2HttpMessageConverter.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.web</div>
+<h2 title="Class ProjectingJackson2HttpMessageConverter" class="title">Class ProjectingJackson2HttpMessageConverter</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">org.springframework.http.converter.AbstractHttpMessageConverter</a>&lt;T&gt;</li>
+<li>
+<ul class="inheritance">
+<li><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractGenericHttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">org.springframework.http.converter.AbstractGenericHttpMessageConverter</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</li>
+<li>
+<ul class="inheritance">
+<li><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">org.springframework.http.converter.json.MappingJackson2HttpMessageConverter</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.web.ProjectingJackson2HttpMessageConverter</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/Aware.html?is-external=true" title="class or interface in org.springframework.beans.factory">Aware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanClassLoaderAware.html?is-external=true" title="class or interface in org.springframework.beans.factory">BeanClassLoaderAware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanFactoryAware.html?is-external=true" title="class or interface in org.springframework.beans.factory">BeanFactoryAware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/GenericHttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">GenericHttpMessageConverter</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">HttpMessageConverter</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">ProjectingJackson2HttpMessageConverter</span>
+extends <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">MappingJackson2HttpMessageConverter</a>
+implements <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanClassLoaderAware.html?is-external=true" title="class or interface in org.springframework.beans.factory">BeanClassLoaderAware</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanFactoryAware.html?is-external=true" title="class or interface in org.springframework.beans.factory">BeanFactoryAware</a></pre>
+<div class="block"><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter"><code>HttpMessageConverter</code></a> implementation to enable projected JSON binding to interfaces annotated with
+<a href="../../../../org/springframework/data/web/ProjectedPayload.html" title="annotation in org.springframework.data.web"><code>ProjectedPayload</code></a>.</div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.13</dd>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke, Christoph Strobl</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter">
+
+</a>
+<h3>Fields inherited from class&nbsp;org.springframework.http.converter.json.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">AbstractJackson2HttpMessageConverter</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#DEFAULT_CHARSET" title="class or interface in org.springframework.http.converter.json">DEFAULT_CHARSET</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#objectMapper" title="class or interface in org.springframework.http.converter.json">objectMapper</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.org.springframework.http.converter.AbstractHttpMessageConverter">
+
+</a>
+<h3>Fields inherited from class&nbsp;org.springframework.http.converter.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">AbstractHttpMessageConverter</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#logger" title="class or interface in org.springframework.http.converter">logger</a></code></li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html#ProjectingJackson2HttpMessageConverter--">ProjectingJackson2HttpMessageConverter</a></span>()</code>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html" title="class in org.springframework.data.web"><code>ProjectingJackson2HttpMessageConverter</code></a> using a default <code>ObjectMapper</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html#ProjectingJackson2HttpMessageConverter-com.fasterxml.jackson.databind.ObjectMapper-">ProjectingJackson2HttpMessageConverter</a></span>(com.fasterxml.jackson.databind.ObjectMapper&nbsp;mapper)</code>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html" title="class in org.springframework.data.web"><code>ProjectingJackson2HttpMessageConverter</code></a> for the given <code>ObjectMapper</code>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html#canRead-java.lang.reflect.Type-java.lang.Class-org.springframework.http.MediaType-">canRead</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a>&nbsp;type,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;contextClass,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/MediaType.html?is-external=true" title="class or interface in org.springframework.http">MediaType</a>&nbsp;mediaType)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html#canWrite-java.lang.Class-org.springframework.http.MediaType-">canWrite</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;clazz,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/MediaType.html?is-external=true" title="class or interface in org.springframework.http">MediaType</a>&nbsp;mediaType)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html#read-java.lang.reflect.Type-java.lang.Class-org.springframework.http.HttpInputMessage-">read</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a>&nbsp;type,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;contextClass,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/HttpInputMessage.html?is-external=true" title="class or interface in org.springframework.http">HttpInputMessage</a>&nbsp;inputMessage)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html#setBeanClassLoader-java.lang.ClassLoader-">setBeanClassLoader</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html?is-external=true" title="class or interface in java.lang">ClassLoader</a>&nbsp;classLoader)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html#setBeanFactory-org.springframework.beans.factory.BeanFactory-">setBeanFactory</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanFactory.html?is-external=true" title="class or interface in org.springframework.beans.factory">BeanFactory</a>&nbsp;beanFactory)</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+
+</a>
+<h3>Methods inherited from class&nbsp;org.springframework.http.converter.json.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">MappingJackson2HttpMessageConverter</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html?is-external=true#setJsonPrefix-java.lang.String-" title="class or interface in org.springframework.http.converter.json">setJsonPrefix</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html?is-external=true#setPrefixJson-boolean-" title="class or interface in org.springframework.http.converter.json">setPrefixJson</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html?is-external=true#writePrefix-com.fasterxml.jackson.core.JsonGenerator-java.lang.Object-" title="class or interface in org.springframework.http.converter.json">writePrefix</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html?is-external=true#writeSuffix-com.fasterxml.jackson.core.JsonGenerator-java.lang.Object-" title="class or interface in org.springframework.http.converter.json">writeSuffix</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter">
+
+</a>
+<h3>Methods inherited from class&nbsp;org.springframework.http.converter.json.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">AbstractJackson2HttpMessageConverter</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#canRead-java.lang.Class-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter.json">canRead</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#getContentLength-java.lang.Object-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter.json">getContentLength</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#getDefaultContentType-java.lang.Object-" title="class or interface in org.springframework.http.converter.json">getDefaultContentType</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#getJavaType-java.lang.reflect.Type-java.lang.Class-" title="class or interface in org.springframework.http.converter.json">getJavaType</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#getJsonEncoding-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter.json">getJsonEncoding</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#getObjectMapper--" title="class or interface in org.springframework.http.converter.json">getObjectMapper</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#logWarningIfNecessary-java.lang.reflect.Type-java.lang.Throwable-" title="class or interface in org.springframework.http.converter.json">logWarningIfNecessary</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#readInternal-java.lang.Class-org.springframework.http.HttpInputMessage-" title="class or interface in org.springframework.http.converter.json">readInternal</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#setObjectMapper-com.fasterxml.jackson.databind.ObjectMapper-" title="class or interface in org.springframework.http.converter.json">setObjectMapper</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#setPrettyPrint-boolean-" title="class or interface in org.springframework.http.converter.json">setPrettyPrint</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#writeInternal-java.lang.Object-java.lang.reflect.Type-org.springframework.http.HttpOutputMessage-" title="class or interface in org.springframework.http.converter.json">writeInternal</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.http.converter.AbstractGenericHttpMessageConverter">
+
+</a>
+<h3>Methods inherited from class&nbsp;org.springframework.http.converter.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractGenericHttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">AbstractGenericHttpMessageConverter</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractGenericHttpMessageConverter.html?is-external=true#canWrite-java.lang.reflect.Type-java.lang.Class-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter">canWrite</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractGenericHttpMessageConverter.html?is-external=true#supports-java.lang.Class-" title="class or interface in org.springframework.http.converter">supports</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractGenericHttpMessageConverter.html?is-external=true#write-T-java.lang.reflect.Type-org.springframework.http.MediaType-org.springframework.http.HttpOutputMessage-" title="class or interface in org.springframework.http.converter">write</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractGenericHttpMessageConverter.html?is-external=true#writeInternal-T-org.springframework.http.HttpOutputMessage-" title="class or interface in org.springframework.http.converter">writeInternal</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.http.converter.AbstractHttpMessageConverter">
+
+</a>
+<h3>Methods inherited from class&nbsp;org.springframework.http.converter.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">AbstractHttpMessageConverter</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#addDefaultHeaders-org.springframework.http.HttpHeaders-T-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter">addDefaultHeaders</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#canRead-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter">canRead</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#canWrite-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter">canWrite</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#getDefaultCharset--" title="class or interface in org.springframework.http.converter">getDefaultCharset</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#getSupportedMediaTypes--" title="class or interface in org.springframework.http.converter">getSupportedMediaTypes</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#read-java.lang.Class-org.springframework.http.HttpInputMessage-" title="class or interface in org.springframework.http.converter">read</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#setDefaultCharset-java.nio.charset.Charset-" title="class or interface in org.springframework.http.converter">setDefaultCharset</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#setSupportedMediaTypes-java.util.List-" title="class or interface in org.springframework.http.converter">setSupportedMediaTypes</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/AbstractHttpMessageConverter.html?is-external=true#write-T-org.springframework.http.MediaType-org.springframework.http.HttpOutputMessage-" title="class or interface in org.springframework.http.converter">write</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.org.springframework.http.converter.HttpMessageConverter">
+
+</a>
+<h3>Methods inherited from interface&nbsp;org.springframework.http.converter.<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">HttpMessageConverter</a></h3>
+<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html?is-external=true#getSupportedMediaTypes--" title="class or interface in org.springframework.http.converter">getSupportedMediaTypes</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html?is-external=true#read-java.lang.Class-org.springframework.http.HttpInputMessage-" title="class or interface in org.springframework.http.converter">read</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html?is-external=true#write-T-org.springframework.http.MediaType-org.springframework.http.HttpOutputMessage-" title="class or interface in org.springframework.http.converter">write</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="ProjectingJackson2HttpMessageConverter--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ProjectingJackson2HttpMessageConverter</h4>
+<pre>public&nbsp;ProjectingJackson2HttpMessageConverter()</pre>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html" title="class in org.springframework.data.web"><code>ProjectingJackson2HttpMessageConverter</code></a> using a default <code>ObjectMapper</code>.</div>
+</li>
+</ul>
+<a name="ProjectingJackson2HttpMessageConverter-com.fasterxml.jackson.databind.ObjectMapper-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ProjectingJackson2HttpMessageConverter</h4>
+<pre>public&nbsp;ProjectingJackson2HttpMessageConverter(com.fasterxml.jackson.databind.ObjectMapper&nbsp;mapper)</pre>
+<div class="block">Creates a new <a href="../../../../org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html" title="class in org.springframework.data.web"><code>ProjectingJackson2HttpMessageConverter</code></a> for the given <code>ObjectMapper</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>mapper</code> - must not be null.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="setBeanClassLoader-java.lang.ClassLoader-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBeanClassLoader</h4>
+<pre>public&nbsp;void&nbsp;setBeanClassLoader(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html?is-external=true" title="class or interface in java.lang">ClassLoader</a>&nbsp;classLoader)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanClassLoaderAware.html?is-external=true#setBeanClassLoader-java.lang.ClassLoader-" title="class or interface in org.springframework.beans.factory">setBeanClassLoader</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanClassLoaderAware.html?is-external=true" title="class or interface in org.springframework.beans.factory">BeanClassLoaderAware</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setBeanFactory-org.springframework.beans.factory.BeanFactory-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBeanFactory</h4>
+<pre>public&nbsp;void&nbsp;setBeanFactory(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanFactory.html?is-external=true" title="class or interface in org.springframework.beans.factory">BeanFactory</a>&nbsp;beanFactory)
+                    throws <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/BeansException.html?is-external=true" title="class or interface in org.springframework.beans">BeansException</a></pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanFactoryAware.html?is-external=true#setBeanFactory-org.springframework.beans.factory.BeanFactory-" title="class or interface in org.springframework.beans.factory">setBeanFactory</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/BeanFactoryAware.html?is-external=true" title="class or interface in org.springframework.beans.factory">BeanFactoryAware</a></code></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/BeansException.html?is-external=true" title="class or interface in org.springframework.beans">BeansException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="canRead-java.lang.reflect.Type-java.lang.Class-org.springframework.http.MediaType-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canRead</h4>
+<pre>public&nbsp;boolean&nbsp;canRead(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a>&nbsp;type,
+                       <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;contextClass,
+                       <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                       <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/MediaType.html?is-external=true" title="class or interface in org.springframework.http">MediaType</a>&nbsp;mediaType)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/GenericHttpMessageConverter.html?is-external=true#canRead-java.lang.reflect.Type-java.lang.Class-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter">canRead</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/GenericHttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">GenericHttpMessageConverter</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#canRead-java.lang.reflect.Type-java.lang.Class-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter.json">canRead</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">AbstractJackson2HttpMessageConverter</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="canWrite-java.lang.Class-org.springframework.http.MediaType-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canWrite</h4>
+<pre>public&nbsp;boolean&nbsp;canWrite(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;clazz,
+                        <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                        <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/MediaType.html?is-external=true" title="class or interface in org.springframework.http">MediaType</a>&nbsp;mediaType)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html?is-external=true#canWrite-java.lang.Class-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter">canWrite</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">HttpMessageConverter</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#canWrite-java.lang.Class-org.springframework.http.MediaType-" title="class or interface in org.springframework.http.converter.json">canWrite</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">AbstractJackson2HttpMessageConverter</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="read-java.lang.reflect.Type-java.lang.Class-org.springframework.http.HttpInputMessage-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>read</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;read(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html?is-external=true" title="class or interface in java.lang.reflect">Type</a>&nbsp;type,
+                   <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;contextClass,
+                   <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/HttpInputMessage.html?is-external=true" title="class or interface in org.springframework.http">HttpInputMessage</a>&nbsp;inputMessage)
+            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                   <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageNotReadableException.html?is-external=true" title="class or interface in org.springframework.http.converter">HttpMessageNotReadableException</a></pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/GenericHttpMessageConverter.html?is-external=true#read-java.lang.reflect.Type-java.lang.Class-org.springframework.http.HttpInputMessage-" title="class or interface in org.springframework.http.converter">read</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/GenericHttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter">GenericHttpMessageConverter</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true#read-java.lang.reflect.Type-java.lang.Class-org.springframework.http.HttpInputMessage-" title="class or interface in org.springframework.http.converter.json">read</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.html?is-external=true" title="class or interface in org.springframework.http.converter.json">AbstractJackson2HttpMessageConverter</a></code></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/http/converter/HttpMessageNotReadableException.html?is-external=true" title="class or interface in org.springframework.http.converter">HttpMessageNotReadableException</a></code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/ProjectingJackson2HttpMessageConverter.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/web/ProjectedPayload.html" title="annotation in org.springframework.data.web"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/web/ProxyingHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/web/ProjectingJackson2HttpMessageConverter.html" target="_top">Frames</a></li>
+<li><a href="ProjectingJackson2HttpMessageConverter.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

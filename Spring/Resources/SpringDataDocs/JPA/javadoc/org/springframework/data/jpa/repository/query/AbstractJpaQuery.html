@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AbstractJpaQuery (Spring Data JPA 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="AbstractJpaQuery (Spring Data JPA 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":6,"i6":6,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AbstractJpaQuery.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data JPA</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../../org/springframework/data/jpa/repository/query/DefaultJpaEntityMetadata.html" title="class in org.springframework.data.jpa.repository.query"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/springframework/data/jpa/repository/query/AbstractJpaQuery.html" target="_top">Frames</a></li>
+<li><a href="AbstractJpaQuery.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.jpa.repository.query</div>
+<h2 title="Class AbstractJpaQuery" class="title">Class AbstractJpaQuery</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.jpa.repository.query.AbstractJpaQuery</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/RepositoryQuery.html?is-external=true" title="class or interface in org.springframework.data.repository.query">RepositoryQuery</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../../org/springframework/data/jpa/repository/query/PartTreeJpaQuery.html" title="class in org.springframework.data.jpa.repository.query">PartTreeJpaQuery</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="typeNameLabel">AbstractJpaQuery</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/RepositoryQuery.html?is-external=true" title="class or interface in org.springframework.data.repository.query">RepositoryQuery</a></pre>
+<div class="block">Abstract base class to implement <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/RepositoryQuery.html?is-external=true" title="class or interface in org.springframework.data.repository.query"><code>RepositoryQuery</code></a>s.</div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke, Thomas Darimont, Mark Paluch, Christoph Strobl, Nicolas Cirigliano, Jens Schauder, Сергей Цыпанов</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#AbstractJpaQuery-org.springframework.data.jpa.repository.query.JpaQueryMethod-javax.persistence.EntityManager-">AbstractJpaQuery</a></span>(<a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryMethod.html" title="class in org.springframework.data.jpa.repository.query">JpaQueryMethod</a>&nbsp;method,
+javax.persistence.EntityManager&nbsp;em)</code>
+<div class="block">Creates a new <a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html" title="class in org.springframework.data.jpa.repository.query"><code>AbstractJpaQuery</code></a> from the given <a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryMethod.html" title="class in org.springframework.data.jpa.repository.query"><code>JpaQueryMethod</code></a>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>protected &lt;T extends javax.persistence.Query&gt;<br>T</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#applyHints-T-org.springframework.data.jpa.repository.query.JpaQueryMethod-">applyHints</a></span>(T&nbsp;query,
+<a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryMethod.html" title="class in org.springframework.data.jpa.repository.query">JpaQueryMethod</a>&nbsp;method)</code>
+<div class="block">Applies the declared query hints to the given query.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>protected &lt;T extends javax.persistence.Query&gt;<br>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#applyQueryHint-T-javax.persistence.QueryHint-">applyQueryHint</a></span>(T&nbsp;query,
+javax.persistence.QueryHint&nbsp;hint)</code>
+<div class="block">Protected to be able to customize in sub-classes.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../org/springframework/data/jpa/repository/query/ParameterBinder.html" title="class in org.springframework.data.jpa.repository.query">ParameterBinder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#createBinder--">createBinder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>protected javax.persistence.Query</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#createCountQuery-java.lang.Object:A-">createCountQuery</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;values)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>protected javax.persistence.Query</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#createQuery-java.lang.Object:A-">createQuery</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;values)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>protected abstract javax.persistence.Query</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#doCreateCountQuery-java.lang.Object:A-">doCreateCountQuery</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;values)</code>
+<div class="block">Creates a <code>TypedQuery</code> for counting using the given values.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>protected abstract javax.persistence.Query</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#doCreateQuery-java.lang.Object:A-">doCreateQuery</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;values)</code>
+<div class="block">Creates a <code>Query</code> instance for the given values.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#execute-java.lang.Object:A-">execute</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;parameters)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>protected javax.persistence.EntityManager</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#getEntityManager--">getEntityManager</a></span>()</code>
+<div class="block">Returns the <code>EntityManager</code>.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryExecution.html" title="class in org.springframework.data.jpa.repository.query">JpaQueryExecution</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#getExecution--">getExecution</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../../org/springframework/data/jpa/util/JpaMetamodel.html" title="class in org.springframework.data.jpa.util">JpaMetamodel</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#getMetamodel--">getMetamodel</a></span>()</code>
+<div class="block">Returns the <a href="../../../../../../org/springframework/data/jpa/util/JpaMetamodel.html" title="class in org.springframework.data.jpa.util"><code>JpaMetamodel</code></a>.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryMethod.html" title="class in org.springframework.data.jpa.repository.query">JpaQueryMethod</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#getQueryMethod--">getQueryMethod</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html#getTypeToRead--">getTypeToRead</a></span>()</code>
+<div class="block">Returns the type to be used when creating the JPA query.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="AbstractJpaQuery-org.springframework.data.jpa.repository.query.JpaQueryMethod-javax.persistence.EntityManager-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AbstractJpaQuery</h4>
+<pre>public&nbsp;AbstractJpaQuery(<a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryMethod.html" title="class in org.springframework.data.jpa.repository.query">JpaQueryMethod</a>&nbsp;method,
+                        javax.persistence.EntityManager&nbsp;em)</pre>
+<div class="block">Creates a new <a href="../../../../../../org/springframework/data/jpa/repository/query/AbstractJpaQuery.html" title="class in org.springframework.data.jpa.repository.query"><code>AbstractJpaQuery</code></a> from the given <a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryMethod.html" title="class in org.springframework.data.jpa.repository.query"><code>JpaQueryMethod</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>method</code> - </dd>
+<dd><code>em</code> - </dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="getQueryMethod--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getQueryMethod</h4>
+<pre>public&nbsp;<a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryMethod.html" title="class in org.springframework.data.jpa.repository.query">JpaQueryMethod</a>&nbsp;getQueryMethod()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/RepositoryQuery.html?is-external=true#getQueryMethod--" title="class or interface in org.springframework.data.repository.query">getQueryMethod</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/RepositoryQuery.html?is-external=true" title="class or interface in org.springframework.data.repository.query">RepositoryQuery</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getEntityManager--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEntityManager</h4>
+<pre>protected&nbsp;javax.persistence.EntityManager&nbsp;getEntityManager()</pre>
+<div class="block">Returns the <code>EntityManager</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>will never be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="getMetamodel--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMetamodel</h4>
+<pre>protected&nbsp;<a href="../../../../../../org/springframework/data/jpa/util/JpaMetamodel.html" title="class in org.springframework.data.jpa.util">JpaMetamodel</a>&nbsp;getMetamodel()</pre>
+<div class="block">Returns the <a href="../../../../../../org/springframework/data/jpa/util/JpaMetamodel.html" title="class in org.springframework.data.jpa.util"><code>JpaMetamodel</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="execute-java.lang.Object:A-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>execute</h4>
+<pre><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;execute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;parameters)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/RepositoryQuery.html?is-external=true#execute-java.lang.Object:A-" title="class or interface in org.springframework.data.repository.query">execute</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/RepositoryQuery.html?is-external=true" title="class or interface in org.springframework.data.repository.query">RepositoryQuery</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getExecution--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getExecution</h4>
+<pre>protected&nbsp;<a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryExecution.html" title="class in org.springframework.data.jpa.repository.query">JpaQueryExecution</a>&nbsp;getExecution()</pre>
+</li>
+</ul>
+<a name="applyHints-javax.persistence.Query-org.springframework.data.jpa.repository.query.JpaQueryMethod-">
+
+</a><a name="applyHints-T-org.springframework.data.jpa.repository.query.JpaQueryMethod-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>applyHints</h4>
+<pre>protected&nbsp;&lt;T extends javax.persistence.Query&gt;&nbsp;T&nbsp;applyHints(T&nbsp;query,
+                                                           <a href="../../../../../../org/springframework/data/jpa/repository/query/JpaQueryMethod.html" title="class in org.springframework.data.jpa.repository.query">JpaQueryMethod</a>&nbsp;method)</pre>
+<div class="block">Applies the declared query hints to the given query.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>query</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="applyQueryHint-javax.persistence.Query-javax.persistence.QueryHint-">
+
+</a><a name="applyQueryHint-T-javax.persistence.QueryHint-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>applyQueryHint</h4>
+<pre>protected&nbsp;&lt;T extends javax.persistence.Query&gt;&nbsp;void&nbsp;applyQueryHint(T&nbsp;query,
+                                                                  javax.persistence.QueryHint&nbsp;hint)</pre>
+<div class="block">Protected to be able to customize in sub-classes.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>query</code> - must not be null.</dd>
+<dd><code>hint</code> - must not be null.</dd>
+</dl>
+</li>
+</ul>
+<a name="createBinder--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createBinder</h4>
+<pre>protected&nbsp;<a href="../../../../../../org/springframework/data/jpa/repository/query/ParameterBinder.html" title="class in org.springframework.data.jpa.repository.query">ParameterBinder</a>&nbsp;createBinder()</pre>
+</li>
+</ul>
+<a name="createQuery-java.lang.Object:A-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createQuery</h4>
+<pre>protected&nbsp;javax.persistence.Query&nbsp;createQuery(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;values)</pre>
+</li>
+</ul>
+<a name="createCountQuery-java.lang.Object:A-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCountQuery</h4>
+<pre>protected&nbsp;javax.persistence.Query&nbsp;createCountQuery(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;values)</pre>
+</li>
+</ul>
+<a name="getTypeToRead--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTypeToRead</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&gt;&nbsp;getTypeToRead()</pre>
+<div class="block">Returns the type to be used when creating the JPA query.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.0.5</dd>
+</dl>
+</li>
+</ul>
+<a name="doCreateQuery-java.lang.Object:A-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doCreateQuery</h4>
+<pre>protected abstract&nbsp;javax.persistence.Query&nbsp;doCreateQuery(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;values)</pre>
+<div class="block">Creates a <code>Query</code> instance for the given values.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>values</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a name="doCreateCountQuery-java.lang.Object:A-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>doCreateCountQuery</h4>
+<pre>protected abstract&nbsp;javax.persistence.Query&nbsp;doCreateCountQuery(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;values)</pre>
+<div class="block">Creates a <code>TypedQuery</code> for counting using the given values.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>values</code> - must not be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AbstractJpaQuery.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data JPA</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../../org/springframework/data/jpa/repository/query/DefaultJpaEntityMetadata.html" title="class in org.springframework.data.jpa.repository.query"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/springframework/data/jpa/repository/query/AbstractJpaQuery.html" target="_top">Frames</a></li>
+<li><a href="AbstractJpaQuery.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>

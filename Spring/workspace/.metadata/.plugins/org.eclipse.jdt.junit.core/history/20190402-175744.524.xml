@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ItemRepositoryTest" project="Lab05.2" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.javatunes.persistence.ItemRepositoryTest" time="0.641">
+    <testcase name="testFindByArtistdPositive" classname="com.javatunes.persistence.ItemRepositoryTest" time="0.578"/>
+    <testcase name="testFindPositive" classname="com.javatunes.persistence.ItemRepositoryTest" time="0.063"/>
+  </testsuite>
+</testrun>

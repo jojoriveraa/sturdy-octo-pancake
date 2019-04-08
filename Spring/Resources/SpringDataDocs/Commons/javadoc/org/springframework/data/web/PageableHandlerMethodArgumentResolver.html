@@ -1,0 +1,634 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PageableHandlerMethodArgumentResolver (Spring Data Core 2.0.5.RELEASE API)</title>
+<meta name="date" content="2018-02-28">
+<link rel="stylesheet" type="text/css" href="../../../../spring-javadoc.css" title="Style">
+<script type="text/javascript" src="../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript">try{if(location.href.indexOf('is-external=true')==-1){parent.document.title="PageableHandlerMethodArgumentResolver (Spring Data Core 2.0.5.RELEASE API)";}}catch(err){}var methods={"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10};var tabs={65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};var altColor="altColor";var rowColor="rowColor";var tableTab="tableTab";var activeTableTab="activeTableTab";</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+
+<div class="topNav"><a name="navbar.top">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PageableHandlerMethodArgumentResolver.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/web/PageableDefault.html" title="annotation in org.springframework.data.web"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/web/PagedResourcesAssembler.html" title="class in org.springframework.data.web"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/web/PageableHandlerMethodArgumentResolver.html" target="_top">Frames</a></li>
+<li><a href="PageableHandlerMethodArgumentResolver.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+
+</a></div>
+
+
+<div class="header">
+<div class="subTitle">org.springframework.data.web</div>
+<h2 title="Class PageableHandlerMethodArgumentResolver" class="title">Class PageableHandlerMethodArgumentResolver</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.springframework.data.web.PageableHandlerMethodArgumentResolver</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../org/springframework/data/web/PageableArgumentResolver.html" title="interface in org.springframework.data.web">PageableArgumentResolver</a>, <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html?is-external=true" title="class or interface in org.springframework.web.method.support">HandlerMethodArgumentResolver</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../org/springframework/data/web/HateoasPageableHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web">HateoasPageableHandlerMethodArgumentResolver</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">PageableHandlerMethodArgumentResolver</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../org/springframework/data/web/PageableArgumentResolver.html" title="interface in org.springframework.data.web">PageableArgumentResolver</a></pre>
+<div class="block">Extracts paging information from web requests and thus allows injecting <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> instances into controller
+methods. Request properties to be parsed can be configured. Default configuration uses request parameters beginning
+with <a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#DEFAULT_PAGE_PARAMETER"><code>DEFAULT_PAGE_PARAMETER</code></a><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#DEFAULT_QUALIFIER_DELIMITER"><code>DEFAULT_QUALIFIER_DELIMITER</code></a>.</div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.6</dd>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Oliver Gierke, Nick Williams, Mark Paluch, Christoph Strobl</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#PageableHandlerMethodArgumentResolver--">PageableHandlerMethodArgumentResolver</a></span>()</code>
+<div class="block">Constructs an instance of this resolved with a default <a href="../../../../org/springframework/data/web/SortHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web"><code>SortHandlerMethodArgumentResolver</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#PageableHandlerMethodArgumentResolver-org.springframework.data.web.SortArgumentResolver-">PageableHandlerMethodArgumentResolver</a></span>(<a href="../../../../org/springframework/data/web/SortArgumentResolver.html" title="interface in org.springframework.data.web">SortArgumentResolver</a>&nbsp;sortResolver)</code>
+<div class="block">Constructs an instance of this resolver with the specified <a href="../../../../org/springframework/data/web/SortArgumentResolver.html" title="interface in org.springframework.data.web"><code>SortArgumentResolver</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#PageableHandlerMethodArgumentResolver-org.springframework.data.web.SortHandlerMethodArgumentResolver-">PageableHandlerMethodArgumentResolver</a></span>(<a href="../../../../org/springframework/data/web/SortHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web">SortHandlerMethodArgumentResolver</a>&nbsp;sortResolver)</code>
+<div class="block">Constructs an instance of this resolver with the specified <a href="../../../../org/springframework/data/web/SortHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web"><code>SortHandlerMethodArgumentResolver</code></a>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#getMaxPageSize--">getMaxPageSize</a></span>()</code>
+<div class="block">Retrieves the maximum page size to be accepted.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#getPageParameterName--">getPageParameterName</a></span>()</code>
+<div class="block">Retrieves the parameter name to be used to find the page number in the request.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#getParameterNameToUse-java.lang.String-org.springframework.core.MethodParameter-">getParameterNameToUse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;source,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/MethodParameter.html?is-external=true" title="class or interface in org.springframework.core">MethodParameter</a>&nbsp;parameter)</code>
+<div class="block">Returns the name of the request parameter to find the <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> information in.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#getSizeParameterName--">getSizeParameterName</a></span>()</code>
+<div class="block">Retrieves the parameter name to be used to find the page size in the request.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#isFallbackPageable-org.springframework.data.domain.Pageable-">isFallbackPageable</a></span>(<a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;pageable)</code>
+<div class="block">Returns whether the given <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> is the fallback one.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#isOneIndexedParameters--">isOneIndexedParameters</a></span>()</code>
+<div class="block">Indicates whether to expose and assume 1-based page number indexes in the request parameters.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#resolveArgument-org.springframework.core.MethodParameter-org.springframework.web.method.support.ModelAndViewContainer-org.springframework.web.context.request.NativeWebRequest-org.springframework.web.bind.support.WebDataBinderFactory-">resolveArgument</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/MethodParameter.html?is-external=true" title="class or interface in org.springframework.core">MethodParameter</a>&nbsp;methodParameter,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/method/support/ModelAndViewContainer.html?is-external=true" title="class or interface in org.springframework.web.method.support">ModelAndViewContainer</a>&nbsp;mavContainer,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/context/request/NativeWebRequest.html?is-external=true" title="class or interface in org.springframework.web.context.request">NativeWebRequest</a>&nbsp;webRequest,
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/bind/support/WebDataBinderFactory.html?is-external=true" title="class or interface in org.springframework.web.bind.support">WebDataBinderFactory</a>&nbsp;binderFactory)</code>
+<div class="block">Resolves a <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> method parameter into an argument value from a given request.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#setFallbackPageable-org.springframework.data.domain.Pageable-">setFallbackPageable</a></span>(<a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;fallbackPageable)</code>
+<div class="block">Configures the <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> to be used as fallback in case no <a href="../../../../org/springframework/data/web/PageableDefault.html" title="annotation in org.springframework.data.web"><code>PageableDefault</code></a> or
+<a href="../../../../org/springframework/data/web/PageableDefault.html" title="annotation in org.springframework.data.web"><code>PageableDefault</code></a> (the latter only supported in legacy mode) can be found at the method parameter to be
+resolved.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#setMaxPageSize-int-">setMaxPageSize</a></span>(int&nbsp;maxPageSize)</code>
+<div class="block">Configures the maximum page size to be accepted.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#setOneIndexedParameters-boolean-">setOneIndexedParameters</a></span>(boolean&nbsp;oneIndexedParameters)</code>
+<div class="block">Configures whether to expose and assume 1-based page number indexes in the request parameters.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#setPageParameterName-java.lang.String-">setPageParameterName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageParameterName)</code>
+<div class="block">Configures the parameter name to be used to find the page number in the request.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#setPrefix-java.lang.String-">setPrefix</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</code>
+<div class="block">Configures a general prefix to be prepended to the page number and page size parameters.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#setQualifierDelimiter-java.lang.String-">setQualifierDelimiter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;qualifierDelimiter)</code>
+<div class="block">The delimiter to be used between the qualifier and the actual page number and size properties.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#setSizeParameterName-java.lang.String-">setSizeParameterName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sizeParameterName)</code>
+<div class="block">Configures the parameter name to be used to find the page size in the request.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#supportsParameter-org.springframework.core.MethodParameter-">supportsParameter</a></span>(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/MethodParameter.html?is-external=true" title="class or interface in org.springframework.core">MethodParameter</a>&nbsp;parameter)</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+
+</a>
+<h3>Constructor Detail</h3>
+<a name="PageableHandlerMethodArgumentResolver--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PageableHandlerMethodArgumentResolver</h4>
+<pre>public&nbsp;PageableHandlerMethodArgumentResolver()</pre>
+<div class="block">Constructs an instance of this resolved with a default <a href="../../../../org/springframework/data/web/SortHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web"><code>SortHandlerMethodArgumentResolver</code></a>.</div>
+</li>
+</ul>
+<a name="PageableHandlerMethodArgumentResolver-org.springframework.data.web.SortHandlerMethodArgumentResolver-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PageableHandlerMethodArgumentResolver</h4>
+<pre>public&nbsp;PageableHandlerMethodArgumentResolver(<a href="../../../../org/springframework/data/web/SortHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web">SortHandlerMethodArgumentResolver</a>&nbsp;sortResolver)</pre>
+<div class="block">Constructs an instance of this resolver with the specified <a href="../../../../org/springframework/data/web/SortHandlerMethodArgumentResolver.html" title="class in org.springframework.data.web"><code>SortHandlerMethodArgumentResolver</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>sortResolver</code> - the sort resolver to use</dd>
+</dl>
+</li>
+</ul>
+<a name="PageableHandlerMethodArgumentResolver-org.springframework.data.web.SortArgumentResolver-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PageableHandlerMethodArgumentResolver</h4>
+<pre>public&nbsp;PageableHandlerMethodArgumentResolver(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                                             <a href="../../../../org/springframework/data/web/SortArgumentResolver.html" title="interface in org.springframework.data.web">SortArgumentResolver</a>&nbsp;sortResolver)</pre>
+<div class="block">Constructs an instance of this resolver with the specified <a href="../../../../org/springframework/data/web/SortArgumentResolver.html" title="interface in org.springframework.data.web"><code>SortArgumentResolver</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>sortResolver</code> - the sort resolver to use</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.13</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+
+</a>
+<h3>Method Detail</h3>
+<a name="setFallbackPageable-org.springframework.data.domain.Pageable-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFallbackPageable</h4>
+<pre>public&nbsp;void&nbsp;setFallbackPageable(<a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;fallbackPageable)</pre>
+<div class="block">Configures the <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> to be used as fallback in case no <a href="../../../../org/springframework/data/web/PageableDefault.html" title="annotation in org.springframework.data.web"><code>PageableDefault</code></a> or
+<a href="../../../../org/springframework/data/web/PageableDefault.html" title="annotation in org.springframework.data.web"><code>PageableDefault</code></a> (the latter only supported in legacy mode) can be found at the method parameter to be
+resolved.
+<p>
+If you set this to Optional#empty(), be aware that you controller methods will get null
+handed into them in case no <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> data can be found in the request. Note, that doing so will require you
+supply bot the page <em>and</em> the size parameter with the requests as there will be no default for any of the
+parameters available.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>fallbackPageable</code> - the <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> to be used as general fallback.</dd>
+</dl>
+</li>
+</ul>
+<a name="isFallbackPageable-org.springframework.data.domain.Pageable-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isFallbackPageable</h4>
+<pre>public&nbsp;boolean&nbsp;isFallbackPageable(<a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;pageable)</pre>
+<div class="block">Returns whether the given <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> is the fallback one.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pageable</code> - can be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.9</dd>
+</dl>
+</li>
+</ul>
+<a name="setMaxPageSize-int-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaxPageSize</h4>
+<pre>public&nbsp;void&nbsp;setMaxPageSize(int&nbsp;maxPageSize)</pre>
+<div class="block">Configures the maximum page size to be accepted. This allows to put an upper boundary of the page size to prevent
+potential attacks trying to issue an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/OutOfMemoryError.html?is-external=true" title="class or interface in java.lang"><code>OutOfMemoryError</code></a>. Defaults to <a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#DEFAULT_MAX_PAGE_SIZE"><code>DEFAULT_MAX_PAGE_SIZE</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>maxPageSize</code> - the maxPageSize to set</dd>
+</dl>
+</li>
+</ul>
+<a name="getMaxPageSize--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaxPageSize</h4>
+<pre>protected&nbsp;int&nbsp;getMaxPageSize()</pre>
+<div class="block">Retrieves the maximum page size to be accepted. This allows to put an upper boundary of the page size to prevent
+potential attacks trying to issue an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/OutOfMemoryError.html?is-external=true" title="class or interface in java.lang"><code>OutOfMemoryError</code></a>. Defaults to <a href="../../../../org/springframework/data/web/PageableHandlerMethodArgumentResolver.html#DEFAULT_MAX_PAGE_SIZE"><code>DEFAULT_MAX_PAGE_SIZE</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the maximum page size allowed.</dd>
+</dl>
+</li>
+</ul>
+<a name="setPageParameterName-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPageParameterName</h4>
+<pre>public&nbsp;void&nbsp;setPageParameterName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageParameterName)</pre>
+<div class="block">Configures the parameter name to be used to find the page number in the request. Defaults to <code>page</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pageParameterName</code> - the parameter name to be used, must not be null or empty.</dd>
+</dl>
+</li>
+</ul>
+<a name="getPageParameterName--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPageParameterName</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPageParameterName()</pre>
+<div class="block">Retrieves the parameter name to be used to find the page number in the request. Defaults to <code>page</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the parameter name to be used, never null or empty.</dd>
+</dl>
+</li>
+</ul>
+<a name="setSizeParameterName-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSizeParameterName</h4>
+<pre>public&nbsp;void&nbsp;setSizeParameterName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sizeParameterName)</pre>
+<div class="block">Configures the parameter name to be used to find the page size in the request. Defaults to <code>size</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>sizeParameterName</code> - the parameter name to be used, must not be null or empty.</dd>
+</dl>
+</li>
+</ul>
+<a name="getSizeParameterName--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSizeParameterName</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSizeParameterName()</pre>
+<div class="block">Retrieves the parameter name to be used to find the page size in the request. Defaults to <code>size</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the parameter name to be used, never null or empty.</dd>
+</dl>
+</li>
+</ul>
+<a name="setPrefix-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPrefix</h4>
+<pre>public&nbsp;void&nbsp;setPrefix(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix)</pre>
+<div class="block">Configures a general prefix to be prepended to the page number and page size parameters. Useful to namespace the
+property names used in case they are clashing with ones used by your application. By default, no prefix is used.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>prefix</code> - the prefix to be used or null to reset to the default.</dd>
+</dl>
+</li>
+</ul>
+<a name="setQualifierDelimiter-java.lang.String-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setQualifierDelimiter</h4>
+<pre>public&nbsp;void&nbsp;setQualifierDelimiter(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;qualifierDelimiter)</pre>
+<div class="block">The delimiter to be used between the qualifier and the actual page number and size properties. Defaults to
+<code>_</code>. So a qualifier of <code>foo</code> will result in a page number parameter of <code>foo_page</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>qualifierDelimiter</code> - the delimiter to be used or null to reset to the default.</dd>
+</dl>
+</li>
+</ul>
+<a name="setOneIndexedParameters-boolean-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOneIndexedParameters</h4>
+<pre>public&nbsp;void&nbsp;setOneIndexedParameters(boolean&nbsp;oneIndexedParameters)</pre>
+<div class="block">Configures whether to expose and assume 1-based page number indexes in the request parameters. Defaults to
+false, meaning a page number of 0 in the request equals the first page. If this is set to
+true, a page number of 1 in the request will be considered the first page.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>oneIndexedParameters</code> - the oneIndexedParameters to set</dd>
+</dl>
+</li>
+</ul>
+<a name="isOneIndexedParameters--">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOneIndexedParameters</h4>
+<pre>protected&nbsp;boolean&nbsp;isOneIndexedParameters()</pre>
+<div class="block">Indicates whether to expose and assume 1-based page number indexes in the request parameters. Defaults to
+false, meaning a page number of 0 in the request equals the first page. If this is set to
+true, a page number of 1 in the request will be considered the first page.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>whether to assume 1-based page number indexes in the request parameters.</dd>
+</dl>
+</li>
+</ul>
+<a name="supportsParameter-org.springframework.core.MethodParameter-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>supportsParameter</h4>
+<pre>public&nbsp;boolean&nbsp;supportsParameter(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/MethodParameter.html?is-external=true" title="class or interface in org.springframework.core">MethodParameter</a>&nbsp;parameter)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html?is-external=true#supportsParameter-org.springframework.core.MethodParameter-" title="class or interface in org.springframework.web.method.support">supportsParameter</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html?is-external=true" title="class or interface in org.springframework.web.method.support">HandlerMethodArgumentResolver</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="resolveArgument-org.springframework.core.MethodParameter-org.springframework.web.method.support.ModelAndViewContainer-org.springframework.web.context.request.NativeWebRequest-org.springframework.web.bind.support.WebDataBinderFactory-">
+
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolveArgument</h4>
+<pre>public&nbsp;<a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain">Pageable</a>&nbsp;resolveArgument(<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/MethodParameter.html?is-external=true" title="class or interface in org.springframework.core">MethodParameter</a>&nbsp;methodParameter,
+                                <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                                <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/method/support/ModelAndViewContainer.html?is-external=true" title="class or interface in org.springframework.web.method.support">ModelAndViewContainer</a>&nbsp;mavContainer,
+                                <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/context/request/NativeWebRequest.html?is-external=true" title="class or interface in org.springframework.web.context.request">NativeWebRequest</a>&nbsp;webRequest,
+                                <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                                <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/bind/support/WebDataBinderFactory.html?is-external=true" title="class or interface in org.springframework.web.bind.support">WebDataBinderFactory</a>&nbsp;binderFactory)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/springframework/data/web/PageableArgumentResolver.html#resolveArgument-org.springframework.core.MethodParameter-org.springframework.web.method.support.ModelAndViewContainer-org.springframework.web.context.request.NativeWebRequest-org.springframework.web.bind.support.WebDataBinderFactory-">PageableArgumentResolver</a></code></span></div>
+<div class="block">Resolves a <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> method parameter into an argument value from a given request.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../org/springframework/data/web/PageableArgumentResolver.html#resolveArgument-org.springframework.core.MethodParameter-org.springframework.web.method.support.ModelAndViewContainer-org.springframework.web.context.request.NativeWebRequest-org.springframework.web.bind.support.WebDataBinderFactory-">resolveArgument</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/springframework/data/web/PageableArgumentResolver.html" title="interface in org.springframework.data.web">PageableArgumentResolver</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html?is-external=true#resolveArgument-org.springframework.core.MethodParameter-org.springframework.web.method.support.ModelAndViewContainer-org.springframework.web.context.request.NativeWebRequest-org.springframework.web.bind.support.WebDataBinderFactory-" title="class or interface in org.springframework.web.method.support">resolveArgument</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html?is-external=true" title="class or interface in org.springframework.web.method.support">HandlerMethodArgumentResolver</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>methodParameter</code> - the method parameter to resolve. This parameter must have previously been passed to
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html?is-external=true#supportsParameter-org.springframework.core.MethodParameter-" title="class or interface in org.springframework.web.method.support"><code>HandlerMethodArgumentResolver.supportsParameter(org.springframework.core.MethodParameter)</code></a> which must have returned <code>true</code>.</dd>
+<dd><code>mavContainer</code> - the ModelAndViewContainer for the current request</dd>
+<dd><code>webRequest</code> - the current request</dd>
+<dd><code>binderFactory</code> - a factory for creating <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/web/bind/WebDataBinder.html?is-external=true" title="class or interface in org.springframework.web.bind"><code>WebDataBinder</code></a> instances</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the resolved argument value.</dd>
+</dl>
+</li>
+</ul>
+<a name="getParameterNameToUse-java.lang.String-org.springframework.core.MethodParameter-">
+
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getParameterNameToUse</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getParameterNameToUse(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;source,
+                                       <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/lang/Nullable.html?is-external=true" title="class or interface in org.springframework.lang">@Nullable</a>
+                                       <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/MethodParameter.html?is-external=true" title="class or interface in org.springframework.core">MethodParameter</a>&nbsp;parameter)</pre>
+<div class="block">Returns the name of the request parameter to find the <a href="../../../../org/springframework/data/domain/Pageable.html" title="interface in org.springframework.data.domain"><code>Pageable</code></a> information in. Inspects the given
+<a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/MethodParameter.html?is-external=true" title="class or interface in org.springframework.core"><code>MethodParameter</code></a> for <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html?is-external=true" title="class or interface in org.springframework.beans.factory.annotation"><code>Qualifier</code></a> present and prefixes the given source parameter name with it.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>source</code> - the basic parameter name.</dd>
+<dd><code>parameter</code> - the <a href="https://docs.spring.io/spring/docs/5.0.x/javadoc-api/org/springframework/core/MethodParameter.html?is-external=true" title="class or interface in org.springframework.core"><code>MethodParameter</code></a> potentially qualified.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the name of the request parameter.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div class="bottomNav"><a name="navbar.bottom">
+
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PageableHandlerMethodArgumentResolver.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+<div class="aboutLanguage">Spring Data Core</div>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/springframework/data/web/PageableDefault.html" title="annotation in org.springframework.data.web"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/springframework/data/web/PagedResourcesAssembler.html" title="class in org.springframework.data.web"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/springframework/data/web/PageableHandlerMethodArgumentResolver.html" target="_top">Frames</a></li>
+<li><a href="PageableHandlerMethodArgumentResolver.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom");if(window==top){allClassesLink.style.display="block";}else{allClassesLink.style.display="none";}</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+
+</a></div>
+
+<p class="legalCopy"><small>Copyright &#169; 2011&#x2013;2018 <a href="https://www.spring.io">Pivotal Software, Inc.</a>. All rights reserved.</small></p>
+<script>if(window.parent==window){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-2728886-23','auto',{'siteSpeedSampleRate':100});ga('send','pageview');}</script></body>
+</html>
